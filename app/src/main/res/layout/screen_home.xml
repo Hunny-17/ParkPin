@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/pp_bg"
+        android:fillViewport="true"
+        android:clipToPadding="false"
+        android:scrollbars="none"
+        tools:context=".MainActivity">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="22dp"
+            android:paddingEnd="22dp"
+            android:paddingTop="22dp"
+            android:paddingBottom="26dp"
+            android:orientation="vertical">
+
+            <!-- App brand -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal">
+                <FrameLayout android:layout_width="48dp" android:layout_height="48dp" android:background="@drawable/bg_logo">
+                    <ImageView android:layout_width="27dp" android:layout_height="27dp" android:layout_gravity="center" android:src="@drawable/ic_pin" app:tint="#41E2B7" android:contentDescription="@string/app_logo_description"/>
+                </FrameLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:layout_marginStart="12dp" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ParkPin" android:textSize="21sp" android:textStyle="bold" android:textColor="@color/pp_ink"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="YOUR PARKING COMPANION" android:letterSpacing="0.13" android:textSize="9sp" android:textColor="@color/pp_ink_muted"/>
+                </LinearLayout>
+                <TextView android:layout_width="42dp" android:layout_height="42dp" android:gravity="center" android:text="P" android:textStyle="bold" android:textSize="17sp" android:textColor="@color/pp_green" android:background="@drawable/bg_logo_soft"/>
+            </LinearLayout>
+
+            <!-- Welcome -->
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="28dp" android:text="Xin chào! 👋" android:textSize="15sp" android:textColor="@color/pp_ink_muted"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="7dp" android:text="Không bao giờ quên&#10;chỗ đỗ xe nữa." android:lineSpacingExtra="3dp" android:textSize="29sp" android:textStyle="bold" android:textColor="@color/pp_ink"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="7dp" android:text="Ghim chỗ đỗ, ghi chú khu vực và trở lại dễ dàng." android:textSize="13sp" android:textColor="@color/pp_ink_muted"/>
+
+            <!-- Stylised map, fully offline static asset -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/ParkPinCard" android:layout_width="match_parent" android:layout_height="200dp" android:layout_marginTop="22dp"
+                app:cardCornerRadius="22dp" app:strokeWidth="0dp">
+                <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                    <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:contentDescription="@string/map_preview_description" android:src="@drawable/bg_map_preview" android:scaleType="centerCrop" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="top|start" android:layout_margin="14dp" android:background="@drawable/bg_white_tag" android:paddingStart="11dp" android:paddingEnd="11dp" android:paddingTop="7dp" android:paddingBottom="7dp" android:text="●  VỊ TRÍ MINH HOẠ" android:textColor="@color/pp_green_dark" android:textSize="10sp" android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="bottom|end" android:layout_margin="12dp" android:background="@drawable/bg_white_tag" android:padding="9dp" android:text="Không phải bản đồ thực" android:textColor="@color/pp_ink_muted" android:textSize="10sp" />
+                </FrameLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Current mock parking -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="23dp" android:orientation="horizontal" android:gravity="center_vertical">
+                <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="Vị trí đỗ gần nhất" android:textStyle="bold" android:textSize="18sp" android:textColor="@color/pp_ink" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/bg_pill_gray" android:paddingStart="9dp" android:paddingEnd="9dp" android:paddingTop="5dp" android:paddingBottom="5dp" android:text="Dữ liệu mẫu" android:textSize="10sp" android:textColor="@color/pp_ink_muted" />
+            </LinearLayout>
+            <com.google.android.material.card.MaterialCardView style="@style/ParkPinCard" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp" android:orientation="horizontal" android:gravity="center_vertical">
+                    <FrameLayout android:layout_width="52dp" android:layout_height="52dp" android:background="@drawable/bg_logo_soft">
+                        <ImageView android:layout_width="25dp" android:layout_height="25dp" android:layout_gravity="center" android:src="@drawable/ic_car" app:tint="@color/pp_green" android:contentDescription="Xe đã đỗ"/>
+                    </FrameLayout>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="13dp" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Bãi xe trung tâm" android:textSize="15sp" android:textStyle="bold" android:textColor="@color/pp_ink"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="Tầng B2  ·  Khu A  ·  Cột 12" android:textSize="12sp" android:textColor="@color/pp_ink_muted"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="Hôm nay, 14:35" android:textSize="11sp" android:textColor="@color/pp_green"/>
+                    </LinearLayout>
+                    <ImageView android:layout_width="21dp" android:layout_height="21dp" android:src="@drawable/ic_arrow" app:tint="@color/pp_ink_muted" android:contentDescription="Chi tiết (chưa hoạt động)" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Main CTA (not wired yet) -->
+            <com.google.android.material.button.MaterialButton
+                style="@style/ParkPinActionButton"
+                android:id="@+id/btn_save_parking_mock"
+                android:layout_width="match_parent" android:layout_height="56dp"
+                android:layout_marginTop="18dp"
+                android:text="+  LƯU VỊ TRÍ ĐỖ XE"
+                android:textSize="14sp" android:textStyle="bold"
+                android:contentDescription="Lưu vị trí đỗ xe - giao diện chưa có xử lý" />
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="Thao tác nhanh" android:textColor="@color/pp_ink" android:textStyle="bold" android:textSize="18sp" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="11dp" android:orientation="horizontal">
+                <com.google.android.material.card.MaterialCardView style="@style/ParkPinCard" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginEnd="6dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                        <ImageView android:layout_width="28dp" android:layout_height="28dp" android:src="@drawable/ic_navigation" app:tint="@color/pp_green" android:contentDescription="Tìm xe"/>
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="11dp" android:text="Tìm xe" android:textSize="14sp" android:textStyle="bold" android:textColor="@color/pp_ink"/>
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Mở chỉ đường" android:textSize="11sp" android:textColor="@color/pp_ink_muted"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView style="@style/ParkPinCard" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="6dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                        <ImageView android:layout_width="28dp" android:layout_height="28dp" android:src="@drawable/ic_history" app:tint="@color/pp_green" android:contentDescription="Lịch sử"/>
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="11dp" android:text="Lịch sử" android:textSize="14sp" android:textStyle="bold" android:textColor="@color/pp_ink"/>
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Các lần đã đỗ" android:textSize="11sp" android:textColor="@color/pp_ink_muted"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <!-- hint -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:background="@drawable/bg_tag" android:orientation="horizontal" android:padding="14dp" android:gravity="center_vertical">
+                <ImageView android:layout_width="22dp" android:layout_height="22dp" android:src="@drawable/ic_info" app:tint="@color/pp_green_dark" android:contentDescription="Mẹo nhỏ"/>
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="10dp" android:text="Mẹo: Ở tầng hầm, hãy ghi lại tầng, khu và cột đỗ xe vì GPS có thể yếu." android:textSize="12sp" android:lineSpacingExtra="2dp" android:textColor="@color/pp_green_dark"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
