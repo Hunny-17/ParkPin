@@ -10,7 +10,7 @@
 | Mốc | Dự kiến | Công việc chính | Trạng thái |
 |---|---|---|---|
 | `v0.1.1-ui` | Baseline | Home UI tĩnh, các màn Save/History ở XML preview, AGP 9.4.0 | UI Home đã được người dùng chạy và xác nhận trên Emulator API 37.2 |
-| `v0.2.0` | Ngày 2–3 | Tạo 3 Fragments, Bottom Navigation hoạt động, sửa cuộn/keyboard | Chưa thực hiện |
+| `v0.2.0` | Ngày 2–3 | Tạo 3 Fragments, Bottom Navigation hoạt động, sửa cuộn/keyboard | Code đã triển khai trong branch G1; chờ CI và emulator |
 | `v0.3.0` | Ngày 4–6 | Room, ParkingEntity/Dao/Repository, tạo/xem/sửa/xóa và lịch sử | Chưa thực hiện |
 | `v0.4.0` | Ngày 7–10 | Runtime permission, lấy GPS, lưu lat/lng, mở Google Maps | Chưa thực hiện |
 | `v0.5.0` | Ngày 11–12 | Photo Picker, ảnh điểm đỗ, trạng thái rỗng/lỗi | Chưa thực hiện |
@@ -20,8 +20,10 @@
 
 ### UI & Navigation
 - [x] Home UI render trên Emulator (đã được người dùng xác nhận).
-- [ ] Chuyển Home / Lưu xe / Lịch sử không crash.
-- [ ] Nội dung cuộn không bị bottom bar che.
+- [x] Code điều hướng Home / Lưu xe / Lịch sử bằng 3 Fragments đã triển khai (chưa nghiệm thu emulator).
+- [x] Code cuộn trên Bottom Navigation và IME insets đã triển khai (chưa nghiệm thu emulator).
+- [ ] GitHub Actions assembleDebug thành công.
+- [ ] Nghiệm thu trên emulator theo [G1_ACCEPTANCE.md](G1_ACCEPTANCE.md).
 
 ### Local CRUD
 - [ ] Lưu vị trí bãi xe, tầng, khu, cột, ghi chú.
@@ -46,3 +48,6 @@ Không thêm đăng nhập, Firebase, AI, bản đồ nhúng, hệ thống đặ
 - Source snapshot này xuất phát từ file `ParkPin_UI_Starter_AGP_9.4.0.zip` đã gửi trong cuộc trò chuyện; **không tự động đồng bộ** các chỉnh sửa nếu bạn đã thay đổi code trên máy.
 - Bản ZIP nguồn chưa có `gradle-wrapper.jar`. Nếu cần khôi phục wrapper, xem README.
 - Chưa có chứng cứ build APK trong môi trường đóng gói; đã có ảnh người dùng chạy UI Home thành công trên emulator.
+
+## G1 branch
+Feature: `feat/g1-navigation-fragments-wrapper`. Nhánh `main` giữ nguyên tới khi PR được nghiệm thu và merge. Chưa claim CI/emulator pass.
