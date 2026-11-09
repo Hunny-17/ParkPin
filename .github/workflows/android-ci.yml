@@ -21,8 +21,12 @@ jobs:
           distribution: temurin
           java-version: '17'
           cache: gradle
-      - uses: android-actions/setup-android@v3
+      # ubuntu-latest Android runner already provides cmdline-tools.
+      # setup-android@v3 currently tries to install obsolete package "tools"
+      # and fails before Gradle can run; invoke sdkmanager directly instead.
       - name: Install Android SDK 37
-        run: sdkmanager "platforms;android-37"
+        run: |
+          yes | sdkmanager --licenses >/dev/null || true
+          sdkmanager "platforms;android-37" "build-tools;37.0.0"
       - name: Assemble debug APK
         run: ./gradlew --no-daemon :app:assembleDebug
