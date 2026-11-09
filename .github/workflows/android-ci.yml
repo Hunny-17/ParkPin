@@ -21,12 +21,18 @@ jobs:
           distribution: temurin
           java-version: '17'
           cache: gradle
-      # v4 no longer requests the removed Android SDK "tools" package.
       - name: Setup Android SDK
         uses: android-actions/setup-android@v4
         with:
           packages: 'platform-tools'
-      - name: Install Android SDK 37
-        run: sdkmanager "platforms;android-37" "build-tools;37.0.0"
+      - name: Install Android SDK Platform 37.0
+        run: |
+          sdkmanager "platforms;android-37.0" "build-tools;37.0.0"
+          # API 37 preview is published as android-37.0. Some AGP
+          # versions still search the bare android-37 platform name.
+          SDK="${ANDROID_SDK_ROOT:-${ANDROID_HOME}}"
+          if [ -d "$SDK/platforms/android-37.0" ] && [ ! -e "$SDK/platforms/android-37" ]; then
+            ln -s "$SDK/platforms/android-37.0" "$SDK/platforms/android-37"
+          fi
       - name: Assemble debug APK
         run: ./gradlew --no-daemon :app:assembleDebug
