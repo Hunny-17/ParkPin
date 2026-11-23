@@ -52,6 +52,14 @@ public abstract class ParkingDao {
     public abstract int updateDetails(long id, String name, String floor, String zone,
                                       String columnLabel, String note, long now);
 
+    /** Replaces GPS only when the user explicitly captured a fresh fix. */
+    @Query("UPDATE parking_spots SET placeName=:name, floor=:floor, zone=:zone, " +
+           "columnLabel=:columnLabel, note=:note, latitude=:latitude, longitude=:longitude, " +
+           "accuracyMeters=:accuracy, locationCapturedAt=:capturedAt, updatedAt=:now WHERE id=:id")
+    public abstract int updateDetailsAndGps(long id, String name, String floor, String zone,
+            String columnLabel, String note, double latitude, double longitude,
+            Float accuracy, long capturedAt, long now);
+
     @Query("DELETE FROM parking_spots WHERE id = :id")
     public abstract int deleteById(long id);
 }

@@ -15,6 +15,7 @@ import com.tranquochuy.parkpin.MainActivity;
 import com.tranquochuy.parkpin.R;
 import com.tranquochuy.parkpin.data.ParkingRepository;
 import com.tranquochuy.parkpin.data.ParkingSpot;
+import com.tranquochuy.parkpin.navigation.MapsNavigation;
 import java.text.DateFormat;
 import java.util.Date;
 import java.util.List;
@@ -64,6 +65,15 @@ public class HistoryFragment extends Fragment {
                         .format(new Date(spot.createdAt)));
         row.<MaterialButton>findViewById(R.id.item_edit).setOnClickListener(
                 v -> ((MainActivity) requireActivity()).editParking(spot.id));
+        MaterialButton map = row.findViewById(R.id.item_map);
+        map.setVisibility(spot.hasCoordinates() ? View.VISIBLE : View.GONE);
+        map.setOnClickListener(v -> {
+            if (spot.hasCoordinates() &&
+                    !MapsNavigation.open(requireContext(), spot.latitude, spot.longitude)) {
+                Toast.makeText(requireContext(),
+                        "Không có ứng dụng bản đồ để mở vị trí này.", Toast.LENGTH_LONG).show();
+            }
+        });
         MaterialButton activate = row.findViewById(R.id.item_activate);
         activate.setVisibility(spot.active ? View.GONE : View.VISIBLE);
         activate.setOnClickListener(v -> ParkingRepository.get(requireContext())

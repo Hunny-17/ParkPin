@@ -12,7 +12,7 @@
 | `v0.1.1-ui` | Baseline | Home UI tĩnh, các màn Save/History ở XML preview, AGP 9.4.0 | UI Home đã được người dùng chạy và xác nhận trên Emulator API 37.2 |
 | `v0.2.0` | Ngày 2–3 | Tạo 3 Fragments, Bottom Navigation hoạt động, sửa cuộn/keyboard | QA 23/11/2026: build sạch JDK 17, Emulator 9/9, Visual/Crash PASS; CI HEAD nghiệm thu xem PR #1 |
 | `v0.3.0` | Ngày 4–6 | Room, ParkingEntity/Dao/Repository, tạo/xem/sửa/xóa và lịch sử | G2 QA 23/11/2026: JVM 1/1, instrumentation 5/5, CRUD 10/10, hồi quy 6/6 PASS; CI final HEAD xem PR #2 |
-| `v0.4.0` | Ngày 7–10 | Runtime permission, lấy GPS, lưu lat/lng, mở Google Maps | Chưa thực hiện |
+| `v0.4.0` | Ngày 7–10 | Runtime permission, lấy GPS, lưu lat/lng, mở Google Maps | G3 code đang triển khai trên branch riêng; CI/Emulator QA chưa nghiệm thu |
 | `v0.5.0` | Ngày 11–12 | Photo Picker, ảnh điểm đỗ, trạng thái rỗng/lỗi | Chưa thực hiện |
 | `v1.0.0` | Ngày 13–14 | Kiểm thử hồi quy, sửa lỗi, tài liệu, APK nộp môn | Chưa thực hiện |
 
@@ -49,5 +49,7 @@ Không thêm đăng nhập, Firebase, AI, bản đồ nhúng, hệ thống đặ
 - Bản ZIP nguồn chưa có `gradle-wrapper.jar`. Nếu cần khôi phục wrapper, xem README.
 - Nghiệm thu G1 ngày 23/11/2026 bổ sung build log JDK 17, ảnh và kết quả thao tác Emulator trong `artifacts/g1/`.
 
-## G1 branch
-G1 đã được tích hợp làm base của G2. Branch hiện tại `feat/g2-room-parking-crud` có local QA G2 PASS; CI final HEAD và readiness được ghi tại [PR #2](https://github.com/Hunny-17/ParkPin/pull/2). Không tự merge và chưa triển khai G3.
+## Mốc tích hợp
+G1 đã merge qua PR #1 và G2 đã merge qua PR #2 vào `main` ngày 23/11/2026. G3 phát triển riêng tại `feat/g3-gps-maps-intent`, dựa trên merge commit G2 `87bafe7293afa455cde3fe2ed686f54bf79102ea`.
+
+[Kiểm thử G3 đang chờ](G3_PROGRESS.md). Không mở rộng sang G4 trước khi chốt G3.
