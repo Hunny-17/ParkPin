@@ -1,0 +1,8 @@
+{
+  "same_apk": true,
+  "build_sha256": "b66cfc360df2d321db2418f24280881375c103445b86ffee28fc0c18dfc6383c",
+  "installed_sha256": "b66cfc360df2d321db2418f24280881375c103445b86ffee28fc0c18dfc6383c",
+  "version": "0.5.0-g4-dev",
+  "instrumentation_tests": 16,
+  "final_smoke": "PASS"
+}

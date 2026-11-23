@@ -6,7 +6,7 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-/** One saved parking place. GPS coordinates are optional; photos are deferred. */
+/** One saved parking place, with optional GPS and an app-owned photo filename. */
 @Entity(tableName = "parking_spots")
 public class ParkingSpot {
     @PrimaryKey(autoGenerate = true)
@@ -34,6 +34,7 @@ public class ParkingSpot {
     @Nullable public Double longitude;
     @Nullable public Float accuracyMeters;
     @Nullable public Long locationCapturedAt;
+    @Nullable public String photoPath;
 
     public boolean hasCoordinates() {
         return latitude != null && longitude != null && GpsFix.validCoordinates(latitude, longitude);

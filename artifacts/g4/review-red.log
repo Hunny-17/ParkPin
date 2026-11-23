@@ -1,0 +1,53 @@
+INSTRUMENTATION_STATUS: class=com.tranquochuy.parkpin.data.ParkingPhotoTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stream=
+com.tranquochuy.parkpin.data.ParkingPhotoTest:
+INSTRUMENTATION_STATUS: test=clearingOffscreenPhotoReleasesBitmapAndRejectsLateDecode
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.tranquochuy.parkpin.data.ParkingPhotoTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: Offscreen photo cancellation/release is missing
+    at com.tranquochuy.parkpin.data.ParkingPhotoTest.clearingOffscreenPhotoReleasesBitmapAndRejectsLateDecode(ParkingPhotoTest.java:25)
+    ... 32 trimmed
+Caused by: java.lang.NoSuchMethodException: com.tranquochuy.parkpin.photos.PhotoViews.clear [class android.widget.ImageView]
+    at java.lang.Class.getMethod(Class.java:2947)
+    at java.lang.Class.getMethod(Class.java:2447)
+    at com.tranquochuy.parkpin.data.ParkingPhotoTest.clearingOffscreenPhotoReleasesBitmapAndRejectsLateDecode(ParkingPhotoTest.java:24)
+    ... 33 more
+
+INSTRUMENTATION_STATUS: stream=
+Error in clearingOffscreenPhotoReleasesBitmapAndRejectsLateDecode(com.tranquochuy.parkpin.data.ParkingPhotoTest):
+java.lang.AssertionError: Offscreen photo cancellation/release is missing
+    at com.tranquochuy.parkpin.data.ParkingPhotoTest.clearingOffscreenPhotoReleasesBitmapAndRejectsLateDecode(ParkingPhotoTest.java:25)
+    ... 32 trimmed
+Caused by: java.lang.NoSuchMethodException: com.tranquochuy.parkpin.photos.PhotoViews.clear [class android.widget.ImageView]
+    at java.lang.Class.getMethod(Class.java:2947)
+    at java.lang.Class.getMethod(Class.java:2447)
+    at com.tranquochuy.parkpin.data.ParkingPhotoTest.clearingOffscreenPhotoReleasesBitmapAndRejectsLateDecode(ParkingPhotoTest.java:24)
+    ... 33 more
+
+INSTRUMENTATION_STATUS: test=clearingOffscreenPhotoReleasesBitmapAndRejectsLateDecode
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_RESULT: stream=
+
+Time: 0.024
+There was 1 failure:
+1) clearingOffscreenPhotoReleasesBitmapAndRejectsLateDecode(com.tranquochuy.parkpin.data.ParkingPhotoTest)
+java.lang.AssertionError: Offscreen photo cancellation/release is missing
+    at com.tranquochuy.parkpin.data.ParkingPhotoTest.clearingOffscreenPhotoReleasesBitmapAndRejectsLateDecode(ParkingPhotoTest.java:25)
+    ... 32 trimmed
+Caused by: java.lang.NoSuchMethodException: com.tranquochuy.parkpin.photos.PhotoViews.clear [class android.widget.ImageView]
+    at java.lang.Class.getMethod(Class.java:2947)
+    at java.lang.Class.getMethod(Class.java:2447)
+    at com.tranquochuy.parkpin.data.ParkingPhotoTest.clearingOffscreenPhotoReleasesBitmapAndRejectsLateDecode(ParkingPhotoTest.java:24)
+    ... 33 more
+
+FAILURES!!!
+Tests run: 1,  Failures: 1
+
+
+INSTRUMENTATION_CODE: -1

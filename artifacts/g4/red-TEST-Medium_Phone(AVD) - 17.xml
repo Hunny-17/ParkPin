@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuites tests="5" failures="5" errors="0" skipped="0" time="0.000" timestamp="2026-11-23T11:09:32" hostname="localhost">
+  <testsuite name="com.tranquochuy.parkpin.data.ParkingPhotoTest" tests="5" failures="5" errors="0" skipped="0" time="0.400" timestamp="2026-11-23T11:09:32" hostname="localhost">
+    <properties>
+      <property name="device" value="emulator-5556" />
+    </properties>
+    <testcase name="migration2To3RetainsGpsAndAddsNullablePhoto" classname="com.tranquochuy.parkpin.data.ParkingPhotoTest" time="0.002">
+      <failure>java.lang.AssertionError: Non-destructive migration 2-&gt;3 is missing
+    at com.tranquochuy.parkpin.data.ParkingPhotoTest.migration2To3RetainsGpsAndAddsNullablePhoto(ParkingPhotoTest.java:104)
+    ... 32 trimmed
+Caused by: java.lang.NoSuchFieldException: MIGRATION_2_3
+    at java.lang.Class.getField(Class.java:2334)
+    at com.tranquochuy.parkpin.data.ParkingPhotoTest.migration2To3RetainsGpsAndAddsNullablePhoto(ParkingPhotoTest.java:103)
+    ... 33 more
+</failure>
+    </testcase>
+    <testcase name="corruptSourceFailsWithoutLeavingOwnedFiles" classname="com.tranquochuy.parkpin.data.ParkingPhotoTest" time="0.008">
+      <failure>java.lang.AssertionError: G4 PhotoStorage is missing
+    at com.tranquochuy.parkpin.data.ParkingPhotoTest.storage(ParkingPhotoTest.java:26)
+    at com.tranquochuy.parkpin.data.ParkingPhotoTest.corruptSourceFailsWithoutLeavingOwnedFiles(ParkingPhotoTest.java:58)
+    ... 32 trimmed
+Caused by: java.lang.ClassNotFoundException: com.tranquochuy.parkpin.photos.PhotoStorage
+    at java.lang.Class.classForName(Native Method)
+    at java.lang.Class.forName(Class.java:597)
+    at java.lang.Class.forName(Class.java:502)
+    at com.tranquochuy.parkpin.data.ParkingPhotoTest.storage(ParkingPhotoTest.java:25)
+    ... 34 more
+Caused by: java.lang.ClassNotFoundException: Didn't find class "com.tranquochuy.parkpin.photos.PhotoStorage" on path: DexPathList[[zip file "/data/app/~~lKYdgbWUUSfN-SNiiQnYgA==/com.tranquochuy.parkpin.test-dbZGHL9ge2HLqdWjoUG5Jg==/base.apk", zip file "/data/app/~~YyGbNGD6f48De6AKUCrPGw==/com.tranquochuy.parkpin-ftG6BXBa6mqrcBq_GNDlWw==/base.apk"],nativeLibraryDirectories=[/data/app/~~lKYdgbWUUSfN-SNiiQnYgA==/com.tranquochuy.parkpin.test-dbZGHL9ge2HLqdWjoUG5Jg==/lib/x86_64, /data/app/~~YyGbNGD6f48De6AKUCrPGw==/com.tranquochuy.parkpin-ftG6BXBa6mqrcBq_GNDlWw==/lib/x86_64, /system/lib64, /system_ext/lib64]]
+    at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:279)
+    at java.lang.ClassLoader.loadClass(ClassLoader.java:644)
+    at java.lang.ClassLoader.loadClass(ClassLoader.java:580)
+    ... 38 more
+</failure>
+    </testcase>
+    <testcase name="photoDeletionCannotEscapePrivatePhotoDirectory" classname="com.tranquochuy.parkpin.data.ParkingPhotoTest" time="0.019">
+      <failure>java.lang.AssertionError: G4 PhotoStorage is missing
+    at com.tranquochuy.parkpin.data.ParkingPhotoTest.storage(ParkingPhotoTest.java:26)
+    at com.tranquochuy.parkpin.data.ParkingPhotoTest.photoDeletionCannotEscapePrivatePhotoDirectory(ParkingPhotoTest.java:68)
+    ... 32 trimmed
+Caused by: java.lang.ClassNotFoundException: com.tranquochuy.parkpin.photos.PhotoStorage
+    at java.lang.Class.classForName(Native Method)
+    at java.lang.Class.forName(Class.java:597)
+    at java.lang.Class.forName(Class.java:502)
+    at com.tranquochuy.parkpin.data.ParkingPhotoTest.storage(ParkingPhotoTest.java:25)
+    ... 34 more
+Caused by: java.lang.ClassNotFoundException: Didn't find class "com.tranquochuy.parkpin.photos.PhotoStorage" on path: DexPathList[[zip file "/data/app/~~lKYdgbWUUSfN-SNiiQnYgA==/com.tranquochuy.parkpin.test-dbZGHL9ge2HLqdWjoUG5Jg==/base.apk", zip file "/data/app/~~YyGbNGD6f48De6AKUCrPGw==/com.tranquochuy.parkpin-ftG6BXBa6mqrcBq_GNDlWw==/base.apk"],nativeLibraryDirectories=[/data/app/~~lKYdgbWUUSfN-SNiiQnYgA==/com.tranquochuy.parkpin.test-dbZGHL9ge2HLqdWjoUG5Jg==/lib/x86_64, /data/app/~~YyGbNGD6f48De6AKUCrPGw==/com.tranquochuy.parkpin-ftG6BXBa6mqrcBq_GNDlWw==/lib/x86_64, /system/lib64, /system_ext/lib64]]
+    at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:279)
+    at java.lang.ClassLoader.loadClass(ClassLoader.java:644)
+    at java.lang.ClassLoader.loadClass(ClassLoader.java:580)
+    ... 38 more
+</failure>
+    </testcase>
+    <testcase name="importedPhotoIsBoundedAndSurvivesSourceDeletion" classname="com.tranquochuy.parkpin.data.ParkingPhotoTest" time="0.250">
+      <failure>java.lang.AssertionError: G4 PhotoStorage is missing
+    at com.tranquochuy.parkpin.data.ParkingPhotoTest.storage(ParkingPhotoTest.java:26)
+    at com.tranquochuy.parkpin.data.ParkingPhotoTest.importedPhotoIsBoundedAndSurvivesSourceDeletion(ParkingPhotoTest.java:40)
+    ... 32 trimmed
+Caused by: java.lang.ClassNotFoundException: com.tranquochuy.parkpin.photos.PhotoStorage
+    at java.lang.Class.classForName(Native Method)
+    at java.lang.Class.forName(Class.java:597)
+    at java.lang.Class.forName(Class.java:502)
+    at com.tranquochuy.parkpin.data.ParkingPhotoTest.storage(ParkingPhotoTest.java:25)
+    ... 34 more
+Caused by: java.lang.ClassNotFoundException: Didn't find class "com.tranquochuy.parkpin.photos.PhotoStorage" on path: DexPathList[[zip file "/data/app/~~lKYdgbWUUSfN-SNiiQnYgA==/com.tranquochuy.parkpin.test-dbZGHL9ge2HLqdWjoUG5Jg==/base.apk", zip file "/data/app/~~YyGbNGD6f48De6AKUCrPGw==/com.tranquochuy.parkpin-ftG6BXBa6mqrcBq_GNDlWw==/base.apk"],nativeLibraryDirectories=[/data/app/~~lKYdgbWUUSfN-SNiiQnYgA==/com.tranquochuy.parkpin.test-dbZGHL9ge2HLqdWjoUG5Jg==/lib/x86_64, /data/app/~~YyGbNGD6f48De6AKUCrPGw==/com.tranquochuy.parkpin-ftG6BXBa6mqrcBq_GNDlWw==/lib/x86_64, /system/lib64, /system_ext/lib64]]
+    at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:279)
+    at java.lang.ClassLoader.loadClass(ClassLoader.java:644)
+    at java.lang.ClassLoader.loadClass(ClassLoader.java:580)
+    ... 38 more
+</failure>
+    </testcase>
+    <testcase name="roomPhotoPersistsAndManualGpsUpdatesPreserveIt" classname="com.tranquochuy.parkpin.data.ParkingPhotoTest" time="0.121">
+      <failure>java.lang.AssertionError: Room photoPath column is missing
+    at com.tranquochuy.parkpin.data.ParkingPhotoTest.roomPhotoPersistsAndManualGpsUpdatesPreserveIt(ParkingPhotoTest.java:80)
+    ... 32 trimmed
+Caused by: java.lang.NoSuchFieldException: photoPath
+    at java.lang.Class.getField(Class.java:2334)
+    at com.tranquochuy.parkpin.data.ParkingPhotoTest.roomPhotoPersistsAndManualGpsUpdatesPreserveIt(ParkingPhotoTest.java:79)
+    ... 33 more
+</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

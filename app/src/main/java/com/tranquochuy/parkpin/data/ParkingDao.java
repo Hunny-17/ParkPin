@@ -62,4 +62,24 @@ public abstract class ParkingDao {
 
     @Query("DELETE FROM parking_spots WHERE id = :id")
     public abstract int deleteById(long id);
+
+    @Query("UPDATE parking_spots SET photoPath=:path, updatedAt=:now WHERE id=:id")
+    public abstract int updatePhoto(long id, @Nullable String path, long now);
+
+    @Query("SELECT COUNT(*) FROM parking_spots WHERE photoPath=:path")
+    public abstract int photoReferences(String path);
+
+    @Query("SELECT photoPath FROM parking_spots WHERE photoPath IS NOT NULL")
+    public abstract List<String> photoPaths();
+
+    @Transaction
+    public boolean updateWithPhoto(long id, String name, String floor, String zone,
+            String column, String note, @Nullable GpsFix fix, boolean changePhoto,
+            @Nullable String path, long now) {
+        int changed = fix == null ? updateDetails(id,name,floor,zone,column,note,now)
+                : updateDetailsAndGps(id,name,floor,zone,column,note,fix.latitude,
+                        fix.longitude,fix.accuracyMeters,fix.capturedAt,now);
+        if (changed == 1 && changePhoto) updatePhoto(id,path,now);
+        return changed == 1;
+    }
 }

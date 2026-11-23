@@ -30,6 +30,8 @@
         <TextView android:id="@+id/item_time" android:layout_width="match_parent"
             android:layout_height="wrap_content" android:layout_marginTop="6dp"
             android:textSize="11sp" android:textColor="@color/pp_ink_muted"/>
+        <ImageView android:id="@+id/item_photo" android:layout_width="match_parent" android:layout_height="140dp" android:layout_marginTop="10dp" android:scaleType="fitCenter" android:visibility="gone" android:contentDescription="Ảnh vị trí đỗ xe đã lưu"/>
+        <TextView android:id="@+id/item_photo_status" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:textSize="12sp" android:textColor="@color/pp_ink_muted" android:visibility="gone"/>
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
             android:layout_marginTop="12dp" android:orientation="horizontal">
             <com.google.android.material.button.MaterialButton

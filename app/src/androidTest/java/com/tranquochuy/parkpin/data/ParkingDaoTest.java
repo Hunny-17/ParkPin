@@ -135,7 +135,7 @@ public class ParkingDaoTest {
             legacy.close();
         }
         ParkPinDatabase migrated = Room.databaseBuilder(context, ParkPinDatabase.class, name)
-                .addMigrations(ParkPinDatabase.MIGRATION_1_2)
+                .addMigrations(ParkPinDatabase.MIGRATION_1_2, ParkPinDatabase.MIGRATION_2_3)
                 .allowMainThreadQueries().build(); // TEST-ONLY
         try {
             ParkingSpot active = migrated.parkingDao().getActive();

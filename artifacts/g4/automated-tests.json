@@ -1,0 +1,71 @@
+{
+  "jvm": [
+    {
+      "file": "TEST-com.tranquochuy.parkpin.data.GpsFixTest.xml",
+      "name": "com.tranquochuy.parkpin.data.GpsFixTest",
+      "tests": "3",
+      "skipped": "0",
+      "failures": "0",
+      "errors": "0",
+      "timestamp": "2026-11-23T11:31:08.043Z",
+      "hostname": "LAPTOP-0BVMS5BD",
+      "time": "0.009",
+      "cases": [
+        "navigationUriUsesLocaleIndependentDecimalPoint",
+        "acceptsValidCoordinatesIncludingZero",
+        "assignsOptionalFixWithoutChangingManualData"
+      ]
+    },
+    {
+      "file": "TEST-com.tranquochuy.parkpin.data.ParkingSpotTest.xml",
+      "name": "com.tranquochuy.parkpin.data.ParkingSpotTest",
+      "tests": "1",
+      "skipped": "0",
+      "failures": "0",
+      "errors": "0",
+      "timestamp": "2026-11-23T11:31:08.054Z",
+      "hostname": "LAPTOP-0BVMS5BD",
+      "time": "0.0",
+      "cases": [
+        "createNormalizesManualInput"
+      ]
+    }
+  ],
+  "instrumentation": {
+    "tests": 16,
+    "failures": 0,
+    "cases": [
+      "clearingOffscreenPhotoReleasesBitmapAndRejectsLateDecode",
+      "corruptSourceFailsWithoutLeavingOwnedFiles",
+      "emptyDatabaseAndHistoryOrder",
+      "gpsCoordinatesPersistAndManualUpdatePreservesThem",
+      "importedPhotoIsBoundedAndSurvivesSourceDeletion",
+      "jpegExifOrientationIsAppliedBeforeSaving",
+      "migration1To2PreservesExistingParkingRecords",
+      "migration2To3RetainsGpsAndAddsNullablePhoto",
+      "oversizedSourceIsRejectedAndTemporaryFilesAreCleaned",
+      "persistsAfterDatabaseCloseAndReopen",
+      "photoDeletionCannotEscapePrivatePhotoDirectory",
+      "pruningOldDraftsNeverDeletesReferencedPhotos",
+      "reactivationIsAtomicAndIdempotent",
+      "readUpdateAndDelete",
+      "roomPhotoPersistsAndManualGpsUpdatesPreserveIt",
+      "savesOneActiveAndArchivesOlder"
+    ],
+    "method": "Final clean-built target/test APK installed with adb; am instrument after AndroidX EXIF fix",
+    "log": "instrumentation-final.log"
+  },
+  "earlier_connected_gradle": {
+    "tests": 12,
+    "failures": 0,
+    "log": "implementation-green.log"
+  },
+  "red_before_feature": {
+    "tests": 5,
+    "failures": 5
+  },
+  "red_review_before_fix": {
+    "tests": 1,
+    "failures": 1
+  }
+}

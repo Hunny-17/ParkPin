@@ -1,0 +1,228 @@
+--------- beginning of main
+11-23 19:06:03.805  4753  4753 I Zygote  : Process 4753 created for com.tranquochuy.parkpin
+11-23 19:06:03.805  4753  4753 I quochuy.parkpin: Late-enabling -Xcheck:jni
+11-23 19:06:03.824  4753  4753 I quochuy.parkpin: Using generational CollectorTypeCMC GC.
+11-23 19:06:03.825  4753  4753 W quochuy.parkpin: Unexpected CPU variant for x86: x86_64.
+11-23 19:06:03.825  4753  4753 W quochuy.parkpin: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, goldmont-without-sha-xsaves, tremont, kabylake, alderlake, pantherlake, default
+11-23 19:06:03.847  4753  4753 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+11-23 19:06:03.888  4753  4753 D CompatChangeReporter: Compat change id reported: 333566037; UID 10235; state: ENABLED
+11-23 19:06:04.018  4753  4753 D nativeloader: Configuring clns-9 for other apk /data/app/~~DmUn8SxBeLO-AsOQhRA6Pg==/com.tranquochuy.parkpin.test-PrvEhJBJajBrS5m2YHALeg==/base.apk:/data/app/~~rO2Ka1hCE0j10vhCmT7DqA==/com.tranquochuy.parkpin-XMAjmJxCgybcg5_Obdpgag==/base.apk. target_sdk_version=37, uses_libraries=, library_path=/data/app/~~DmUn8SxBeLO-AsOQhRA6Pg==/com.tranquochuy.parkpin.test-PrvEhJBJajBrS5m2YHALeg==/lib/x86_64:/data/app/~~rO2Ka1hCE0j10vhCmT7DqA==/com.tranquochuy.parkpin-XMAjmJxCgybcg5_Obdpgag==/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/com.tranquochuy.parkpin
+--------- beginning of system
+11-23 19:06:04.024  4753  4753 D ActivityThread: Set OS env TMPDIR to /data/user/0/com.tranquochuy.parkpin/cache
+11-23 19:06:04.026  4753  4753 V GraphicsEnvironment: Currently set values for:
+11-23 19:06:04.026  4753  4753 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+11-23 19:06:04.026  4753  4753 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+11-23 19:06:04.026  4753  4753 V GraphicsEnvironment: com.tranquochuy.parkpin is not listed in per-application setting
+11-23 19:06:04.026  4753  4753 V GraphicsEnvironment: No special selections for ANGLE, returning default driver choice
+11-23 19:06:04.027  4753  4753 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+11-23 19:06:04.150  4753  4753 D CompatChangeReporter: Compat change id reported: 407952621; UID 10235; state: ENABLED
+11-23 19:06:04.150  4753  4753 D CompatChangeReporter: Compat change id reported: 419020719; UID 10235; state: ENABLED
+11-23 19:06:04.150  4753  4753 I AndroidJUnitRunner: newApplication android.app.Application
+11-23 19:06:04.166  4753  4753 I AndroidJUnitRunner: onCreate Bundle[EMPTY_PARCEL]
+11-23 19:06:04.166  4753  4753 D AndroidJUnitRunner: Use the raw file system for managing file I/O.
+11-23 19:06:04.246  4753  4753 V TestEventClient: No service name argument was given (testDiscoveryService, testRunEventService or orchestratorService)
+11-23 19:06:04.247  4753  4777 D AndroidJUnitRunner: onStart is called.
+11-23 19:06:04.251  4753  4778 D CompatChangeReporter: Compat change id reported: 458413887; UID 10235; state: ENABLED
+11-23 19:06:04.254  4753  4777 I InstrConnection: Could not send broadcast or register receiver (isolatedProcess?)
+11-23 19:06:04.256  4753  4777 D TestRequestBuilder: Using class path scanning to discover tests
+11-23 19:06:04.256  4753  4777 I TestRequestBuilder: Scanning classpath to find tests in paths [/data/app/~~DmUn8SxBeLO-AsOQhRA6Pg==/com.tranquochuy.parkpin.test-PrvEhJBJajBrS5m2YHALeg==/base.apk]
+11-23 19:06:04.256  4753  4777 W quochuy.parkpin: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+11-23 19:06:04.420  4753  4777 I TestRunner: run started: 16 tests
+11-23 19:06:04.421  4753  4777 I TestRunner: started: persistsAfterDatabaseCloseAndReopen(com.tranquochuy.parkpin.data.ParkingDaoTest)
+11-23 19:06:04.483  4753  4777 D CompatChangeReporter: Compat change id reported: 418924588; UID 10235; state: ENABLED
+11-23 19:06:04.495  4753  4777 I TestRunner: finished: persistsAfterDatabaseCloseAndReopen(com.tranquochuy.parkpin.data.ParkingDaoTest)
+11-23 19:06:04.497  4753  4777 I TestRunner: started: savesOneActiveAndArchivesOlder(com.tranquochuy.parkpin.data.ParkingDaoTest)
+11-23 19:06:04.516  4753  4777 I TestRunner: finished: savesOneActiveAndArchivesOlder(com.tranquochuy.parkpin.data.ParkingDaoTest)
+11-23 19:06:04.519  4753  4777 I TestRunner: started: readUpdateAndDelete(com.tranquochuy.parkpin.data.ParkingDaoTest)
+11-23 19:06:04.536  4753  4777 I TestRunner: finished: readUpdateAndDelete(com.tranquochuy.parkpin.data.ParkingDaoTest)
+11-23 19:06:04.539  4753  4777 I TestRunner: started: reactivationIsAtomicAndIdempotent(com.tranquochuy.parkpin.data.ParkingDaoTest)
+11-23 19:06:04.558  4753  4777 I TestRunner: finished: reactivationIsAtomicAndIdempotent(com.tranquochuy.parkpin.data.ParkingDaoTest)
+11-23 19:06:04.560  4753  4777 I TestRunner: started: migration1To2PreservesExistingParkingRecords(com.tranquochuy.parkpin.data.ParkingDaoTest)
+11-23 19:06:04.601  4753  4777 I TestRunner: finished: migration1To2PreservesExistingParkingRecords(com.tranquochuy.parkpin.data.ParkingDaoTest)
+11-23 19:06:04.603  4753  4777 I TestRunner: started: gpsCoordinatesPersistAndManualUpdatePreservesThem(com.tranquochuy.parkpin.data.ParkingDaoTest)
+11-23 19:06:04.614  4753  4777 I TestRunner: finished: gpsCoordinatesPersistAndManualUpdatePreservesThem(com.tranquochuy.parkpin.data.ParkingDaoTest)
+11-23 19:06:04.616  4753  4777 I TestRunner: started: emptyDatabaseAndHistoryOrder(com.tranquochuy.parkpin.data.ParkingDaoTest)
+11-23 19:06:04.624  4753  4777 I TestRunner: finished: emptyDatabaseAndHistoryOrder(com.tranquochuy.parkpin.data.ParkingDaoTest)
+11-23 19:06:04.626  4753  4777 I TestRunner: started: migration2To3RetainsGpsAndAddsNullablePhoto(com.tranquochuy.parkpin.data.ParkingPhotoTest)
+11-23 19:06:04.661  4753  4777 I TestRunner: finished: migration2To3RetainsGpsAndAddsNullablePhoto(com.tranquochuy.parkpin.data.ParkingPhotoTest)
+11-23 19:06:04.663  4753  4777 I TestRunner: started: corruptSourceFailsWithoutLeavingOwnedFiles(com.tranquochuy.parkpin.data.ParkingPhotoTest)
+11-23 19:06:04.668  4753  4777 I TestRunner: finished: corruptSourceFailsWithoutLeavingOwnedFiles(com.tranquochuy.parkpin.data.ParkingPhotoTest)
+11-23 19:06:04.670  4753  4777 I TestRunner: started: jpegExifOrientationIsAppliedBeforeSaving(com.tranquochuy.parkpin.data.ParkingPhotoTest)
+11-23 19:06:04.686  4753  4777 I TestRunner: finished: jpegExifOrientationIsAppliedBeforeSaving(com.tranquochuy.parkpin.data.ParkingPhotoTest)
+11-23 19:06:04.688  4753  4777 I TestRunner: started: photoDeletionCannotEscapePrivatePhotoDirectory(com.tranquochuy.parkpin.data.ParkingPhotoTest)
+11-23 19:06:04.690  4753  4777 I TestRunner: finished: photoDeletionCannotEscapePrivatePhotoDirectory(com.tranquochuy.parkpin.data.ParkingPhotoTest)
+11-23 19:06:04.692  4753  4777 I TestRunner: started: pruningOldDraftsNeverDeletesReferencedPhotos(com.tranquochuy.parkpin.data.ParkingPhotoTest)
+11-23 19:06:04.694  4753  4777 I TestRunner: finished: pruningOldDraftsNeverDeletesReferencedPhotos(com.tranquochuy.parkpin.data.ParkingPhotoTest)
+11-23 19:06:04.696  4753  4777 I TestRunner: started: importedPhotoIsBoundedAndSurvivesSourceDeletion(com.tranquochuy.parkpin.data.ParkingPhotoTest)
+11-23 19:06:04.873  4753  4777 I TestRunner: finished: importedPhotoIsBoundedAndSurvivesSourceDeletion(com.tranquochuy.parkpin.data.ParkingPhotoTest)
+11-23 19:06:04.874  4753  4777 I TestRunner: started: roomPhotoPersistsAndManualGpsUpdatesPreserveIt(com.tranquochuy.parkpin.data.ParkingPhotoTest)
+11-23 19:06:04.892  4753  4777 I TestRunner: finished: roomPhotoPersistsAndManualGpsUpdatesPreserveIt(com.tranquochuy.parkpin.data.ParkingPhotoTest)
+11-23 19:06:04.893  4753  4777 I TestRunner: started: oversizedSourceIsRejectedAndTemporaryFilesAreCleaned(com.tranquochuy.parkpin.data.ParkingPhotoTest)
+11-23 19:06:04.937  4753  4777 I TestRunner: finished: oversizedSourceIsRejectedAndTemporaryFilesAreCleaned(com.tranquochuy.parkpin.data.ParkingPhotoTest)
+11-23 19:06:04.939  4753  4777 I TestRunner: started: clearingOffscreenPhotoReleasesBitmapAndRejectsLateDecode(com.tranquochuy.parkpin.data.ParkingPhotoTest)
+11-23 19:06:05.951  4753  4777 I TestRunner: finished: clearingOffscreenPhotoReleasesBitmapAndRejectsLateDecode(com.tranquochuy.parkpin.data.ParkingPhotoTest)
+11-23 19:06:05.952  4753  4777 I TestRunner: run finished: 16 tests, 0 failed, 0 ignored
+11-23 19:06:06.351  4820  4820 I Zygote  : Process 4820 created for com.tranquochuy.parkpin
+11-23 19:06:06.352  4820  4820 I quochuy.parkpin: Late-enabling -Xcheck:jni
+11-23 19:06:06.368  4820  4820 I quochuy.parkpin: Using generational CollectorTypeCMC GC.
+11-23 19:06:06.369  4820  4820 W quochuy.parkpin: Unexpected CPU variant for x86: x86_64.
+11-23 19:06:06.369  4820  4820 W quochuy.parkpin: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, goldmont-without-sha-xsaves, tremont, kabylake, alderlake, pantherlake, default
+11-23 19:06:06.383  4820  4820 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+11-23 19:06:06.444  4820  4820 D CompatChangeReporter: Compat change id reported: 333566037; UID 10235; state: ENABLED
+11-23 19:06:06.587  4820  4820 D nativeloader: Configuring clns-9 for other apk /data/app/~~rO2Ka1hCE0j10vhCmT7DqA==/com.tranquochuy.parkpin-XMAjmJxCgybcg5_Obdpgag==/base.apk. target_sdk_version=37, uses_libraries=, library_path=/data/app/~~rO2Ka1hCE0j10vhCmT7DqA==/com.tranquochuy.parkpin-XMAjmJxCgybcg5_Obdpgag==/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/com.tranquochuy.parkpin
+11-23 19:06:06.608  4820  4820 D ActivityThread: Set OS env TMPDIR to /data/user/0/com.tranquochuy.parkpin/cache
+11-23 19:06:06.611  4820  4820 V GraphicsEnvironment: Currently set values for:
+11-23 19:06:06.611  4820  4820 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+11-23 19:06:06.611  4820  4820 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+11-23 19:06:06.611  4820  4820 V GraphicsEnvironment: com.tranquochuy.parkpin is not listed in per-application setting
+11-23 19:06:06.612  4820  4820 V GraphicsEnvironment: No special selections for ANGLE, returning default driver choice
+11-23 19:06:06.612  4820  4820 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+11-23 19:06:06.616  4820  4820 D CompatChangeReporter: Compat change id reported: 407952621; UID 10235; state: ENABLED
+11-23 19:06:06.616  4820  4820 D CompatChangeReporter: Compat change id reported: 419020719; UID 10235; state: ENABLED
+11-23 19:06:06.642  4820  4836 I DisplayManager: Choreographer implicitly registered for the refresh rate.
+11-23 19:06:06.650  4820  4820 D quochuy.parkpin: Initializing ProtoLog
+11-23 19:06:06.650  4820  4820 D ProtoLog: Initializing ProtoLog DataSource
+11-23 19:06:06.692  4820  4820 D AppCompatDelegate: Checking for metadata for AppLocalesMetadataHolderService : Service not found
+11-23 19:06:06.713  4820  4836 I GFXSTREAM: [eglDisplay.cpp(297)] Opening libGLESv1_CM_emulation.so
+11-23 19:06:06.718  4820  4836 I GFXSTREAM: [eglDisplay.cpp(297)] Opening libGLESv2_emulation.so
+11-23 19:06:06.722  4820  4836 W libc    : Access denied finding property "vendor.mesa.virtgpu.kumquat"
+11-23 19:06:06.730  4820  4836 W HWUI    : Failed to initialize 101010-2 format, error = EGL_SUCCESS
+11-23 19:06:06.764  4820  4820 I quochuy.parkpin: hiddenapi: Accessing hidden method Landroid/view/ViewGroup;->makeOptionalFitsSystemWindows()V (runtime_flags=0, domain=platform, api=unsupported) from Landroidx/appcompat/widget/ViewUtils; (domain=app, TargetSdkVersion=37) using reflection: allowed
+11-23 19:06:06.812  4820  4820 I HWUI    : Using FreeType backend (prop=Auto)
+11-23 19:06:06.974  4820  4820 D CompatChangeReporter: Compat change id reported: 418924588; UID 10235; state: ENABLED
+11-23 19:06:06.994  4820  4820 W HWUI    : Unknown dataspace 0
+11-23 19:06:07.010  4820  4857 W libc    : Access denied finding property "vendor.mesa.virtgpu.kumquat"
+11-23 19:06:07.018  4820  4820 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.app.Activity$$ExternalSyntheticLambda0@eaedc86
+11-23 19:06:07.019  4820  4858 D CompatChangeReporter: Compat change id reported: 458413887; UID 10235; state: ENABLED
+11-23 19:06:07.019  4820  4820 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): androidx.navigationevent.OnBackInvokedInput$createOnBackAnimationCallback$1@3092574
+11-23 19:06:07.021  4820  4858 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: androidx.navigationevent.OnBackInvokedInput$createOnBackAnimationCallback$1@3092574
+11-23 19:06:07.028  4820  4820 D VRI[MainActivity]: WindowInsets changed: 1080x2400 statusBars:[0,63,0,0] navigationBars:[0,0,0,63] mandatorySystemGestures:[0,63,0,84]
+11-23 19:06:07.075  4820  4820 I Surface : Creating surface for consumer unnamed-4820-0 with slotExpansion=1 for 64 slots
+11-23 19:06:07.077  4820  4820 I Surface : Creating surface for consumer VRI[MainActivity]#0(BLAST Consumer)0 with slotExpansion=1 for 64 slots
+11-23 19:06:07.557  4820  4826 I quochuy.parkpin: Compiler allocated 4522KB to compile void android.view.ViewRootImpl.performTraversals(long)
+11-23 19:06:07.647  4820  4834 I HWUI    : Davey! duration=998ms; Flags=1, FrameTimelineVsyncId=9453, IntendedVsync=166670792184, Vsync=167037458836, InputEventId=0, HandleInputStart=167040359007, AnimationStart=167040362967, PerformTraversalsStart=167040700629, DrawStart=167120767643, FrameDeadline=166687458850, FrameStartTime=167040035051, FrameInterval=16666666, WorkloadTarget=16666666, AnimationTime=167037458836, AnimationCounter=-1, SyncQueued=167144726682, SyncStart=167145112763, IssueDrawCommandsStart=167145347870, SwapBuffers=167581841051, FrameCompleted=167669930534, DequeueBufferDuration=2641, QueueBufferDuration=241586, GpuCompleted=167669831290, SwapBuffersCompleted=167669930534, DisplayPresentTime=0, CommandSubmissionCompleted=167581841051,
+11-23 19:06:07.647  4820  4820 I Choreographer: Skipped 37 frames!  The application may be doing too much work on its main thread.
+11-23 19:06:07.734  4820  4820 D InsetsController: hide(ime())
+11-23 19:06:07.734  4820  4820 I ImeTracker: com.tranquochuy.parkpin:892611dd: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+11-23 19:06:11.093  4820  4820 D AutofillManager: view not autofillable - has multiline input type
+11-23 19:06:11.093  4820  4820 D AutofillManager: view not autofillable - has multiline input type
+11-23 19:06:11.099  4820  4820 D AutofillManager: view not autofillable - has multiline input type
+11-23 19:06:11.100  4820  4820 D AutofillManager: view not autofillable - has multiline input type
+11-23 19:06:12.408  4820  4962 D ProfileInstaller: Installing profile for com.tranquochuy.parkpin
+11-23 19:06:13.336  4820  4820 I AutofillManager: showAutofillDialog() return false due to improve fill dialog
+11-23 19:06:13.336  4820  4820 I ImeTracker: com.tranquochuy.parkpin:7ff55b1f: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser true userId 0 displayId 0
+11-23 19:06:13.338  4820  4820 D InsetsController: show(ime())
+11-23 19:06:13.338  4820  4820 D InsetsController: Setting requestedVisibleTypes to 511 (was 503)
+11-23 19:06:13.351  4820  4820 I AssistStructure: Flattened final assist data: 9856 bytes, containing 1 windows, 65 views
+11-23 19:06:13.943  4820  4820 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ImeBackAnimationController@38a35d0
+11-23 19:06:13.943  4820  4858 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ImeBackAnimationController@38a35d0
+11-23 19:06:13.971  4820  4820 D CompatChangeReporter: Compat change id reported: 417951523; UID 10235; state: ENABLED
+11-23 19:06:14.462  4820  4820 D VRI[MainActivity]: WindowInsets changed: ime:[0,0,0,883]
+11-23 19:06:14.468  4820  4820 W InteractionJankMonitor: Initializing without READ_DEVICE_CONFIG permission. enabled=false, interval=1, missedFrameThreshold=3, frameTimeThreshold=64, package=com.tranquochuy.parkpin
+11-23 19:06:14.669  4820  4820 I ImeTracker: com.tranquochuy.parkpin:7ff55b1f: onShown
+11-23 19:06:17.150  4820  4820 I AutofillManager: showAutofillDialog() return false due to improve fill dialog
+11-23 19:06:17.151  4820  4820 I ImeTracker: com.tranquochuy.parkpin:a27a2f8d: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser true userId 0 displayId 0
+11-23 19:06:17.151  4820  4820 D InsetsController: show(ime())
+11-23 19:06:17.151  4820  4820 I ImeTracker: com.tranquochuy.parkpin:a27a2f8d: onCancelled at PHASE_CLIENT_APPLY_ANIMATION
+11-23 19:06:17.168  4820  4827 I quochuy.parkpin: Background concurrent mark compact GC freed 3642KB AllocSpace bytes, 0(0B) LOS objects, 49% free, 4639KB/9279KB, paused 187us,9.161ms total 23.144ms
+11-23 19:06:17.170  4820  4820 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-23 19:06:17.171  4820  4820 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): androidx.navigationevent.OnBackInvokedInput$createOnBackAnimationCallback$1@3092574
+11-23 19:06:17.171  4820  4858 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: androidx.navigationevent.OnBackInvokedInput$createOnBackAnimationCallback$1@3092574
+11-23 19:06:17.190  4820  4820 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ImeBackAnimationController@38a35d0
+11-23 19:06:17.190  4820  4858 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ImeBackAnimationController@38a35d0
+11-23 19:06:19.769  4820  4820 I AutofillManager: showAutofillDialog() return false due to improve fill dialog
+11-23 19:06:19.770  4820  4820 I ImeTracker: com.tranquochuy.parkpin:6cd75c8e: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser true userId 0 displayId 0
+11-23 19:06:19.770  4820  4820 D InsetsController: show(ime())
+11-23 19:06:19.770  4820  4820 I ImeTracker: com.tranquochuy.parkpin:6cd75c8e: onCancelled at PHASE_CLIENT_APPLY_ANIMATION
+11-23 19:06:19.782  4820  4820 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): androidx.navigationevent.OnBackInvokedInput$createOnBackAnimationCallback$1@3092574
+11-23 19:06:19.782  4820  4820 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-23 19:06:19.782  4820  4858 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: androidx.navigationevent.OnBackInvokedInput$createOnBackAnimationCallback$1@3092574
+11-23 19:06:19.794  4820  4820 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ImeBackAnimationController@38a35d0
+11-23 19:06:19.794  4820  4858 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ImeBackAnimationController@38a35d0
+11-23 19:06:22.360  4820  4820 I AutofillManager: showAutofillDialog() return false due to improve fill dialog
+11-23 19:06:22.360  4820  4820 I ImeTracker: com.tranquochuy.parkpin:8d23a242: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser true userId 0 displayId 0
+11-23 19:06:22.360  4820  4820 D InsetsController: show(ime())
+11-23 19:06:22.360  4820  4820 I ImeTracker: com.tranquochuy.parkpin:8d23a242: onCancelled at PHASE_CLIENT_APPLY_ANIMATION
+11-23 19:06:22.366  4820  4820 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-23 19:06:22.370  4820  4820 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): androidx.navigationevent.OnBackInvokedInput$createOnBackAnimationCallback$1@3092574
+11-23 19:06:22.370  4820  4858 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: androidx.navigationevent.OnBackInvokedInput$createOnBackAnimationCallback$1@3092574
+11-23 19:06:22.384  4820  4820 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ImeBackAnimationController@38a35d0
+11-23 19:06:22.384  4820  4858 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ImeBackAnimationController@38a35d0
+11-23 19:06:29.859  4820  4820 D AutofillManager: view not autofillable - has multiline input type
+11-23 19:06:29.861  4820  4820 I AutofillManager: showAutofillDialog() return false due to improve fill dialog
+11-23 19:06:29.861  4820  4820 I ImeTracker: com.tranquochuy.parkpin:d3822eaf: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser true userId 0 displayId 0
+11-23 19:06:29.861  4820  4820 D InsetsController: show(ime())
+11-23 19:06:29.861  4820  4820 I ImeTracker: com.tranquochuy.parkpin:d3822eaf: onCancelled at PHASE_CLIENT_APPLY_ANIMATION
+11-23 19:06:29.868  4820  4820 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-23 19:06:29.868  4820  4820 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): androidx.navigationevent.OnBackInvokedInput$createOnBackAnimationCallback$1@3092574
+11-23 19:06:29.870  4820  4858 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: androidx.navigationevent.OnBackInvokedInput$createOnBackAnimationCallback$1@3092574
+11-23 19:06:29.898  4820  4820 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ImeBackAnimationController@38a35d0
+11-23 19:06:29.899  4820  4858 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ImeBackAnimationController@38a35d0
+11-23 19:06:30.745  4820  4820 I ImeTracker: com.tranquochuy.parkpin:55a472a0: onRequestHide at ORIGIN_CLIENT reason HIDE_SOFT_INPUT_REQUEST_HIDE_WITH_CONTROL fromUser true userId 0 displayId 0
+11-23 19:06:30.745  4820  4820 D InsetsController: hide(ime())
+11-23 19:06:30.745  4820  4820 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): androidx.navigationevent.OnBackInvokedInput$createOnBackAnimationCallback$1@3092574
+11-23 19:06:30.745  4820  4820 D InsetsController: Setting requestedVisibleTypes to 503 (was 511)
+11-23 19:06:30.745  4820  4858 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: androidx.navigationevent.OnBackInvokedInput$createOnBackAnimationCallback$1@3092574
+11-23 19:06:30.763  4820  4820 D VRI[MainActivity]: WindowInsets changed: ime:null
+11-23 19:06:30.784  4820  4820 I ImeTracker: com.tranquochuy.parkpin:ac1ec2d6: onCancelled at PHASE_CLIENT_ON_CONTROLS_CHANGED
+11-23 19:06:38.863  4820  4820 D AutofillManager: view not autofillable - has multiline input type
+11-23 19:06:44.255  4820  4820 D AutofillManager: view not autofillable - has multiline input type
+11-23 19:06:44.516  4820  4820 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-23 19:06:44.516  4820  4820 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-23 19:06:55.248  4820  4820 D AutofillManager: view not autofillable - has multiline input type
+11-23 19:06:55.254  4820  4820 D AutofillManager: view not autofillable - has multiline input type
+11-23 19:06:55.254  4820  4820 D AutofillManager: view not autofillable - has multiline input type
+11-23 19:06:55.273  4820  4820 I ImeTracker: com.tranquochuy.parkpin:55d35b86: onRequestHide at ORIGIN_CLIENT reason HIDE_CLOSE_CURRENT_SESSION fromUser false userId 0 displayId 0
+11-23 19:06:55.274  4820  4820 D InsetsController: hide(ime())
+11-23 19:06:55.274  4820  4820 I ImeTracker: com.tranquochuy.parkpin:55d35b86: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+11-23 19:06:57.895  5898  5898 I Zygote  : Process 5898 created for com.tranquochuy.parkpin
+11-23 19:06:57.895  5898  5898 I quochuy.parkpin: Late-enabling -Xcheck:jni
+11-23 19:06:57.921  5898  5898 I quochuy.parkpin: Using generational CollectorTypeCMC GC.
+11-23 19:06:57.922  5898  5898 W quochuy.parkpin: Unexpected CPU variant for x86: x86_64.
+11-23 19:06:57.922  5898  5898 W quochuy.parkpin: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, goldmont-without-sha-xsaves, tremont, kabylake, alderlake, pantherlake, default
+11-23 19:06:57.937  5898  5898 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+11-23 19:06:57.986  5898  5898 D CompatChangeReporter: Compat change id reported: 333566037; UID 10235; state: ENABLED
+11-23 19:06:58.138  5898  5898 D nativeloader: Configuring clns-9 for other apk /data/app/~~rO2Ka1hCE0j10vhCmT7DqA==/com.tranquochuy.parkpin-XMAjmJxCgybcg5_Obdpgag==/base.apk. target_sdk_version=37, uses_libraries=, library_path=/data/app/~~rO2Ka1hCE0j10vhCmT7DqA==/com.tranquochuy.parkpin-XMAjmJxCgybcg5_Obdpgag==/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/com.tranquochuy.parkpin
+11-23 19:06:58.150  5898  5898 D ActivityThread: Set OS env TMPDIR to /data/user/0/com.tranquochuy.parkpin/cache
+11-23 19:06:58.152  5898  5898 V GraphicsEnvironment: Currently set values for:
+11-23 19:06:58.152  5898  5898 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+11-23 19:06:58.152  5898  5898 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+11-23 19:06:58.152  5898  5898 V GraphicsEnvironment: com.tranquochuy.parkpin is not listed in per-application setting
+11-23 19:06:58.152  5898  5898 V GraphicsEnvironment: No special selections for ANGLE, returning default driver choice
+11-23 19:06:58.153  5898  5898 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+11-23 19:06:58.161  5898  5898 D CompatChangeReporter: Compat change id reported: 407952621; UID 10235; state: ENABLED
+11-23 19:06:58.161  5898  5898 D CompatChangeReporter: Compat change id reported: 419020719; UID 10235; state: ENABLED
+11-23 19:06:58.207  5898  5898 D quochuy.parkpin: Initializing ProtoLog
+11-23 19:06:58.207  5898  5898 D ProtoLog: Initializing ProtoLog DataSource
+11-23 19:06:58.208  5898  5913 I DisplayManager: Choreographer implicitly registered for the refresh rate.
+11-23 19:06:58.256  5898  5898 D AppCompatDelegate: Checking for metadata for AppLocalesMetadataHolderService : Service not found
+11-23 19:06:58.281  5898  5913 I GFXSTREAM: [eglDisplay.cpp(297)] Opening libGLESv1_CM_emulation.so
+11-23 19:06:58.283  5898  5913 I GFXSTREAM: [eglDisplay.cpp(297)] Opening libGLESv2_emulation.so
+11-23 19:06:58.286  5898  5913 W libc    : Access denied finding property "vendor.mesa.virtgpu.kumquat"
+11-23 19:06:58.293  5898  5913 W HWUI    : Failed to initialize 101010-2 format, error = EGL_SUCCESS
+11-23 19:06:58.313  5898  5898 I quochuy.parkpin: hiddenapi: Accessing hidden method Landroid/view/ViewGroup;->makeOptionalFitsSystemWindows()V (runtime_flags=0, domain=platform, api=unsupported) from Landroidx/appcompat/widget/ViewUtils; (domain=app, TargetSdkVersion=37) using reflection: allowed
+11-23 19:06:58.348  5898  5898 I HWUI    : Using FreeType backend (prop=Auto)
+11-23 19:06:58.512  5898  5898 D CompatChangeReporter: Compat change id reported: 418924588; UID 10235; state: ENABLED
+11-23 19:06:58.533  5898  5898 W HWUI    : Unknown dataspace 0
+11-23 19:06:58.547  5898  5920 W libc    : Access denied finding property "vendor.mesa.virtgpu.kumquat"
+11-23 19:06:58.553  5898  5898 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.app.Activity$$ExternalSyntheticLambda0@d48e947
+11-23 19:06:58.555  5898  5921 D CompatChangeReporter: Compat change id reported: 458413887; UID 10235; state: ENABLED
+11-23 19:06:58.555  5898  5898 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): androidx.navigationevent.OnBackInvokedInput$createOnBackAnimationCallback$1@67a9d
+11-23 19:06:58.555  5898  5921 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: androidx.navigationevent.OnBackInvokedInput$createOnBackAnimationCallback$1@67a9d
+11-23 19:06:58.556  5898  5921 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: androidx.navigationevent.OnBackInvokedInput$createOnBackAnimationCallback$1@67a9d
+11-23 19:06:58.565  5898  5898 D VRI[MainActivity]: WindowInsets changed: 1080x2400 statusBars:[0,63,0,0] navigationBars:[0,0,0,63] mandatorySystemGestures:[0,63,0,84]
+11-23 19:06:58.586  5898  5898 I Surface : Creating surface for consumer unnamed-5898-0 with slotExpansion=1 for 64 slots
+11-23 19:06:58.587  5898  5898 I Surface : Creating surface for consumer VRI[MainActivity]#0(BLAST Consumer)0 with slotExpansion=1 for 64 slots
+11-23 19:06:59.157  5898  5898 I Choreographer: Skipped 35 frames!  The application may be doing too much work on its main thread.
+11-23 19:06:59.210  5898  5903 I quochuy.parkpin: Compiler allocated 4522KB to compile void android.view.ViewRootImpl.performTraversals(long)
+11-23 19:06:59.393  5898  5898 D InsetsController: hide(ime())
+11-23 19:06:59.393  5898  5898 I ImeTracker: com.tranquochuy.parkpin:a702d0d7: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+11-23 19:07:03.491  5898  5998 D ProfileInstaller: Installing profile for com.tranquochuy.parkpin
+11-23 19:07:09.169  5898  5898 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.app.Dialog$$ExternalSyntheticLambda2@14dd529
+11-23 19:07:09.170  5898  5921 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.app.Dialog$$ExternalSyntheticLambda2@14dd529
+11-23 19:07:09.177  5898  5898 I Surface : Creating surface for consumer unnamed-5898-1 with slotExpansion=1 for 64 slots
+11-23 19:07:09.177  5898  5898 I Surface : Creating surface for consumer VRI[MainActivity]#1(BLAST Consumer)1 with slotExpansion=1 for 64 slots
+11-23 19:07:11.629  5898  5898 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): null
+11-23 19:07:11.635  5898  5913 D HWUI    : endAllActiveAnimators on 0x7ab9e4a59eb0 (RippleDrawable) with handle 0x7ab984a68000
+11-23 19:07:11.669  5898  5898 D InsetsController: hide(ime())
+11-23 19:07:11.669  5898  5898 I ImeTracker: com.tranquochuy.parkpin:4363cbea: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN

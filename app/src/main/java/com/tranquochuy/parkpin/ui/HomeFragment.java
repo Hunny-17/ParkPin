@@ -14,6 +14,7 @@ import com.tranquochuy.parkpin.R;
 import com.tranquochuy.parkpin.data.ParkingRepository;
 import com.tranquochuy.parkpin.data.ParkingSpot;
 import com.tranquochuy.parkpin.navigation.MapsNavigation;
+import com.tranquochuy.parkpin.photos.PhotoViews;
 import java.text.DateFormat;
 import java.util.Date;
 
@@ -59,6 +60,9 @@ public class HomeFragment extends Fragment {
                 if (!isAdded() || getView() != view) return;
                 activeId = spot == null ? -1L : spot.id;
                 activeSpot = spot;
+                PhotoViews.bind(view.findViewById(R.id.home_photo),view.findViewById(R.id.home_photo_status),
+                        spot==null?null:spot.photoPath,"Ảnh chỗ đỗ xe hiện tại");
+                if(spot==null||spot.photoPath==null)view.findViewById(R.id.home_photo_status).setVisibility(View.GONE);
                 TextView name = view.findViewById(R.id.home_spot_name);
                 TextView details = view.findViewById(R.id.home_spot_details);
                 TextView time = view.findViewById(R.id.home_spot_time);

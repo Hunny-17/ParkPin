@@ -1,0 +1,13 @@
+{
+  "settings": {
+    "system:accelerometer_rotation": "1",
+    "system:user_rotation": "0",
+    "secure:show_ime_with_hard_keyboard": "0"
+  },
+  "maps_enabled_state": "original default",
+  "maps_and_parkpin_location_permissions": "revoked and user flags cleared",
+  "source_qa_fixtures_removed": true,
+  "master_location": "true",
+  "original_avd_untouched": true,
+  "qa_emulator_stopped": true
+}

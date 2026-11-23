@@ -1,0 +1,458 @@
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\drawable\bg_map_preview.xml:2: Warning: Limit vector icons sizes to 200×200 to keep icon drawing fast; see https://developer.android.com/studio/write/vector-asset-studio#when for more [VectorRaster]
+    android:width="340dp" android:height="194dp"
+                   ~~~~~
+
+   Explanation for issues of type "VectorRaster":
+   Vector icons require API 21 or API 24 depending on used features, but when
+   minSdkVersion is less than 21 or 24 and Android Gradle plugin 1.4 or higher
+   is used, a vector drawable placed in the drawable folder is automatically
+   moved to drawable-anydpi-v21 or drawable-anydpi-v24 and bitmap images are
+   generated for different screen resolutions for backwards compatibility.
+
+   However, there are some limitations to this raster image generation, and
+   this lint check flags elements and attributes that are not fully supported.
+   You should manually check whether the generated output is acceptable for
+   those older devices.
+
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\build.gradle:25: Warning: A newer version of androidx.fragment:fragment than 1.8.9 is available: 1.9.1 [GradleDependency]
+    implementation 'androidx.fragment:fragment:1.8.9'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\build.gradle:33: Warning: A newer version of androidx.test:core than 1.6.1 is available: 1.7.0 [GradleDependency]
+    androidTestImplementation 'androidx.test:core:1.6.1'
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\build.gradle:34: Warning: A newer version of androidx.test.ext:junit than 1.2.1 is available: 1.3.0 [GradleDependency]
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\build.gradle:35: Warning: A newer version of androidx.test:runner than 1.6.2 is available: 1.7.0 [GradleDependency]
+    androidTestImplementation 'androidx.test:runner:1.6.2'
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "GradleDependency":
+   This detector looks for usages of libraries where the version you are using
+   is not the current stable release. Using older versions is fine, and there
+   are cases where you deliberately want to stick with an older version.
+   However, you may simply not be aware that a more recent version is
+   available, and that is what this lint check helps find.
+
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\AndroidManifest.xml:6: Warning: The attribute android:allowBackup is deprecated from Android 12 and higher and may be removed in future versions. Consider adding the attribute android:dataExtractionRules specifying an @xml resource which configures cloud backups and device transfers on Android 12 and higher. [DataExtractionRules]
+        android:allowBackup="false"
+                             ~~~~~
+
+   Explanation for issues of type "DataExtractionRules":
+   Before Android 12, the attributes android:allowBackup and
+   android:fullBackupContent were used to configure all forms of backup,
+   including cloud backups, device-to-device transfers and adb backup.
+
+   In Android 12 and higher, these attributes have been deprecated and will
+   only apply to cloud backups. You should instead use the attribute
+   android:dataExtractionRules, specifying an @xml resource that configures
+   which files to back up, for cloud backups and for device-to-device
+   transfers, separately. If your minSdkVersion supports older versions,
+   you'll still want to specify an android:fullBackupContent resource if the
+   default behavior is not right for your app.
+
+   https://developer.android.com/about/versions/12/backup-restore#xml-changes
+   https://goo.gle/DataExtractionRules
+
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\layout\screen_save_parking.xml:37: Warning: Set android:baselineAligned="false" on this element for better performance [DisableBaselineAlignment]
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="12dp">
+         ~~~~~~~~~~~~
+
+   Explanation for issues of type "DisableBaselineAlignment":
+   When a LinearLayout is used to distribute the space proportionally between
+   nested layouts, the baseline alignment property should be turned off to
+   make the layout computation faster.
+
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\layout\activity_main.xml:8: Warning: Possible overdraw: Root element paints background @color/pp_bg with a theme that also paints a background (inferred theme is @style/Theme.ParkPin) [Overdraw]
+    android:background="@color/pp_bg"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\layout\screen_history.xml:5: Warning: Possible overdraw: Root element paints background @color/pp_bg with a theme that also paints a background (inferred theme is @style/Theme.ParkPin) [Overdraw]
+    android:background="@color/pp_bg" android:fillViewport="true"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\layout\screen_home.xml:7: Warning: Possible overdraw: Root element paints background @color/pp_bg with a theme that also paints a background (inferred theme is @style/Theme.ParkPin) [Overdraw]
+        android:background="@color/pp_bg"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\layout\screen_save_parking.xml:6: Warning: Possible overdraw: Root element paints background @color/pp_bg with a theme that also paints a background (inferred theme is @style/Theme.ParkPin) [Overdraw]
+    android:background="@color/pp_bg" android:fillViewport="true" android:scrollbars="none"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "Overdraw":
+   If you set a background drawable on a root view, then you should use a
+   custom theme where the theme background is null. Otherwise, the theme
+   background will be painted first, only to have your custom background
+   completely cover it; this is called "overdraw".
+
+   NOTE: This detector relies on figuring out which layouts are associated
+   with which activities based on scanning the Java code, and it's currently
+   doing that using an inexact pattern matching algorithm. Therefore, it can
+   incorrectly conclude which activity the layout is associated with and then
+   wrongly complain that a background-theme is hidden.
+
+   If you want your custom background on multiple pages, then you should
+   consider making a custom theme with your custom background and just using
+   that theme instead of a root element background.
+
+   Of course it's possible that your custom drawable is translucent and you
+   want it to be mixed with the background. However, you will get better
+   performance if you pre-mix the background with your drawable and use that
+   resulting image or color as a custom theme background instead.
+
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\values\colors.xml:12: Warning: The resource R.color.pp_yellow appears to be unused [UnusedResources]
+    <color name="pp_yellow">#FFF1CC</color>
+           ~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\values\colors.xml:13: Warning: The resource R.color.pp_yellow_ink appears to be unused [UnusedResources]
+    <color name="pp_yellow_ink">#94630A</color>
+           ~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\drawable\ic_camera.xml:1: Warning: The resource R.drawable.ic_camera appears to be unused [UnusedResources]
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+^
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\drawable\ic_check.xml:1: Warning: The resource R.drawable.ic_check appears to be unused [UnusedResources]
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+^
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\drawable\ic_clock.xml:1: Warning: The resource R.drawable.ic_clock appears to be unused [UnusedResources]
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+^
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\drawable\ic_filter.xml:1: Warning: The resource R.drawable.ic_filter appears to be unused [UnusedResources]
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+^
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\drawable\ic_image.xml:1: Warning: The resource R.drawable.ic_image appears to be unused [UnusedResources]
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+^
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\drawable\ic_more.xml:1: Warning: The resource R.drawable.ic_more appears to be unused [UnusedResources]
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+^
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\values\strings.xml:7: Warning: The resource R.string.screen_home_preview appears to be unused [UnusedResources]
+    <string name="screen_home_preview">Trang chủ ParkPin</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\values\strings.xml:8: Warning: The resource R.string.save_location appears to be unused [UnusedResources]
+    <string name="save_location">Lưu vị trí đỗ xe</string>
+            ~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\values\strings.xml:9: Warning: The resource R.string.find_car appears to be unused [UnusedResources]
+    <string name="find_car">Tìm xe</string>
+            ~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\values\strings.xml:10: Warning: The resource R.string.parking_history appears to be unused [UnusedResources]
+    <string name="parking_history">Lịch sử đỗ xe</string>
+            ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\values\strings.xml:11: Warning: The resource R.string.sample_notice appears to be unused [UnusedResources]
+    <string name="sample_notice">DỮ LIỆU MINH HOẠ</string>
+            ~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\values\strings.xml:14: Warning: The resource R.string.parking_photo_description appears to be unused [UnusedResources]
+    <string name="parking_photo_description">Khu vực ảnh mẫu</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\values\styles.xml:22: Warning: The resource R.style.ParkPinTextHeading appears to be unused [UnusedResources]
+    <style name="ParkPinTextHeading">
+           ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UnusedResources":
+   Unused resources make applications larger and slow down builds.
+
+
+   The unused resource check can ignore tests. If you want to include
+   resources that are only referenced from tests, consider packaging them in a
+   test source set instead.
+
+   You can include test sources in the unused resource check by setting the
+   system property lint.unused-resources.include-tests=true, and to exclude
+   them (usually for performance reasons), use
+   lint.unused-resources.exclude-tests=true.
+
+   Available options:
+
+   **skip-libraries** (default is true):
+   Whether the unused resource check should skip reporting unused resources in libraries.
+
+   Many libraries will declare resources that are part of the library surface; other modules depending on the library will also reference the resources. To avoid reporting all these resources as unused (in the context of a library), the unused resource check normally skips reporting unused resources in libraries. Instead, run the unused resource check on the consuming app module (along with `checkDependencies=true`).
+
+   However, there are cases where you want to check that all the resources declared in a library are used; in that case, you can disable the skip option.
+
+   To configure this option, use a `lint.xml` file with an <option> like this:
+
+   ```xml
+   <lint>
+       <issue id="UnusedResources">
+           <option name="skip-libraries" value="true" />
+       </issue>
+   </lint>
+   ```
+
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\layout\item_parking_spot.xml:21: Warning: Avoid using sizes smaller than 11sp: 10sp [SmallSp]
+                android:layout_height="wrap_content" android:textSize="10sp"
+                                                     ~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\layout\item_parking_spot.xml:46: Warning: Avoid using sizes smaller than 11sp: 10sp [SmallSp]
+                android:minHeight="44dp" android:text="Đặt hiện tại" android:textSize="10sp"/>
+                                                                     ~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\layout\screen_home.xml:28: Warning: Avoid using sizes smaller than 11sp: 9sp [SmallSp]
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="YOUR PARKING COMPANION" android:letterSpacing="0.13" android:textSize="9sp" android:textColor="@color/pp_ink_muted"/>
+                                                                                                                                                                          ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\layout\screen_home.xml:44: Warning: Avoid using sizes smaller than 11sp: 10sp [SmallSp]
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="top|start" android:layout_margin="14dp" android:background="@drawable/bg_white_tag" android:paddingStart="11dp" android:paddingEnd="11dp" android:paddingTop="7dp" android:paddingBottom="7dp" android:text="●  VỊ TRÍ MINH HOẠ" android:textColor="@color/pp_green_dark" android:textSize="10sp" android:textStyle="bold" />
+                                                                                                                                                                                                                                                                                                                                                                                                         ~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\layout\screen_home.xml:45: Warning: Avoid using sizes smaller than 11sp: 10sp [SmallSp]
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="bottom|end" android:layout_margin="12dp" android:background="@drawable/bg_white_tag" android:padding="9dp" android:text="Không phải bản đồ thực" android:textColor="@color/pp_ink_muted" android:textSize="10sp" />
+                                                                                                                                                                                                                                                                                                                        ~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\layout\screen_home.xml:52: Warning: Avoid using sizes smaller than 11sp: 10sp [SmallSp]
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/bg_pill_gray" android:paddingStart="9dp" android:paddingEnd="9dp" android:paddingTop="5dp" android:paddingBottom="5dp" android:text="Lưu trên máy" android:textSize="10sp" android:textColor="@color/pp_ink_muted" />
+                                                                                                                                                                                                                                                                                    ~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\layout\screen_home.xml:66: Warning: Avoid using sizes smaller than 11sp: 10sp [SmallSp]
+                            android:textSize="10sp" android:textColor="@color/pp_ink_muted"/>
+                            ~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\layout\screen_save_parking.xml:28: Warning: Avoid using sizes smaller than 11sp: 10sp [SmallSp]
+                    android:layout_marginStart="6dp" android:text="LẤY GPS" android:textSize="10sp"
+                                                                            ~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "SmallSp":
+   Avoid using sizes smaller than 11sp.
+
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\java\com\tranquochuy\parkpin\ui\HistoryFragment.java:55: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+                count.setText(items.size() + " VỊ TRÍ ĐÃ LƯU");
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\java\com\tranquochuy\parkpin\ui\HistoryFragment.java:55: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                count.setText(items.size() + " VỊ TRÍ ĐÃ LƯU");
+                                             ~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\java\com\tranquochuy\parkpin\ui\HistoryFragment.java:62: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                ((TextView) root.findViewById(R.id.history_count)).setText("KHÔNG TẢI ĐƯỢC LỊCH SỬ");
+                                                                           ~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\java\com\tranquochuy\parkpin\ui\HistoryFragment.java:74: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+                "Tầng " + dash(spot.floor) + " · Khu " + dash(spot.zone) + " · Cột " + dash(spot.columnLabel));
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\java\com\tranquochuy\parkpin\ui\HistoryFragment.java:74: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                "Tầng " + dash(spot.floor) + " · Khu " + dash(spot.zone) + " · Cột " + dash(spot.columnLabel));
+                ~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\java\com\tranquochuy\parkpin\ui\HistoryFragment.java:74: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                "Tầng " + dash(spot.floor) + " · Khu " + dash(spot.zone) + " · Cột " + dash(spot.columnLabel));
+                                             ~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\java\com\tranquochuy\parkpin\ui\HomeFragment.java:71: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                    name.setText("Chưa lưu vị trí nào");
+                                 ~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\java\com\tranquochuy\parkpin\ui\HomeFragment.java:72: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                    details.setText("Nhấn LƯU VỊ TRÍ ĐỖ XE để bắt đầu");
+                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\java\com\tranquochuy\parkpin\ui\HomeFragment.java:73: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                    time.setText("Dữ liệu chỉ lưu trên thiết bị");
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\java\com\tranquochuy\parkpin\ui\HomeFragment.java:74: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                    gps.setText("Chưa có GPS");
+                                ~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\java\com\tranquochuy\parkpin\ui\HomeFragment.java:77: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+                    details.setText("Tầng " + dash(spot.floor) + " · Khu " + dash(spot.zone)
+                                    ^
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\java\com\tranquochuy\parkpin\ui\HomeFragment.java:77: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                    details.setText("Tầng " + dash(spot.floor) + " · Khu " + dash(spot.zone)
+                                    ~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\java\com\tranquochuy\parkpin\ui\HomeFragment.java:77: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                    details.setText("Tầng " + dash(spot.floor) + " · Khu " + dash(spot.zone)
+                                                                 ~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\java\com\tranquochuy\parkpin\ui\HomeFragment.java:86: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                    ((TextView) view.findViewById(R.id.home_spot_name)).setText("Không tải được dữ liệu");
+                                                                                ~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\java\com\tranquochuy\parkpin\photos\PhotoViews.java:34: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        if(path==null){status.setText("Chưa có ảnh");status.setVisibility(View.VISIBLE);return;}
+                                      ~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\java\com\tranquochuy\parkpin\photos\PhotoViews.java:35: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        status.setText("Đang tải ảnh...");status.setVisibility(View.VISIBLE);
+                       ~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\java\com\tranquochuy\parkpin\photos\PhotoViews.java:42: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                if(bitmap==null){status.setText("Không tải được ảnh. Bạn có thể chọn lại khi chỉnh sửa.");}
+                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\java\com\tranquochuy\parkpin\ui\SaveParkingFragment.java:63: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                        "Không được cấp quyền vị trí. Bạn vẫn có thể lưu thủ công.");
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\java\com\tranquochuy\parkpin\ui\SaveParkingFragment.java:144: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            save.setText("CẬP NHẬT VỊ TRÍ");
+                         ~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\java\com\tranquochuy\parkpin\ui\SaveParkingFragment.java:147: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                status.setText("Đang tải dữ liệu đã lưu...");
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\java\com\tranquochuy\parkpin\ui\SaveParkingFragment.java:152: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                            status.setText("Vị trí không còn tồn tại.");
+                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\java\com\tranquochuy\parkpin\ui\SaveParkingFragment.java:168: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                        status.setText("Đang sửa vị trí đã lưu trên thiết bị");
+                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\java\com\tranquochuy\parkpin\ui\SaveParkingFragment.java:172: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+                        if (getView() == view) status.setText("Không tải được vị trí: " + error.getMessage());
+                                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\java\com\tranquochuy\parkpin\ui\SaveParkingFragment.java:172: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                        if (getView() == view) status.setText("Không tải được vị trí: " + error.getMessage());
+                                                              ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\java\com\tranquochuy\parkpin\ui\SaveParkingFragment.java:189: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            status.setText("Đang lưu trên thiết bị...");
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\java\com\tranquochuy\parkpin\ui\SaveParkingFragment.java:195: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                        status.setText("Vị trí không còn tồn tại.");
+                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\java\com\tranquochuy\parkpin\ui\SaveParkingFragment.java:204: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+                    status.setText("Lưu thất bại: " + error.getMessage());
+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\java\com\tranquochuy\parkpin\ui\SaveParkingFragment.java:204: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                    status.setText("Lưu thất bại: " + error.getMessage());
+                                   ~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\java\com\tranquochuy\parkpin\ui\SaveParkingFragment.java:221: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+                        status.setText("Lưu thất bại: " + error.getMessage());
+                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\java\com\tranquochuy\parkpin\ui\SaveParkingFragment.java:221: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                        status.setText("Lưu thất bại: " + error.getMessage());
+                                       ~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\java\com\tranquochuy\parkpin\ui\SaveParkingFragment.java:241: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        gpsStatus.setText("Đang lấy vị trí thiết bị... Có thể tiếp tục nhập thủ công.");
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\java\com\tranquochuy\parkpin\ui\SaveParkingFragment.java:259: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                            gpsStatus.setText("Chưa lấy được GPS. Bạn vẫn có thể lưu vị trí thủ công.");
+                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\java\com\tranquochuy\parkpin\ui\SaveParkingFragment.java:272: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                        gpsStatus.setText("Không thể lấy GPS. Hãy kiểm tra định vị hoặc lưu thủ công.");
+                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\java\com\tranquochuy\parkpin\ui\SaveParkingFragment.java:277: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            gpsStatus.setText("Không thể truy cập định vị. Vẫn có thể lưu thủ công.");
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\java\com\tranquochuy\parkpin\ui\SaveParkingFragment.java:284: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            status.setText("Chưa lấy GPS · Có thể lưu vị trí thủ công");
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "SetTextI18n":
+   When calling TextView#setText
+   * Never call Number#toString() to format numbers; it will not handle
+   fraction separators and locale-specific digits properly. Consider using
+   String#format with proper format specifications (%d or %f) instead.
+   * Do not pass a string literal (e.g. "Hello") to display text. Hardcoded
+   text can not be properly translated to other languages. Consider using
+   Android resource strings instead.
+   * Do not build messages by concatenating text chunks. Such messages can not
+   be properly translated.
+
+   https://developer.android.com/guide/topics/resources/localization.html
+
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\layout\item_parking_spot.xml:15: Warning: Hardcoded string "Vị trí đã lưu", should use @string resource [HardcodedText]
+                android:contentDescription="Vị trí đã lưu"/>
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\layout\item_parking_spot.xml:33: Warning: Hardcoded string "Ảnh vị trí đỗ xe đã lưu", should use @string resource [HardcodedText]
+        <ImageView android:id="@+id/item_photo" android:layout_width="match_parent" android:layout_height="140dp" android:layout_marginTop="10dp" android:scaleType="fitCenter" android:visibility="gone" android:contentDescription="Ảnh vị trí đỗ xe đã lưu"/>
+                                                                                                                                                                                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\layout\item_parking_spot.xml:41: Warning: Hardcoded string "Sửa", should use @string resource [HardcodedText]
+                android:text="Sửa" android:textSize="11sp"/>
+                ~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\layout\item_parking_spot.xml:46: Warning: Hardcoded string "Đặt hiện tại", should use @string resource [HardcodedText]
+                android:minHeight="44dp" android:text="Đặt hiện tại" android:textSize="10sp"/>
+                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\layout\item_parking_spot.xml:51: Warning: Hardcoded string "Xóa", should use @string resource [HardcodedText]
+                android:minHeight="44dp" android:text="Xóa" android:textSize="11sp"/>
+                                         ~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\layout\item_parking_spot.xml:57: Warning: Hardcoded string "Chỉ đường đến đây", should use @string resource [HardcodedText]
+            android:text="Chỉ đường đến đây" android:textSize="11sp"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\layout\screen_history.xml:10: Warning: Hardcoded string "LỊCH SỬ", should use @string resource [HardcodedText]
+            android:text="LỊCH SỬ" android:letterSpacing="0.18"
+            ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\layout\screen_history.xml:13: Warning: Hardcoded string "Những nơi bạn đã đỗ", should use @string resource [HardcodedText]
+            android:layout_marginTop="8dp" android:text="Những nơi bạn đã đỗ"
+                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\layout\screen_history.xml:16: Warning: Hardcoded string "Xem lại và quản lý các vị trí bạn đã lưu trên máy.", should use @string resource [HardcodedText]
+            android:layout_marginTop="7dp" android:text="Xem lại và quản lý các vị trí bạn đã lưu trên máy."
+                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\layout\screen_history.xml:22: Warning: Hardcoded string "ĐANG TẢI...", should use @string resource [HardcodedText]
+            android:paddingBottom="8dp" android:text="ĐANG TẢI..."
+                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\layout\screen_history.xml:26: Warning: Hardcoded string "Chưa có vị trí đỗ xe nào. Hãy mở Lưu xe để thêm vị trí đầu tiên.", should use @string resource [HardcodedText]
+            android:text="Chưa có vị trí đỗ xe nào. Hãy mở Lưu xe để thêm vị trí đầu tiên."
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\layout\screen_home.xml:27: Warning: Hardcoded string "ParkPin", should use @string resource [HardcodedText]
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ParkPin" android:textSize="21sp" android:textStyle="bold" android:textColor="@color/pp_ink"/>
+                                                                                                       ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\layout\screen_home.xml:28: Warning: Hardcoded string "YOUR PARKING COMPANION", should use @string resource [HardcodedText]
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="YOUR PARKING COMPANION" android:letterSpacing="0.13" android:textSize="9sp" android:textColor="@color/pp_ink_muted"/>
+                                                                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\layout\screen_home.xml:30: Warning: Hardcoded string "P", should use @string resource [HardcodedText]
+                <TextView android:layout_width="42dp" android:layout_height="42dp" android:gravity="center" android:text="P" android:textStyle="bold" android:textSize="17sp" android:textColor="@color/pp_green" android:background="@drawable/bg_logo_soft"/>
+                                                                                                            ~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\layout\screen_home.xml:34: Warning: Hardcoded string "Xin chào! 👋", should use @string resource [HardcodedText]
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="28dp" android:text="Xin chào! 👋" android:textSize="15sp" android:textColor="@color/pp_ink_muted"/>
+                                                                                                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\layout\screen_home.xml:35: Warning: Hardcoded string "Không bao giờ quên
+chỗ đỗ xe nữa.", should use @string resource [HardcodedText]
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="7dp" android:text="Không bao giờ quên&#10;chỗ đỗ xe nữa." android:lineSpacingExtra="3dp" android:textSize="29sp" android:textStyle="bold" android:textColor="@color/pp_ink"/>
+                                                                                                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\layout\screen_home.xml:36: Warning: Hardcoded string "Ghim chỗ đỗ, ghi chú khu vực và trở lại dễ dàng.", should use @string resource [HardcodedText]
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="7dp" android:text="Ghim chỗ đỗ, ghi chú khu vực và trở lại dễ dàng." android:textSize="13sp" android:textColor="@color/pp_ink_muted"/>
+                                                                                                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\layout\screen_home.xml:44: Warning: Hardcoded string "●  VỊ TRÍ MINH HOẠ", should use @string resource [HardcodedText]
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="top|start" android:layout_margin="14dp" android:background="@drawable/bg_white_tag" android:paddingStart="11dp" android:paddingEnd="11dp" android:paddingTop="7dp" android:paddingBottom="7dp" android:text="●  VỊ TRÍ MINH HOẠ" android:textColor="@color/pp_green_dark" android:textSize="10sp" android:textStyle="bold" />
+                                                                                                                                                                                                                                                                                                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\layout\screen_home.xml:45: Warning: Hardcoded string "Không phải bản đồ thực", should use @string resource [HardcodedText]
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="bottom|end" android:layout_margin="12dp" android:background="@drawable/bg_white_tag" android:padding="9dp" android:text="Không phải bản đồ thực" android:textColor="@color/pp_ink_muted" android:textSize="10sp" />
+                                                                                                                                                                                                                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\layout\screen_home.xml:51: Warning: Hardcoded string "Vị trí đỗ hiện tại", should use @string resource [HardcodedText]
+                <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="Vị trí đỗ hiện tại" android:textStyle="bold" android:textSize="18sp" android:textColor="@color/pp_ink" />
+                                                                                                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\layout\screen_home.xml:52: Warning: Hardcoded string "Lưu trên máy", should use @string resource [HardcodedText]
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/bg_pill_gray" android:paddingStart="9dp" android:paddingEnd="9dp" android:paddingTop="5dp" android:paddingBottom="5dp" android:text="Lưu trên máy" android:textSize="10sp" android:textColor="@color/pp_ink_muted" />
+                                                                                                                                                                                                                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\layout\screen_home.xml:57: Warning: Hardcoded string "Xe đã đỗ", should use @string resource [HardcodedText]
+                        <ImageView android:layout_width="25dp" android:layout_height="25dp" android:layout_gravity="center" android:src="@drawable/ic_car" app:tint="@color/pp_green" android:contentDescription="Xe đã đỗ"/>
+                                                                                                                                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\layout\screen_home.xml:60: Warning: Hardcoded string "Đang tải dữ liệu...", should use @string resource [HardcodedText]
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/home_spot_name" android:text="Đang tải dữ liệu..." android:textSize="15sp" android:textStyle="bold" android:textColor="@color/pp_ink"/>
+                                                                                                                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\layout\screen_home.xml:65: Warning: Hardcoded string "Đang kiểm tra GPS...", should use @string resource [HardcodedText]
+                            android:layout_marginTop="4dp" android:text="Đang kiểm tra GPS..."
+                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\layout\screen_home.xml:68: Warning: Hardcoded string "Chạm vào thẻ để chỉnh sửa", should use @string resource [HardcodedText]
+                    <ImageView android:layout_width="21dp" android:layout_height="21dp" android:src="@drawable/ic_arrow" app:tint="@color/pp_ink_muted" android:contentDescription="Chạm vào thẻ để chỉnh sửa" />
+                                                                                                                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\layout\screen_home.xml:72: Warning: Hardcoded string "Ảnh vị trí đỗ xe hiện tại", should use @string resource [HardcodedText]
+            <ImageView android:id="@+id/home_photo" android:layout_width="match_parent" android:layout_height="180dp" android:layout_marginTop="12dp" android:scaleType="fitCenter" android:visibility="gone" android:contentDescription="Ảnh vị trí đỗ xe hiện tại"/>
+                                                                                                                                                                                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\layout\screen_home.xml:81: Warning: Hardcoded string "+  LƯU VỊ TRÍ ĐỖ XE", should use @string resource [HardcodedText]
+                android:text="+  LƯU VỊ TRÍ ĐỖ XE"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\layout\screen_home.xml:83: Warning: Hardcoded string "Mở màn hình lưu vị trí đỗ xe", should use @string resource [HardcodedText]
+                android:contentDescription="Mở màn hình lưu vị trí đỗ xe" />
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\layout\screen_home.xml:85: Warning: Hardcoded string "Thao tác nhanh", should use @string resource [HardcodedText]
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="Thao tác nhanh" android:textColor="@color/pp_ink" android:textStyle="bold" android:textSize="18sp" />
+                                                                                                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\layout\screen_home.xml:87: Warning: Hardcoded string "Mở chỉ đường tới tọa độ GPS đã lưu", should use @string resource [HardcodedText]
+                <com.google.android.material.card.MaterialCardView android:id="@+id/card_find_car" android:contentDescription="Mở chỉ đường tới tọa độ GPS đã lưu" style="@style/ParkPinCard" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginEnd="6dp">
+                                                                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\layout\screen_home.xml:89: Warning: Hardcoded string "Tìm xe", should use @string resource [HardcodedText]
+                        <ImageView android:layout_width="28dp" android:layout_height="28dp" android:src="@drawable/ic_navigation" app:tint="@color/pp_green" android:contentDescription="Tìm xe"/>
+                                                                                                                                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\layout\screen_home.xml:90: Warning: Hardcoded string "Tìm xe", should use @string resource [HardcodedText]
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="11dp" android:text="Tìm xe" android:textSize="14sp" android:textStyle="bold" android:textColor="@color/pp_ink"/>
+                                                                                                                                           ~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\layout\screen_home.xml:91: Warning: Hardcoded string "Mở chỉ đường", should use @string resource [HardcodedText]
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Mở chỉ đường" android:textSize="11sp" android:textColor="@color/pp_ink_muted"/>
+                                                                                                                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\layout\screen_home.xml:94: Warning: Hardcoded string "Mở lịch sử đỗ xe", should use @string resource [HardcodedText]
+                <com.google.android.material.card.MaterialCardView android:id="@+id/card_open_history" android:contentDescription="Mở lịch sử đỗ xe" style="@style/ParkPinCard" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="6dp">
+                                                                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\layout\screen_home.xml:96: Warning: Hardcoded string "Lịch sử", should use @string resource [HardcodedText]
+                        <ImageView android:layout_width="28dp" android:layout_height="28dp" android:src="@drawable/ic_history" app:tint="@color/pp_green" android:contentDescription="Lịch sử"/>
+                                                                                                                                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\layout\screen_home.xml:97: Warning: Hardcoded string "Lịch sử", should use @string resource [HardcodedText]
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="11dp" android:text="Lịch sử" android:textSize="14sp" android:textStyle="bold" android:textColor="@color/pp_ink"/>
+                                                                                                                                           ~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\layout\screen_home.xml:98: Warning: Hardcoded string "Các lần đã đỗ", should use @string resource [HardcodedText]
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Các lần đã đỗ" android:textSize="11sp" android:textColor="@color/pp_ink_muted"/>
+                                                                                                                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\layout\screen_home.xml:105: Warning: Hardcoded string "Mẹo nhỏ", should use @string resource [HardcodedText]
+                <ImageView android:layout_width="22dp" android:layout_height="22dp" android:src="@drawable/ic_info" app:tint="@color/pp_green_dark" android:contentDescription="Mẹo nhỏ"/>
+                                                                                                                                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\ASUS\Documents\ChatGPT\ParkPin\app\src\main\res\layout\screen_home.xml:106: Warning: Hardcoded string "Mẹo: Ở tầng hầm, hãy ghi lại tầng, khu và cột đỗ xe vì GPS có thể yếu.", should use @string resource [HardcodedText]
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="10dp" android:text="Mẹo: Ở tầng hầm, hãy ghi lại tầng, khu và cột đỗ xe vì GPS có thể yếu." android:textSize="12sp" android:lineSpacingExtra="2dp" android:textColor="@color/pp_green_dark"/>
+                                                                                                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "HardcodedText":
+   Hardcoding text attributes directly in layout files is bad for several
+   reasons:
+
+   * When creating configuration variations (for example for landscape or
+   portrait) you have to repeat the actual text (and keep it up to date when
+   making changes)
+
+   * The application cannot be translated to other languages by just adding
+   new translations for existing string resources.
+
+   There are quickfixes to automatically extract this hardcoded string into a
+   resource lookup.
+
+0 errors, 108 warnings

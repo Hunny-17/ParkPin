@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "settings": {
+    "system:accelerometer_rotation": "1",
+    "system:user_rotation": "0",
+    "secure:show_ime_with_hard_keyboard": "0"
+  },
+  "permissions": {
+    "com.tranquochuy.parkpin": [
+      "android.permission.ACCESS_FINE_LOCATION: granted=false, flags=[ USER_SENSITIVE_WHEN_GRANTED|USER_SENSITIVE_WHEN_DENIED|SELECTED_LOCATION_ACCURACY]",
+      "android.permission.ACCESS_COARSE_LOCATION: granted=false, flags=[ USER_SENSITIVE_WHEN_GRANTED|USER_SENSITIVE_WHEN_DENIED]"
+    ],
+    "com.google.android.apps.maps": [
+      "android.permission.ACCESS_FINE_LOCATION: granted=false, flags=[ USER_SENSITIVE_WHEN_GRANTED|USER_SENSITIVE_WHEN_DENIED|SELECTED_LOCATION_ACCURACY]",
+      "android.permission.ACCESS_COARSE_LOCATION: granted=false, flags=[ USER_SENSITIVE_WHEN_GRANTED|USER_SENSITIVE_WHEN_DENIED]",
+      "android.permission.ACCESS_BACKGROUND_LOCATION: granted=false, flags=[ USER_SENSITIVE_WHEN_GRANTED|USER_SENSITIVE_WHEN_DENIED|RESTRICTION_UPGRADE_EXEMPT]",
+      "android.permission.ACCESS_MEDIA_LOCATION: granted=false, flags=[ USER_SENSITIVE_WHEN_GRANTED|USER_SENSITIVE_WHEN_DENIED]"
+    ]
+  },
+  "master_location": "true",
+  "qa_fixtures_removed": true,
+  "test_package_uninstalled": true,
+  "original_avd_untouched": true,
+  "qa_emulator_stopped": true
+}

@@ -1,0 +1,2 @@
+topResumedActivity=ActivityRecord{141865136 u0 com.google.android.apps.maps/com.google.android.maps.MapsActivity t27}
+Intent { act=android.intent.action.VIEW dat=google.navigation:q=10.7768883,106.7008050 flg=0x10000000 xflg=0x4 pkg=com.google.android.apps.maps cmp=com.google.android.apps.maps/com.google.android.maps.MapsActivity }
