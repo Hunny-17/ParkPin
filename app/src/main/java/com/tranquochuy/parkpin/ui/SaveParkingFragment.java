@@ -6,6 +6,10 @@ import android.location.Location;
 import android.os.Bundle;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.activity.result.PickVisualMediaRequest;
+import androidx.lifecycle.ViewModelProvider;
+import com.tranquochuy.parkpin.photos.PhotoDraftViewModel;
+import com.tranquochuy.parkpin.photos.PhotoViews;
 import androidx.core.content.ContextCompat;
 import com.google.android.gms.location.CurrentLocationRequest;
 import com.google.android.gms.location.LocationServices;
@@ -41,6 +45,15 @@ public class SaveParkingFragment extends Fragment {
     @Nullable private GpsFix currentFix;
     private boolean newGpsFix;
     @Nullable private CancellationTokenSource pendingRequest;
+    private PhotoDraftViewModel photoDraft;
+    private boolean loadingRecord;
+    private final ActivityResultLauncher<PickVisualMediaRequest> photoPicker =
+            registerForActivityResult(new ActivityResultContracts.PickVisualMedia(), uri -> {
+                if(uri!=null) {
+                    if(photoDraft==null)photoDraft=new ViewModelProvider(this).get(PhotoDraftViewModel.class);
+                    photoDraft.select(uri);
+                }
+            });
 
     private final ActivityResultLauncher<String[]> permissionLauncher =
             registerForActivityResult(new ActivityResultContracts.RequestMultiplePermissions(), result -> {
@@ -72,6 +85,32 @@ public class SaveParkingFragment extends Fragment {
         MaterialButton save = view.findViewById(R.id.btn_save_parking);
         TextView status = view.findViewById(R.id.save_status);
         ParkingRepository repository = ParkingRepository.get(requireContext());
+        photoDraft=new ViewModelProvider(this).get(PhotoDraftViewModel.class);
+        loadingRecord=editId>0&&!photoDraft.initialized();
+        if(editId<=0)photoDraft.initialize(null);
+        view.findViewById(R.id.btn_pick_photo).setOnClickListener(v -> {
+            try {photoPicker.launch(new PickVisualMediaRequest.Builder()
+                    .setMediaType(ActivityResultContracts.PickVisualMedia.ImageOnly.INSTANCE).build());}
+            catch(RuntimeException e){Toast.makeText(requireContext(),"Không mở được trình chọn ảnh. Bạn vẫn có thể lưu thủ công.",Toast.LENGTH_LONG).show();}
+        });
+        view.findViewById(R.id.btn_remove_photo).setOnClickListener(v -> photoDraft.remove());
+        photoDraft.state().observe(getViewLifecycleOwner(),draft->{
+            if(draft.saved){
+                photoDraft.consumeSaved();
+                Toast.makeText(requireContext(),editId>0?"Đã cập nhật vị trí":"Đã lưu vị trí đỗ xe",Toast.LENGTH_SHORT).show();
+                ((MainActivity)requireActivity()).navigateTo(R.id.nav_home);return;
+            }
+            PhotoViews.bind(view.findViewById(R.id.photo_preview),view.findViewById(R.id.photo_status),draft.path,"Ảnh chỗ đỗ xe đã chọn");
+            TextView photoError=view.findViewById(R.id.photo_error);
+            photoError.setVisibility(draft.busy||draft.error!=null?View.VISIBLE:View.GONE);
+            photoError.setText(draft.busy?"Đang chuẩn bị ảnh...":draft.error);
+            MaterialButton pick=view.findViewById(R.id.btn_pick_photo);
+            pick.setText(draft.path==null?"CHỌN ẢNH":"ĐỔI ẢNH");
+            pick.setEnabled(!draft.busy&&!draft.saving&&!loadingRecord);
+            view.findViewById(R.id.btn_remove_photo).setVisibility(draft.path==null?View.GONE:View.VISIBLE);
+            view.findViewById(R.id.btn_remove_photo).setEnabled(!draft.busy&&!draft.saving&&!loadingRecord);
+            save.setEnabled(!draft.busy&&!draft.saving&&!loadingRecord);
+        });
         MaterialButton gpsButton = view.findViewById(R.id.btn_capture_gps);
         gpsButton.setOnClickListener(v -> {
             if (hasLocationPermission()) requestCurrentLocation(view);
@@ -103,7 +142,7 @@ public class SaveParkingFragment extends Fragment {
 
         if (editId > 0) {
             save.setText("CẬP NHẬT VỊ TRÍ");
-            if (state == null) {
+            if (loadingRecord) {
                 save.setEnabled(false);
                 status.setText("Đang tải dữ liệu đã lưu...");
                 repository.getById(editId, new ParkingRepository.Callback<ParkingSpot>() {
@@ -118,6 +157,8 @@ public class SaveParkingFragment extends Fragment {
                         zone.setText(item.zone);
                         column.setText(item.columnLabel);
                         note.setText(item.note);
+                        loadingRecord=false;
+                        photoDraft.initialize(item.photoPath);
                         if (item.hasCoordinates() && !newGpsFix) {
                             currentFix = new GpsFix(item.latitude, item.longitude,
                                     item.accuracyMeters,
@@ -125,7 +166,7 @@ public class SaveParkingFragment extends Fragment {
                             updateGpsLabel(view);
                         }
                         status.setText("Đang sửa vị trí đã lưu trên thiết bị");
-                        save.setEnabled(true);
+                        save.setEnabled(!photoDraft.current().busy&&!photoDraft.current().saving);
                     }
                     @Override public void onError(@NonNull Exception error) {
                         if (getView() == view) status.setText("Không tải được vị trí: " + error.getMessage());
@@ -142,20 +183,23 @@ public class SaveParkingFragment extends Fragment {
                 return;
             }
             nameLayout.setError(null);
+            if(photoDraft.current().busy||photoDraft.current().saving||loadingRecord)return;
+            photoDraft.beginSave();
             save.setEnabled(false);
             status.setText("Đang lưu trên thiết bị...");
             ParkingRepository.Callback<Boolean> updateCallback = new ParkingRepository.Callback<Boolean>() {
                 @Override public void onResult(Boolean updated) {
-                    if (!isAdded() || getView() != view) return;
                     if (!Boolean.TRUE.equals(updated)) {
+                        photoDraft.finishSave();
+                        if(getView()!=view)return;
                         status.setText("Vị trí không còn tồn tại.");
                         save.setEnabled(true);
                         return;
                     }
-                    Toast.makeText(requireContext(), "Đã cập nhật vị trí", Toast.LENGTH_SHORT).show();
-                    ((MainActivity) requireActivity()).navigateTo(R.id.nav_home);
+                    photoDraft.markSaved();
                 }
                 @Override public void onError(@NonNull Exception error) {
+                    photoDraft.finishSave();
                     if (getView() != view) return;
                     status.setText("Lưu thất bại: " + error.getMessage());
                     save.setEnabled(true);
@@ -163,16 +207,16 @@ public class SaveParkingFragment extends Fragment {
             };
             if (editId > 0) {
                 repository.updateDetails(editId, placeName, value(floor), value(zone),
-                        value(column), value(note), newGpsFix ? currentFix : null, updateCallback);
+                        value(column), value(note), newGpsFix ? currentFix : null,
+                        photoDraft.current().changed,photoDraft.current().path,updateCallback);
             } else {
                 repository.saveActive(placeName, value(floor), value(zone),
-                        value(column), value(note), currentFix, new ParkingRepository.Callback<Long>() {
+                        value(column), value(note), currentFix,photoDraft.current().path,new ParkingRepository.Callback<Long>() {
                     @Override public void onResult(Long id) {
-                        if (!isAdded() || getView() != view) return;
-                        Toast.makeText(requireContext(), "Đã lưu vị trí đỗ xe", Toast.LENGTH_SHORT).show();
-                        ((MainActivity) requireActivity()).navigateTo(R.id.nav_home);
+                        photoDraft.markSaved();
                     }
                     @Override public void onError(@NonNull Exception error) {
+                        photoDraft.finishSave();
                         if (getView() != view) return;
                         status.setText("Lưu thất bại: " + error.getMessage());
                         save.setEnabled(true);

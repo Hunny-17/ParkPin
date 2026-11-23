@@ -1,0 +1,151 @@
+{
+  "status": "PASS for changed ParkPin screens",
+  "images_opened": 18,
+  "screenshots": [
+    {
+      "file": "screenshots/G4-01-migrated-home.png",
+      "width": 1080,
+      "height": 2400,
+      "sha256": "2833b1308cec301062bfad1c55d0aee9147c829e0c6d410ccce1fc40bb26b584",
+      "opened_and_reviewed": true,
+      "result": "PASS"
+    },
+    {
+      "file": "screenshots/G4-02-system-picker.png",
+      "width": 1080,
+      "height": 2400,
+      "sha256": "c2eff33bd61a5f2952327564a140c8a8278bd94fa8c091b0b0ef9ee61237a6da",
+      "opened_and_reviewed": true,
+      "result": "PASS"
+    },
+    {
+      "file": "screenshots/G4-03-picker-cancelled.png",
+      "width": 1080,
+      "height": 2400,
+      "sha256": "b8ef01f693caa7cfbd2838c4947ffd004ccf2af45b2114fcf122c1a5bfa54f6d",
+      "opened_and_reviewed": true,
+      "result": "PASS"
+    },
+    {
+      "file": "screenshots/G4-04-selected-preview.png",
+      "width": 1080,
+      "height": 2400,
+      "sha256": "83fb29136fd5ecd0ba7df6234968348283d3e47b79126bfc53164d6554e2103d",
+      "opened_and_reviewed": true,
+      "result": "PASS"
+    },
+    {
+      "file": "screenshots/G4-05-draft-landscape.png",
+      "width": 2400,
+      "height": 1080,
+      "sha256": "cbb82370813b67e5a5a13f9beb185d556ca04af7dd1caa4961ae80fc38bd6ab2",
+      "opened_and_reviewed": true,
+      "result": "PASS"
+    },
+    {
+      "file": "screenshots/G4-06-home-photo.png",
+      "width": 1080,
+      "height": 2400,
+      "sha256": "891fb2998661479821159e9fd5c6e5d243f034f085243a4bef034e2f646904c6",
+      "opened_and_reviewed": true,
+      "result": "PASS"
+    },
+    {
+      "file": "screenshots/G4-07-history-photo.png",
+      "width": 1080,
+      "height": 2400,
+      "sha256": "b3cb879238368cf6f465ef3708daa6617e0ee230b40b78341f991e9fe5eeeab5",
+      "opened_and_reviewed": true,
+      "result": "PASS"
+    },
+    {
+      "file": "screenshots/G4-08-home-after-restart.png",
+      "width": 1080,
+      "height": 2400,
+      "sha256": "92eeca33b1bf506b1b5ab40eba0ef7438cfb4b509a9ca301d44e023ab94e613f",
+      "opened_and_reviewed": true,
+      "result": "PASS"
+    },
+    {
+      "file": "screenshots/G4-09-keyboard.png",
+      "width": 1080,
+      "height": 2400,
+      "sha256": "6d989b2ec57652142e02754087543e037dda1b5153fa43bcedc1d13b6852f61c",
+      "opened_and_reviewed": true,
+      "result": "PASS"
+    },
+    {
+      "file": "screenshots/G4-10-replaced-photo.png",
+      "width": 1080,
+      "height": 2400,
+      "sha256": "9a984e765b4f2f73ea348a5c782ecf89930e270cea83ab343545a873c7279f02",
+      "opened_and_reviewed": true,
+      "result": "PASS"
+    },
+    {
+      "file": "screenshots/G4-11-photo-removed.png",
+      "width": 1080,
+      "height": 2400,
+      "sha256": "5412e0fdba1e61bf90ce395e7006de1a7984d2047e57a64822fdd9e554ed124f",
+      "opened_and_reviewed": true,
+      "result": "PASS"
+    },
+    {
+      "file": "screenshots/G4-12-image-unavailable.png",
+      "width": 1080,
+      "height": 2400,
+      "sha256": "6d4c125b067efc65fab6af3d750f65eb75a38108c551017fc7c7faa7b05975d0",
+      "opened_and_reviewed": true,
+      "result": "PASS"
+    },
+    {
+      "file": "screenshots/G4-13-history-top.png",
+      "width": 1080,
+      "height": 2400,
+      "sha256": "437a15053576955ae5b9f6920d776d279270a9c653c7ac7d4564addfbf6d6588",
+      "opened_and_reviewed": true,
+      "result": "PASS"
+    },
+    {
+      "file": "screenshots/G4-14-history-scrolled.png",
+      "width": 1080,
+      "height": 2400,
+      "sha256": "2e87aae2e855eab29d82a45e764c17c7520593440e74e0f8cb65bc900db04a70",
+      "opened_and_reviewed": true,
+      "result": "PASS"
+    },
+    {
+      "file": "screenshots/G4-15-delete-photo-dialog.png",
+      "width": 1080,
+      "height": 2400,
+      "sha256": "40ff99bd9d56766c6a712192155a0143088d63624fae5667d8516e8501151a41",
+      "opened_and_reviewed": true,
+      "result": "PASS"
+    },
+    {
+      "file": "screenshots/G4-16-photo-and-gps.png",
+      "width": 1080,
+      "height": 2400,
+      "sha256": "db58fb9e7f3f659e4f4b38a5ca4ab9b5cd19561f4ea1ced04cfe615e33023ffc",
+      "opened_and_reviewed": true,
+      "result": "PASS"
+    },
+    {
+      "file": "screenshots/G4-17-maps-regression.png",
+      "width": 1080,
+      "height": 2400,
+      "sha256": "7ea328a3bb17a208ba8461e633429f7b1a4424e2e5868dc86e95405a537a7b00",
+      "opened_and_reviewed": true,
+      "result": "EXTERNAL_MAPS_HANDOFF_OBSERVED"
+    },
+    {
+      "file": "screenshots/G4-18-final-empty.png",
+      "width": 1080,
+      "height": 2400,
+      "sha256": "c6c75369585b038faeb1eb7257a30c44f213a7e2a726cb45d64d36287ada5505",
+      "opened_and_reviewed": true,
+      "result": "PASS"
+    }
+  ],
+  "external_maps_scope": "Actual Maps loading activity and exact Intent, not route calculation"
+}

@@ -1,10 +1,11 @@
 # ParkPin — Android Native
 
-Ứng dụng ghi nhớ nơi đỗ xe. G1 Navigation và G2 Room + CRUD đã tích hợp vào `main`. G3 trên branch riêng đã nghiệm thu GPS tùy chọn và Google Maps Intent trên Emulator; camera thuộc G4. GPS không bắt buộc để lưu vị trí thủ công.
+Ứng dụng ghi nhớ nơi đỗ xe. G1 Navigation, G2 Room + CRUD và G3 GPS + Maps đã tích hợp vào `main`. G4 Photo Picker và lưu ảnh đang ở branch `codex/g4-photo-picker`, đã nghiệm thu Emulator. GPS và ảnh đều tùy chọn khi lưu vị trí.
 
 ## Tech stack
 - Java 17 + XML + AndroidX AppCompat/Fragment
-- Room 2.8.5, lưu trữ offline, repository bất đồng bộ và migration v1→v2 không mất dữ liệu
+- Room 2.8.5, lưu trữ offline, repository bất đồng bộ và migration v1→v2→v3 không mất dữ liệu
+- AndroidX Photo Picker, ảnh JPEG riêng trên thiết bị; AndroidX ExifInterface 1.4.2
 - Google Play services location 21.4.0 cho GPS một lần khi người dùng yêu cầu
 - AGP 9.4.0, Gradle Wrapper 9.6.0
 - Compile/Target SDK 37, Min SDK 24
@@ -35,7 +36,16 @@ Wrapper scripts/JAR được lấy từ nguồn chính thức `gradle/gradle` ta
 - Nếu có GPS, **Tìm xe** mở app Maps bên ngoài; không có app Maps sẽ thông báo phù hợp.
 - [Báo cáo nghiệm thu G3](docs/G3_ACCEPTANCE.md): JVM 4/4, instrumentation 7/7, GPS permissions 7/7, migration APK thật PASS, GPS persistence 8/8, Maps Intent 9/9, CRUD 10/10 và hồi quy 6/6 PASS.
 - [Bằng chứng thực tế](artifacts/g3/): ảnh đã mở kiểm tra, UI Automator, Room snapshots, Intent activity và logcat. Generic geo fallback dùng receiver QA riêng; không tuyên bố đã tính được tuyến lái xe hoặc chạy thiết bị vật lý.
-- CI HEAD cuối và quyết định Ready for Review xem [PR #3](https://github.com/Hunny-17/ParkPin/pull/3); không tự merge.
+- [PR #3](https://github.com/Hunny-17/ParkPin/pull/3) đã merge theo yêu cầu người dùng; [CI main tại merge SHA SUCCESS](https://github.com/Hunny-17/ParkPin/actions/runs/45159706681).
+
+## G4 Photo Picker và ảnh điểm đỗ
+
+- Chọn một ảnh tùy chọn bằng trình chọn ảnh hệ thống, xem trước, đổi hoặc bỏ ảnh.
+- Nhấn Lưu để áp dụng; hủy hoặc Back giữ ảnh đã lưu. Home và History hiển thị ảnh.
+- Bản sao ảnh riêng vẫn tồn tại sau restart hoặc xóa ảnh nguồn; thay/xóa ảnh dọn file không còn dùng.
+- Nguồn tối đa 20 MB, ảnh chuẩn hóa JPEG cạnh dài tối đa 1600 px; không cần quyền đọc toàn bộ thư viện ảnh.
+- [Nghiệm thu G4](docs/G4_ACCEPTANCE.md): JVM 4/4, instrumentation 16/16, UI ảnh/GPS/Maps 16/16, migration APK thật, CRUD 10/10 và hồi quy 6/6 PASS. Lint 0 errors/108 warnings; phạm vi API và giới hạn ghi trong báo cáo.
+- [Bằng chứng](artifacts/g4/), [thiết kế và vòng đời ảnh](docs/G4_DESIGN.md). G4 đi qua PR riêng, chưa tự merge vào main.
 
 ## Trạng thái / tài liệu
 - [Roadmap MVP 14 ngày](docs/ROADMAP.md)

@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "uid": "10235",
+  "lines": 228,
+  "markers": [],
+  "crash_buffer_parkpin_references": 0,
+  "scope": "Since QA emulator restart for final AndroidX EXIF build, including 16-test suite and actual picker/save/restart/delete smoke"
+}

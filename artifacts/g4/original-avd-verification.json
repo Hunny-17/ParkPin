@@ -1,0 +1,65 @@
+[
+  {
+    "name": "config.ini",
+    "sha256": "7323434F4AE4DC8A9E7E69F4480AFF2313A72BE8630EAFF91BA682B3C9F52BC9",
+    "length": 1278,
+    "lastWriteUtc": "2026-10-03T04:59:40.8787627Z",
+    "hash_unchanged": true,
+    "length_unchanged": true,
+    "timestamp_unchanged": true
+  },
+  {
+    "name": "userdata-qemu.img",
+    "sha256": "1ABC33F0030368AE3BF542DFD3D6DA9CB1C1FD17E948DBFDAEF77A86FD44A018",
+    "length": 10158080,
+    "lastWriteUtc": "2026-10-03T08:33:37.5315280Z",
+    "hash_unchanged": true,
+    "length_unchanged": true,
+    "timestamp_unchanged": true
+  },
+  {
+    "name": "userdata-qemu.img.qcow2",
+    "sha256": "E61A834F7FA78F4BC7DCA7EEED2B29683DFD89C4402B81367DE9011AFB8D101B",
+    "length": 2470707200,
+    "lastWriteUtc": "2026-11-23T07:58:11.4799439Z",
+    "hash_unchanged": true,
+    "length_unchanged": true,
+    "timestamp_unchanged": true
+  },
+  {
+    "name": "encryptionkey.img",
+    "sha256": "522BD0B6A2C92E37DE465059BB9487BB9597A9AAE032B469A8EBE0B38146D8C3",
+    "length": 18874368,
+    "lastWriteUtc": "2026-10-03T04:50:42.9391906Z",
+    "hash_unchanged": true,
+    "length_unchanged": true,
+    "timestamp_unchanged": true
+  },
+  {
+    "name": "encryptionkey.img.qcow2",
+    "sha256": "7A4C42D78D5AA13CED9CC876EFF1E3B0F49FD9483363A617A4B69D3771C3F365",
+    "length": 8519680,
+    "lastWriteUtc": "2026-11-23T07:21:53.5577794Z",
+    "hash_unchanged": true,
+    "length_unchanged": true,
+    "timestamp_unchanged": true
+  },
+  {
+    "name": "sdcard.img",
+    "sha256": "5F2D56E8DCD5F647175EA2FF9818471A0757F0BB28EC3959E658B99716ABCD1A",
+    "length": 536870912,
+    "lastWriteUtc": "2026-10-03T04:59:40.8757585Z",
+    "hash_unchanged": true,
+    "length_unchanged": true,
+    "timestamp_unchanged": true
+  },
+  {
+    "name": "sdcard.img.qcow2",
+    "sha256": "22D10CC750402238EB1352A57693B37552E7895D9F8995E891626EE634C18CC5",
+    "length": 1114112,
+    "lastWriteUtc": "2026-11-23T06:19:24.3481894Z",
+    "hash_unchanged": true,
+    "length_unchanged": true,
+    "timestamp_unchanged": true
+  }
+]

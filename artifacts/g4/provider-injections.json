@@ -1,0 +1,130 @@
+[
+  {
+    "label": "g4-migration-G3-fix",
+    "latitude": 21.028511,
+    "longitude": 105.804817,
+    "host_epoch_ms": 1795432731966,
+    "source": "Android Emulator geo fix command",
+    "response": "OK"
+  },
+  {
+    "label": "g4-migration-G3-fix",
+    "latitude": 21.028511,
+    "longitude": 105.804817,
+    "host_epoch_ms": 1795432732393,
+    "source": "Android Emulator geo fix command",
+    "response": "OK"
+  },
+  {
+    "label": "g4-migration-G3-fix",
+    "latitude": 21.028511,
+    "longitude": 105.804817,
+    "host_epoch_ms": 1795432732825,
+    "source": "Android Emulator geo fix command",
+    "response": "OK"
+  },
+  {
+    "label": "g4-migration-G3-fix",
+    "latitude": 21.028511,
+    "longitude": 105.804817,
+    "host_epoch_ms": 1795432733247,
+    "source": "Android Emulator geo fix command",
+    "response": "OK"
+  },
+  {
+    "label": "g4-migration-G3-fix",
+    "latitude": 21.028511,
+    "longitude": 105.804817,
+    "host_epoch_ms": 1795432733672,
+    "source": "Android Emulator geo fix command",
+    "response": "OK"
+  },
+  {
+    "label": "g4-migration-G3-fix",
+    "latitude": 21.028511,
+    "longitude": 105.804817,
+    "host_epoch_ms": 1795432734098,
+    "source": "Android Emulator geo fix command",
+    "response": "OK"
+  },
+  {
+    "label": "g4-migration-G3-fix",
+    "latitude": 21.028511,
+    "longitude": 105.804817,
+    "host_epoch_ms": 1795432734523,
+    "source": "Android Emulator geo fix command",
+    "response": "OK"
+  },
+  {
+    "label": "g4-migration-G3-fix",
+    "latitude": 21.028511,
+    "longitude": 105.804817,
+    "host_epoch_ms": 1795432734949,
+    "source": "Android Emulator geo fix command",
+    "response": "OK"
+  },
+  {
+    "label": "G4-recapture-with-photo",
+    "latitude": 10.776889,
+    "longitude": 106.700806,
+    "host_epoch_ms": 1795434135666,
+    "source": "Android Emulator geo fix command",
+    "response": "OK"
+  },
+  {
+    "label": "G4-recapture-with-photo",
+    "latitude": 10.776889,
+    "longitude": 106.700806,
+    "host_epoch_ms": 1795434136093,
+    "source": "Android Emulator geo fix command",
+    "response": "OK"
+  },
+  {
+    "label": "G4-recapture-with-photo",
+    "latitude": 10.776889,
+    "longitude": 106.700806,
+    "host_epoch_ms": 1795434136516,
+    "source": "Android Emulator geo fix command",
+    "response": "OK"
+  },
+  {
+    "label": "G4-recapture-with-photo",
+    "latitude": 10.776889,
+    "longitude": 106.700806,
+    "host_epoch_ms": 1795434136939,
+    "source": "Android Emulator geo fix command",
+    "response": "OK"
+  },
+  {
+    "label": "G4-recapture-with-photo",
+    "latitude": 10.776889,
+    "longitude": 106.700806,
+    "host_epoch_ms": 1795434137364,
+    "source": "Android Emulator geo fix command",
+    "response": "OK"
+  },
+  {
+    "label": "G4-recapture-with-photo",
+    "latitude": 10.776889,
+    "longitude": 106.700806,
+    "host_epoch_ms": 1795434137789,
+    "source": "Android Emulator geo fix command",
+    "response": "OK"
+  },
+  {
+    "label": "G4-recapture-with-photo",
+    "latitude": 10.776889,
+    "longitude": 106.700806,
+    "host_epoch_ms": 1795434138210,
+    "source": "Android Emulator geo fix command",
+    "response": "OK"
+  },
+  {
+    "label": "G4-recapture-with-photo",
+    "latitude": 10.776889,
+    "longitude": 106.700806,
+    "host_epoch_ms": 1795434138631,
+    "source": "Android Emulator geo fix command",
+    "response": "OK"
+  }
+]

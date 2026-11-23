@@ -10,8 +10,8 @@ android {
         applicationId 'com.tranquochuy.parkpin'
         minSdk 24
         targetSdk 37
-        versionCode 4
-        versionName '0.4.0-g3-dev'
+        versionCode 5
+        versionName '0.5.0-g4-dev'
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
     }
     compileOptions {
@@ -23,6 +23,8 @@ android {
 dependencies {
     implementation 'androidx.appcompat:appcompat:1.8.0'
     implementation 'androidx.fragment:fragment:1.8.9'
+    implementation 'androidx.activity:activity:1.13.0'
+    implementation 'androidx.exifinterface:exifinterface:1.4.2'
     implementation 'com.google.android.material:material:1.14.0'
     implementation 'com.google.android.gms:play-services-location:21.4.0'
     implementation 'androidx.room:room-runtime:2.8.5'

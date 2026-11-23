@@ -1,0 +1,131 @@
+{
+  "P01": {
+    "status": "PASS",
+    "detail": "Actual system Photo Picker opened with only selected-media access; cancelled via Back without adding a photo",
+    "evidence": [
+      "G4-02-system-picker.xml",
+      "G4-03-picker-cancelled.xml"
+    ]
+  },
+  "P02": {
+    "status": "PASS",
+    "detail": "Selected photo preview survived portrait/landscape with identical owned draft file; Room unchanged until Save",
+    "evidence": [
+      "G4-04-selected-preview.xml",
+      "G4-05-draft-landscape.xml",
+      "database-selected-draft-unchanged.json"
+    ]
+  },
+  "P03": {
+    "status": "PASS",
+    "detail": "Saved private JPEG and Room photoPath; GPS retained; force-stop/new process retained identical rows and photo",
+    "evidence": [
+      "database-photo-A-saved.json",
+      "database-photo-after-restart.json",
+      "G4-08-home-after-restart.xml"
+    ]
+  },
+  "P04": {
+    "status": "PASS",
+    "detail": "Deleted only source QA fixture A from shared media; private saved JPEG and Home photo remained after restart",
+    "evidence": [
+      "photo-survives-source-deletion.xml"
+    ]
+  },
+  "P05": {
+    "status": "PASS",
+    "detail": "Manual edit kept photo/GPS; update succeeded with software keyboard visible and button entirely above navigation",
+    "evidence": [
+      "G4-09-keyboard.xml",
+      "database-photo-manual-edit.json"
+    ]
+  },
+  "P06": {
+    "status": "PASS",
+    "detail": "Back after choosing a replacement discarded only the new draft; original photo and Room row unchanged",
+    "evidence": [
+      "database-discarded-replacement.json"
+    ]
+  },
+  "P07": {
+    "status": "PASS",
+    "detail": "Explicit replacement saved a new owned JPEG and deleted old unreferenced file after DB success; GPS preserved",
+    "evidence": [
+      "database-photo-replaced.json",
+      "G4-10-replaced-photo.xml"
+    ]
+  },
+  "P08": {
+    "status": "PASS",
+    "detail": "Removing a photo then leaving without Save kept the committed photo and file",
+    "evidence": [
+      "database-remove-draft-cancelled.json"
+    ]
+  },
+  "P09": {
+    "status": "PASS",
+    "detail": "Photo-only new C saved without GPS; History images loaded at top/bottom and again when scrolling back after viewport cleanup",
+    "evidence": [
+      "database-new-photo-C.json",
+      "G4-13-history-top.xml",
+      "G4-14-history-scrolled.xml",
+      "history-return-top.xml"
+    ]
+  },
+  "P10": {
+    "status": "PASS",
+    "detail": "Confirmed deletion removed photo record C and only its owned file; A photo retained",
+    "evidence": [
+      "G4-15-delete-photo-dialog.xml",
+      "database-photo-C-deleted.json"
+    ]
+  },
+  "P11": {
+    "status": "PASS",
+    "detail": "Explicit remove plus Save cleared nullable photoPath and removed owned file; parking/GPS retained",
+    "evidence": [
+      "database-photo-removed.json",
+      "G4-11-photo-removed.xml"
+    ]
+  },
+  "P12": {
+    "status": "PASS",
+    "detail": "Simulated missing owned QA photo: friendly error, no crash; manual update still succeeded without silently clearing path/GPS",
+    "evidence": [
+      "G4-12-image-unavailable.xml",
+      "database-missing-file-manual-saved.json"
+    ]
+  },
+  "P13": {
+    "status": "PASS",
+    "detail": "Rotated while system picker was open; selected photo returned to correct edit; explicit GPS recapture saved photo and new provider fix to same ID",
+    "evidence": [
+      "picker-landscape.xml",
+      "G4-16-photo-and-gps.xml",
+      "database-gps-recaptured-with-photo.json"
+    ]
+  },
+  "P14": {
+    "status": "PASS",
+    "detail": "G3 regression: active parking with photo launched real Maps using exact Room destination; Back returned to ParkPin",
+    "evidence": [
+      "maps-activity.txt",
+      "G4-17-maps-regression.xml"
+    ]
+  },
+  "P15": {
+    "status": "PASS",
+    "detail": "Manual-only B activation preserved single-active invariant; Find Car stayed in ParkPin with no-GPS toast",
+    "evidence": [
+      "G4-no-gps-toast.png"
+    ]
+  },
+  "P16": {
+    "status": "PASS",
+    "detail": "Deleted only UI-created QA A/B/C; Room and owned photo directory both empty; no data clearing",
+    "evidence": [
+      "database-photo-qa-final-empty.json",
+      "G4-18-final-empty.xml"
+    ]
+  }
+}

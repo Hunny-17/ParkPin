@@ -21,6 +21,8 @@ Generic `geo:` fallback được kiểm tra với receiver QA riêng. Google Map
 đích và tải lớp bản đồ, nhưng việc tính tuyến lái xe/hành trình thực tế chưa được
 nghiệm thu. Phạm vi logcat theo UID và giới hạn thiết bị được nêu trong báo cáo.
 
-Chỉ chuyển [PR #3](https://github.com/Hunny-17/ParkPin/pull/3) sang Ready sau khi
-CI của HEAD nghiệm thu cuối SUCCESS. SHA/CI mới được công bố tại PR sau push.
-Không tự merge PR.
+[PR #3](https://github.com/Hunny-17/ParkPin/pull/3) đã Ready sau CI HEAD nghiệm thu
+SUCCESS, rồi được merge theo yêu cầu tiếp theo của người dùng tại
+`44aac930382d87bec3f8bd6c08aa83bdc25fc2f2`.
+[CI push main SUCCESS](https://github.com/Hunny-17/ParkPin/actions/runs/45159706681).
+G4 tiếp tục trên branch riêng; xem [G4_ACCEPTANCE.md](G4_ACCEPTANCE.md).

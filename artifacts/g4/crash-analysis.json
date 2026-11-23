@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "uid": "10235",
+  "log_lines": 846,
+  "fatal_or_database_markers": [],
+  "crash_buffer_parkpin_references": 0,
+  "scope": "Final UID-scoped buffers; intentional RED JUnit failures and unrelated Android UWB service crashes distinguished from ParkPin crashes"
+}

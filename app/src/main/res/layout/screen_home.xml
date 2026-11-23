@@ -69,7 +69,10 @@
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- G1: CTA opens Save tab; saving starts in G2. -->
+            <ImageView android:id="@+id/home_photo" android:layout_width="match_parent" android:layout_height="180dp" android:layout_marginTop="12dp" android:scaleType="fitCenter" android:visibility="gone" android:contentDescription="Ảnh vị trí đỗ xe hiện tại"/>
+            <TextView android:id="@+id/home_photo_status" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:textSize="12sp" android:textColor="@color/pp_ink_muted" android:visibility="gone"/>
+
+            <!-- CTA opens the manual-first parking form. -->
             <com.google.android.material.button.MaterialButton
                 style="@style/ParkPinActionButton"
                 android:id="@+id/btn_save_parking_mock"

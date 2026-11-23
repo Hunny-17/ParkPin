@@ -6,6 +6,9 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.ImageView;
+import android.graphics.Rect;
+import android.view.ViewTreeObserver;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
@@ -16,16 +19,27 @@ import com.tranquochuy.parkpin.R;
 import com.tranquochuy.parkpin.data.ParkingRepository;
 import com.tranquochuy.parkpin.data.ParkingSpot;
 import com.tranquochuy.parkpin.navigation.MapsNavigation;
+import com.tranquochuy.parkpin.photos.PhotoViews;
 import java.text.DateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.ArrayList;
 
 /** G2: Room-backed list, edit, restore and delete with confirmation. */
 public class HistoryFragment extends Fragment {
+    private static final class PhotoSlot {
+        final ImageView image;final TextView status;final String path,description;
+        PhotoSlot(ImageView i,TextView s,String p,String d){image=i;status=s;path=p;description=d;}
+    }
+    private final List<PhotoSlot> photos=new ArrayList<>();
+    private final ViewTreeObserver.OnScrollChangedListener photoScroll=this::updateVisiblePhotos;
+    private final ViewTreeObserver.OnGlobalLayoutListener photoLayout=this::updateVisiblePhotos;
     public HistoryFragment() { super(R.layout.screen_history); }
 
     @Override public void onViewCreated(@NonNull View view, @Nullable Bundle state) {
         super.onViewCreated(view, state);
+        view.getViewTreeObserver().addOnScrollChangedListener(photoScroll);
+        view.getViewTreeObserver().addOnGlobalLayoutListener(photoLayout);
         load(view);
     }
 
@@ -37,10 +51,11 @@ public class HistoryFragment extends Fragment {
                 LinearLayout list = root.findViewById(R.id.history_list);
                 TextView count = root.findViewById(R.id.history_count);
                 TextView empty = root.findViewById(R.id.history_empty);
-                list.removeAllViews();
+                clearPhotos();list.removeAllViews();
                 count.setText(items.size() + " VỊ TRÍ ĐÃ LƯU");
                 empty.setVisibility(items.isEmpty() ? View.VISIBLE : View.GONE);
                 for (ParkingSpot item : items) addItem(root, list, item);
+                root.post(HistoryFragment.this::updateVisiblePhotos);
             }
             @Override public void onError(@NonNull Exception error) {
                 if (getView() != root) return;
@@ -60,6 +75,12 @@ public class HistoryFragment extends Fragment {
         TextView note = row.findViewById(R.id.item_note);
         note.setText(spot.note);
         note.setVisibility(spot.note.isEmpty() ? View.GONE : View.VISIBLE);
+        if(spot.photoPath!=null){
+            ImageView image=row.findViewById(R.id.item_photo);
+            image.setVisibility(View.VISIBLE);
+            photos.add(new PhotoSlot(image,row.findViewById(R.id.item_photo_status),
+                    spot.photoPath,"Ảnh chỗ đỗ xe tại "+spot.placeName));
+        }
         ((TextView) row.findViewById(R.id.item_time)).setText(
                 DateFormat.getDateTimeInstance(DateFormat.SHORT, DateFormat.SHORT)
                         .format(new Date(spot.createdAt)));
@@ -108,6 +129,25 @@ public class HistoryFragment extends Fragment {
         if (isAdded() && getView() == root) {
             Toast.makeText(requireContext(), "Lỗi dữ liệu: " + error.getMessage(), Toast.LENGTH_LONG).show();
         }
+    }
+
+    private void updateVisiblePhotos(){
+        if(getView()==null)return;
+        Rect visible=new Rect();
+        for(PhotoSlot slot:photos){
+            if(slot.image.getGlobalVisibleRect(visible)&&!visible.isEmpty())
+                PhotoViews.bind(slot.image,slot.status,slot.path,slot.description,320);
+            else PhotoViews.clear(slot.image);
+        }
+    }
+    private void clearPhotos(){for(PhotoSlot slot:photos)PhotoViews.clear(slot.image);photos.clear();}
+    @Override public void onDestroyView(){
+        View root=getView();
+        if(root!=null&&root.getViewTreeObserver().isAlive()){
+            root.getViewTreeObserver().removeOnScrollChangedListener(photoScroll);
+            root.getViewTreeObserver().removeOnGlobalLayoutListener(photoLayout);
+        }
+        clearPhotos();super.onDestroyView();
     }
 
     private static String dash(String value) {

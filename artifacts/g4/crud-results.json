@@ -1,0 +1,66 @@
+{
+  "T01": {
+    "status": "PASS",
+    "detail": "Empty Room database; Home and History show actual empty states"
+  },
+  "T02": {
+    "status": "PASS",
+    "detail": "Blank and whitespace-only names blocked; validation visible; database remains empty"
+  },
+  "R06": {
+    "status": "PASS",
+    "detail": "Required-name error clears after entering a valid name"
+  },
+  "T03": {
+    "status": "PASS",
+    "detail": "Saved A through form; exact Home details and all database fields verified"
+  },
+  "T04": {
+    "status": "PASS",
+    "detail": "B is the only active record; A remains archived"
+  },
+  "R01": {
+    "status": "PASS",
+    "detail": "Five consecutive save taps produced exactly one B row; total A+B=2"
+  },
+  "T05": {
+    "status": "PASS",
+    "detail": "History shows A and B, with B active and A archived"
+  },
+  "R03": {
+    "status": "PASS",
+    "detail": "Edit form and Save tab survive portrait/landscape rotation without crash or lost values"
+  },
+  "T06": {
+    "status": "PASS",
+    "detail": "Edited B in place; ID retained; exact name/floor/zone/column/note updated in Home and Room"
+  },
+  "R02": {
+    "status": "PASS",
+    "detail": "Software keyboard open; Update button fully above Bottom Navigation; update succeeded with IME open"
+  },
+  "T07": {
+    "status": "PASS",
+    "detail": "A reactivated; edited B inactive; exactly one active record"
+  },
+  "T08": {
+    "status": "PASS",
+    "detail": "Force-stop killed process; new process reopened; both rows and active A persisted unchanged"
+  },
+  "T09": {
+    "status": "PASS",
+    "detail": "Cancel preserved both records; confirmed deletion removed only B from History and Room"
+  },
+  "T10": {
+    "status": "PASS",
+    "detail": "Deleted only QA-created A; Home and History returned to empty; zero database rows"
+  },
+  "R04": {
+    "status": "PASS",
+    "detail": "18 rapid tab transitions completed; Home valid; database unchanged; crash checks reviewed separately"
+  },
+  "R05": {
+    "status": "PASS",
+    "detail": "Home CTA/History shortcut/Find Car empty-state toast; 3-screen scrolling; History rotation; Back from both tabs and Home exit passed"
+  }
+}

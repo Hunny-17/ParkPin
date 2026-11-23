@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "artifact_files": 230,
+  "artifact_bytes": 10502490,
+  "credential_pattern_hits": [],
+  "broken_document_links": [],
+  "required_screenshots_verified": 18,
+  "scope": "Only G4 source, design/report, clearly labeled QA fixtures and emulator evidence; no APK/DB/AVD/private keys"
+}

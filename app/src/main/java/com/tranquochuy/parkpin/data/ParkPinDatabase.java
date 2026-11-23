@@ -8,8 +8,8 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
-/** Version 2: optional GPS columns; all existing G2 records are preserved. */
-@Database(entities = {ParkingSpot.class}, version = 2, exportSchema = false)
+/** Explicit additive upgrades preserve every existing parking record. */
+@Database(entities = {ParkingSpot.class}, version = 3, exportSchema = false)
 public abstract class ParkPinDatabase extends RoomDatabase {
     public static final Migration MIGRATION_1_2 = new Migration(1, 2) {
         @Override public void migrate(@NonNull SupportSQLiteDatabase database) {
@@ -17,6 +17,12 @@ public abstract class ParkPinDatabase extends RoomDatabase {
             database.execSQL("ALTER TABLE parking_spots ADD COLUMN longitude REAL");
             database.execSQL("ALTER TABLE parking_spots ADD COLUMN accuracyMeters REAL");
             database.execSQL("ALTER TABLE parking_spots ADD COLUMN locationCapturedAt INTEGER");
+        }
+    };
+
+    public static final Migration MIGRATION_2_3 = new Migration(2, 3) {
+        @Override public void migrate(@NonNull SupportSQLiteDatabase database) {
+            database.execSQL("ALTER TABLE parking_spots ADD COLUMN photoPath TEXT");
         }
     };
 
@@ -30,7 +36,7 @@ public abstract class ParkPinDatabase extends RoomDatabase {
                 if (instance == null) {
                     instance = Room.databaseBuilder(context.getApplicationContext(),
                             ParkPinDatabase.class, "parkpin.db")
-                            .addMigrations(MIGRATION_1_2).build();
+                            .addMigrations(MIGRATION_1_2, MIGRATION_2_3).build();
                 }
             }
         }

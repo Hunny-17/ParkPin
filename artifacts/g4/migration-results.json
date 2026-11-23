@@ -1,0 +1,70 @@
+{
+  "status": "PASS",
+  "method": "Actual G3 APK seeded via UI, install -r G4 without data clear",
+  "before": [
+    {
+      "id": 1,
+      "placeName": "QA-G4-LEGACY-A",
+      "floor": "B2",
+      "zone": "A",
+      "columnLabel": "12",
+      "note": "G3_GPS_preserved",
+      "active": 0,
+      "latitude": 21.02851,
+      "longitude": 105.8048167,
+      "accuracyMeters": 5.0,
+      "locationCapturedAt": 1795432735629,
+      "createdAt": 1795432766002,
+      "updatedAt": 1795432766002
+    },
+    {
+      "id": 2,
+      "placeName": "QA-G4-LEGACY-B",
+      "floor": "B3",
+      "zone": "B",
+      "columnLabel": "22",
+      "note": "G3_manual_preserved",
+      "active": 1,
+      "latitude": null,
+      "longitude": null,
+      "accuracyMeters": null,
+      "locationCapturedAt": null,
+      "createdAt": 1795432795919,
+      "updatedAt": 1795432795919
+    }
+  ],
+  "after": [
+    {
+      "id": 1,
+      "placeName": "QA-G4-LEGACY-A",
+      "floor": "B2",
+      "zone": "A",
+      "columnLabel": "12",
+      "note": "G3_GPS_preserved",
+      "active": 0,
+      "latitude": 21.02851,
+      "longitude": 105.8048167,
+      "accuracyMeters": 5.0,
+      "locationCapturedAt": 1795432735629,
+      "createdAt": 1795432766002,
+      "updatedAt": 1795432766002,
+      "photoPath": null
+    },
+    {
+      "id": 2,
+      "placeName": "QA-G4-LEGACY-B",
+      "floor": "B3",
+      "zone": "B",
+      "columnLabel": "22",
+      "note": "G3_manual_preserved",
+      "active": 1,
+      "latitude": null,
+      "longitude": null,
+      "accuracyMeters": null,
+      "locationCapturedAt": null,
+      "createdAt": 1795432795919,
+      "updatedAt": 1795432795919,
+      "photoPath": null
+    }
+  ]
+}
