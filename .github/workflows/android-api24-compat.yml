@@ -55,7 +55,12 @@ jobs:
             echo "Device SDK: $(adb shell getprop ro.build.version.sdk)"
             test "$(adb shell getprop ro.build.version.sdk | tr -d '\r')" = "24"
             ./gradlew --no-daemon :app:connectedDebugAndroidTest
+            # Gradle connected tests can uninstall the target APK during cleanup.
+            # Reinstall the SAME built debug APK before the separate launch smoke.
+            adb install -r app/build/outputs/apk/debug/app-debug.apk
             adb shell am start -W -n com.tranquochuy.parkpin/.MainActivity | tee api24-app-launch.txt
+            grep -q 'Status: ok' api24-app-launch.txt
+            sleep 2
             adb exec-out screencap -p > api24-app-home.png
             adb shell am start -W -a android.intent.action.OPEN_DOCUMENT -c android.intent.category.OPENABLE -t 'image/*' | tee api24-documents-ui-launch.txt
             grep -q 'Status: ok' api24-documents-ui-launch.txt
