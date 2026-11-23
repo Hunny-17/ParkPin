@@ -1,0 +1,120 @@
+{
+  "T01": {
+    "status": "PASS",
+    "detail": "First G3 launch after real upgrade: no automatic permission dialog; request remains user initiated",
+    "evidence": "G3-01-home-no-gps.xml"
+  },
+  "T02": {
+    "status": "PASS",
+    "detail": "User LẤY GPS action opened actual coarse/fine Android runtime permission dialog",
+    "evidence": [
+      "G3-02-gps-permission.xml"
+    ]
+  },
+  "T03": {
+    "status": "PASS",
+    "detail": "Denied both location permissions; real manual Save succeeded with NULL coordinates",
+    "evidence": [
+      "G3-03-permission-denied.xml",
+      "database-manual-after-denial.json"
+    ]
+  },
+  "P05": {
+    "status": "PASS",
+    "detail": "Manual-only position B saved and displayed correctly without GPS",
+    "evidence": [
+      "database-manual-after-denial.json"
+    ]
+  },
+  "T04": {
+    "status": "PASS",
+    "detail": "Coarse-only permission accepted with actual FLP fix after enabling Location Accuracy on isolated AVD: Vị trí gần đúng: 10.774775, 106.710166 (±2000 m)",
+    "evidence": [
+      "G3-04-approximate-location.xml",
+      "permissions-approximate.txt",
+      "provider-approximate.txt"
+    ]
+  },
+  "T05": {
+    "status": "PASS",
+    "detail": "Precise permission returned actual FLP fix: GPS: 10.776888, 106.700805 (±5 m)",
+    "evidence": [
+      "G3-05-precise-location.xml",
+      "permissions-precise.txt",
+      "provider-precise.txt"
+    ]
+  },
+  "P01": {
+    "status": "PASS",
+    "detail": "Saved A via real form; all four GPS fields persisted and match emulator HCMC fix",
+    "evidence": [
+      "database-gps-A-saved.json",
+      "gps-A-saved-home.xml"
+    ]
+  },
+  "P02": {
+    "status": "PASS",
+    "detail": "Actual force-stop/new process retained identical rows and GPS fields",
+    "evidence": [
+      "G3-10-home-after-restart.xml",
+      "database-gps-A-restarted.json"
+    ]
+  },
+  "P03": {
+    "status": "PASS",
+    "detail": "Manual edit updated floor/zone/column/note and preserved all four existing GPS fields",
+    "evidence": [
+      "database-gps-A-before-manual-edit.json",
+      "database-gps-A-after-manual-edit.json"
+    ]
+  },
+  "P04": {
+    "status": "PASS",
+    "detail": "Explicit LẤY GPS recapture updated same A ID to real Hanoi fix and a newer capture timestamp",
+    "evidence": [
+      "gps-explicit-recapture.xml",
+      "database-gps-A-recaptured.json",
+      "provider-recaptured.txt"
+    ]
+  },
+  "T06": {
+    "status": "PASS",
+    "detail": "Master location disabled: request settled with friendly manual-save message; Room unchanged and app alive",
+    "evidence": [
+      "G3-09-location-unavailable.xml",
+      "database-gps-location-off.json"
+    ]
+  },
+  "T07": {
+    "status": "PASS",
+    "detail": "Enabled GPS test provider emitted no fixes: friendly timeout, manual UI update succeeded, all B GPS columns remain NULL and A unchanged",
+    "evidence": [
+      "gps-enabled-no-fix.xml",
+      "database-gps-no-fix-manual-saved.json"
+    ]
+  },
+  "P08": {
+    "status": "PASS",
+    "detail": "Rotated portrait/landscape during actual pending request; same B edit saved with NULL GPS, A unchanged and no crash",
+    "evidence": [
+      "gps-rotation-pending.xml",
+      "gps-rotation-landscape.xml",
+      "database-gps-after-pending-rotation.json"
+    ]
+  },
+  "P06": {
+    "status": "PASS",
+    "detail": "Reactivated manual B from GPS A; exactly one active row, both retained",
+    "evidence": [
+      "database-gps-B-reactivated.json"
+    ]
+  },
+  "P07": {
+    "status": "PASS",
+    "detail": "Confirmed UI deletion removed GPS A only; manual B retained",
+    "evidence": [
+      "gps-delete-dialog.xml",
+      "database-gps-A-deleted.json"
+    ]
+  }
+}

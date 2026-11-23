@@ -18,9 +18,15 @@
                 </FrameLayout>
                 <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="13dp" android:orientation="vertical">
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tọa độ GPS hiện tại" android:textSize="15sp" android:textStyle="bold" android:textColor="@color/pp_ink" />
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="Chưa kết nối định vị" android:textSize="12sp" android:textColor="@color/pp_ink_muted" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:id="@+id/gps_status" android:text="Chưa lấy GPS · Có thể lưu thủ công" android:textSize="12sp" android:textColor="@color/pp_ink_muted" />
                 </LinearLayout>
-                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SẮP CÓ" android:background="@drawable/bg_pill_gray" android:padding="8dp" android:textSize="9sp" android:textStyle="bold" android:textColor="@color/pp_ink_muted"/>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_capture_gps"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:minWidth="84dp" android:minHeight="48dp"
+                    android:layout_marginStart="6dp" android:text="LẤY GPS" android:textSize="10sp"
+                    android:contentDescription="Lấy tọa độ GPS khi người dùng yêu cầu" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 

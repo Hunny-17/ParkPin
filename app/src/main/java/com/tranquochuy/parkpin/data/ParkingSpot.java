@@ -1,11 +1,12 @@
 package com.tranquochuy.parkpin.data;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-/** One saved parking place. GPS/photo fields are intentionally deferred. */
+/** One saved parking place. GPS coordinates are optional; photos are deferred. */
 @Entity(tableName = "parking_spots")
 public class ParkingSpot {
     @PrimaryKey(autoGenerate = true)
@@ -28,6 +29,23 @@ public class ParkingSpot {
 
     @ColumnInfo(index = true)
     public boolean active;
+
+    @Nullable public Double latitude;
+    @Nullable public Double longitude;
+    @Nullable public Float accuracyMeters;
+    @Nullable public Long locationCapturedAt;
+
+    public boolean hasCoordinates() {
+        return latitude != null && longitude != null && GpsFix.validCoordinates(latitude, longitude);
+    }
+
+    public void setGpsFix(@Nullable GpsFix fix) {
+        if (fix == null) return;
+        latitude = fix.latitude;
+        longitude = fix.longitude;
+        accuracyMeters = fix.accuracyMeters;
+        locationCapturedAt = fix.capturedAt;
+    }
 
     public long createdAt;
     public long updatedAt;

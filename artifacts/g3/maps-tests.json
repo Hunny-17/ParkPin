@@ -1,0 +1,75 @@
+{
+  "M02": {
+    "status": "PASS",
+    "detail": "Saved active B has no GPS; friendly toast captured and ParkPin stayed foreground",
+    "evidence": [
+      "maps-no-gps-toast.png",
+      "maps-no-gps-toast-foreground.txt"
+    ]
+  },
+  "M03": {
+    "status": "PASS",
+    "detail": "Home Find Car opened installed real Google Maps activity",
+    "evidence": [
+      "G3-08-maps-navigation.xml",
+      "maps-home-navigation-activity.txt"
+    ]
+  },
+  "M04": {
+    "status": "PASS",
+    "detail": "Actual Android Intent destination 21.0285100,105.8048167 equals Room A coordinates formatted to 7 decimals",
+    "evidence": [
+      "database-maps-source-1.json",
+      "maps-home-navigation-activity.txt"
+    ]
+  },
+  "M05": {
+    "status": "PASS",
+    "detail": "Android Back from real Maps returned to ParkPin Home normally",
+    "evidence": [
+      "maps-back-to-parkpin.xml"
+    ]
+  },
+  "M06": {
+    "status": "PASS",
+    "detail": "Maps disabled only on isolated QA AVD; generic geo Intent reached separate QA-only receiver with exact Room destination. Fixture validates OS delivery, not third-party rendering.",
+    "evidence": [
+      "maps-generic-fallback.xml",
+      "maps-generic-fallback-activity.txt",
+      "maps-fallback-handlers.txt"
+    ]
+  },
+  "M07": {
+    "status": "PASS",
+    "detail": "No geo or Maps handler: friendly toast captured, ParkPin foreground, Room unchanged",
+    "evidence": [
+      "maps-no-handler-toast.png",
+      "maps-no-handler-toast-foreground.txt",
+      "maps-no-handlers.txt"
+    ]
+  },
+  "M09": {
+    "status": "PASS",
+    "detail": "History manual B has no directions action; GPS A has directions",
+    "evidence": [
+      "G3-07-history-with-gps.xml"
+    ]
+  },
+  "M08": {
+    "status": "PASS",
+    "detail": "Inactive GPS A History directions opened actual Maps with A Room destination",
+    "evidence": [
+      "maps-history-navigation.xml",
+      "maps-history-navigation-activity.txt"
+    ]
+  },
+  "M01": {
+    "status": "PASS",
+    "detail": "Empty Home Find Car showed friendly toast and stayed in ParkPin; zero rows",
+    "evidence": [
+      "maps-empty-toast.png",
+      "maps-empty-toast-foreground.txt",
+      "database-gps-final-empty.json"
+    ]
+  }
+}

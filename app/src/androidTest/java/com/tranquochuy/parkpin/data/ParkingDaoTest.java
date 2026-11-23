@@ -1,6 +1,7 @@
 package com.tranquochuy.parkpin.data;
 
 import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
 import androidx.room.Room;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
@@ -96,4 +97,58 @@ public class ParkingDaoTest {
             context.deleteDatabase(dbName);
         }
     }
+    @Test public void gpsCoordinatesPersistAndManualUpdatePreservesThem() {
+        ParkingSpot entry = spot("Has GPS", 100);
+        entry.setGpsFix(new GpsFix(10.1234567, 106.9876543, 12f, 150));
+        long id = dao.saveActive(entry);
+        ParkingSpot fromDb = dao.getById(id);
+        assertTrue(fromDb.hasCoordinates());
+        assertEquals(10.1234567, fromDb.latitude, 0.0000001);
+        assertEquals(106.9876543, fromDb.longitude, 0.0000001);
+        assertEquals(12f, fromDb.accuracyMeters, 0.001f);
+        dao.updateDetails(id, "Edited manually", "B1", "Z", "03", "Notes", 200);
+        assertEquals(10.1234567, dao.getById(id).latitude, 0.0000001);
+        dao.updateDetailsAndGps(id, "GPS updated", "B1", "Z", "03", "Notes",
+                11, 107, 4f, 300, 301);
+        assertEquals(11, dao.getById(id).latitude, 0.0000001);
+        assertEquals(107, dao.getById(id).longitude, 0.0000001);
+        assertEquals(300L, dao.getById(id).locationCapturedAt.longValue());
+    }
+
+    /** Upgrades an on-disk v1 database created from the G2 table schema, without deleting rows. */
+    @Test public void migration1To2PreservesExistingParkingRecords() {
+        Context context = ApplicationProvider.getApplicationContext();
+        String name = "parkpin-g3-migration-test.db";
+        context.deleteDatabase(name);
+        SQLiteDatabase legacy = context.openOrCreateDatabase(name, Context.MODE_PRIVATE, null);
+        try {
+            legacy.execSQL("CREATE TABLE IF NOT EXISTS parking_spots (" +
+                    "id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, " +
+                    "placeName TEXT NOT NULL, floor TEXT NOT NULL, zone TEXT NOT NULL, " +
+                    "columnLabel TEXT NOT NULL, note TEXT NOT NULL, active INTEGER NOT NULL, " +
+                    "createdAt INTEGER NOT NULL, updatedAt INTEGER NOT NULL)");
+            legacy.execSQL("CREATE INDEX IF NOT EXISTS index_parking_spots_active ON parking_spots(active)");
+            legacy.execSQL("INSERT INTO parking_spots (placeName,floor,zone,columnLabel,note,active,createdAt,updatedAt) " +
+                    "VALUES ('Legacy G2','B2','A','12','Do not lose',1,100,100)");
+            legacy.setVersion(1);
+        } finally {
+            legacy.close();
+        }
+        ParkPinDatabase migrated = Room.databaseBuilder(context, ParkPinDatabase.class, name)
+                .addMigrations(ParkPinDatabase.MIGRATION_1_2)
+                .allowMainThreadQueries().build(); // TEST-ONLY
+        try {
+            ParkingSpot active = migrated.parkingDao().getActive();
+            assertNotNull(active);
+            assertEquals("Legacy G2", active.placeName);
+            assertEquals("Do not lose", active.note);
+            assertNull(active.latitude);
+            assertNull(active.longitude);
+            assertEquals(1, migrated.parkingDao().getAll().size());
+        } finally {
+            migrated.close();
+            context.deleteDatabase(name);
+        }
+    }
+
 }

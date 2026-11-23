@@ -60,6 +60,10 @@
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/home_spot_name" android:text="Đang tải dữ liệu..." android:textSize="15sp" android:textStyle="bold" android:textColor="@color/pp_ink"/>
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:id="@+id/home_spot_details" android:text="" android:textSize="12sp" android:textColor="@color/pp_ink_muted"/>
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:id="@+id/home_spot_time" android:text="" android:textSize="11sp" android:textColor="@color/pp_green"/>
+                        <TextView android:id="@+id/home_spot_gps"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp" android:text="Đang kiểm tra GPS..."
+                            android:textSize="10sp" android:textColor="@color/pp_ink_muted"/>
                     </LinearLayout>
                     <ImageView android:layout_width="21dp" android:layout_height="21dp" android:src="@drawable/ic_arrow" app:tint="@color/pp_ink_muted" android:contentDescription="Chạm vào thẻ để chỉnh sửa" />
                 </LinearLayout>
@@ -77,7 +81,7 @@
 
             <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="Thao tác nhanh" android:textColor="@color/pp_ink" android:textStyle="bold" android:textSize="18sp" />
             <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="11dp" android:orientation="horizontal">
-                <com.google.android.material.card.MaterialCardView android:id="@+id/card_find_car" android:contentDescription="Chỉ đường chưa được triển khai" style="@style/ParkPinCard" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginEnd="6dp">
+                <com.google.android.material.card.MaterialCardView android:id="@+id/card_find_car" android:contentDescription="Mở chỉ đường tới tọa độ GPS đã lưu" style="@style/ParkPinCard" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginEnd="6dp">
                     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
                         <ImageView android:layout_width="28dp" android:layout_height="28dp" android:src="@drawable/ic_navigation" app:tint="@color/pp_green" android:contentDescription="Tìm xe"/>
                         <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="11dp" android:text="Tìm xe" android:textSize="14sp" android:textStyle="bold" android:textColor="@color/pp_ink"/>

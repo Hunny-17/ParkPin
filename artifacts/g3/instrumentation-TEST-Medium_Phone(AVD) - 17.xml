@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuites tests="7" failures="0" errors="0" skipped="0" time="0.000" timestamp="2026-11-23T08:37:23" hostname="localhost">
+  <testsuite name="com.tranquochuy.parkpin.data.ParkingDaoTest" tests="7" failures="0" errors="0" skipped="0" time="0.101" timestamp="2026-11-23T08:37:23" hostname="localhost">
+    <properties>
+      <property name="device" value="emulator-5556" />
+    </properties>
+    <testcase name="persistsAfterDatabaseCloseAndReopen" classname="com.tranquochuy.parkpin.data.ParkingDaoTest" time="0.004" />
+    <testcase name="savesOneActiveAndArchivesOlder" classname="com.tranquochuy.parkpin.data.ParkingDaoTest" time="0.015" />
+    <testcase name="readUpdateAndDelete" classname="com.tranquochuy.parkpin.data.ParkingDaoTest" time="0.015" />
+    <testcase name="reactivationIsAtomicAndIdempotent" classname="com.tranquochuy.parkpin.data.ParkingDaoTest" time="0.015" />
+    <testcase name="migration1To2PreservesExistingParkingRecords" classname="com.tranquochuy.parkpin.data.ParkingDaoTest" time="0.033" />
+    <testcase name="gpsCoordinatesPersistAndManualUpdatePreservesThem" classname="com.tranquochuy.parkpin.data.ParkingDaoTest" time="0.010" />
+    <testcase name="emptyDatabaseAndHistoryOrder" classname="com.tranquochuy.parkpin.data.ParkingDaoTest" time="0.009" />
+  </testsuite>
+</testsuites>

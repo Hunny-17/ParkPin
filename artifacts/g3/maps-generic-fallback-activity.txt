@@ -1,0 +1,2 @@
+topResumedActivity=ActivityRecord{159089757 u0 com.tranquochuy.parkpin.qa.geo/.GeoReceiverActivity t13}
+Intent { act=android.intent.action.VIEW dat=geo:0,0?q=21.0285100,105.8048167 xflg=0x4 cmp=com.tranquochuy.parkpin.qa.geo/.GeoReceiverActivity }

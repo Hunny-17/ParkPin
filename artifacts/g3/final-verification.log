@@ -1,0 +1,11 @@
+{
+  "gps_permission": "7/7",
+  "gps_persistence": "8/8",
+  "maps": "9/9",
+  "crud": "10/10",
+  "regression": "6/6",
+  "jvm": "4/4",
+  "instrumentation": "7/7",
+  "visual": "10/10",
+  "crash": "PASS"
+}

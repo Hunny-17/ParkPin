@@ -48,5 +48,11 @@
                 android:layout_weight="1" android:layout_marginStart="6dp"
                 android:minHeight="44dp" android:text="Xóa" android:textSize="11sp"/>
         </LinearLayout>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/item_map" style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="4dp" android:minHeight="44dp"
+            android:text="Chỉ đường đến đây" android:textSize="11sp"
+            android:visibility="gone"/>
     </LinearLayout>
 </com.google.android.material.card.MaterialCardView>

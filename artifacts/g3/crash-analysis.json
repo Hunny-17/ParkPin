@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "app_uid": 10232,
+  "app_log_lines": 550,
+  "error_marker_lines": [],
+  "crash_buffer_package_references": 0,
+  "location_service_error_lines": [],
+  "scope": "UID-scoped logcat since QA AVD DNS restart; earlier migration/GPS continuity also asserted by UI/Room runners and instrumentation logs. Reboot clears volatile logcat.",
+  "expected_conditions": [
+    "Missing Maps/geo handler was caught and friendly toast shown; not an uncaught ActivityNotFoundException.",
+    "Provider null/off/rotation cancellation did not crash ParkPin.",
+    "Maps route-service no-route message is external to ParkPin; exact destination/tiles/handoff verified."
+  ],
+  "unrelated_system_logs_exported": false
+}

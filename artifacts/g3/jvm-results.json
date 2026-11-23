@@ -1,0 +1,24 @@
+[
+  {
+    "suite": "com.tranquochuy.parkpin.data.GpsFixTest",
+    "tests": 3,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "cases": [
+      "navigationUriUsesLocaleIndependentDecimalPoint",
+      "acceptsValidCoordinatesIncludingZero",
+      "assignsOptionalFixWithoutChangingManualData"
+    ]
+  },
+  {
+    "suite": "com.tranquochuy.parkpin.data.ParkingSpotTest",
+    "tests": 1,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "cases": [
+      "createNormalizesManualInput"
+    ]
+  }
+]

@@ -13,12 +13,14 @@ import com.tranquochuy.parkpin.MainActivity;
 import com.tranquochuy.parkpin.R;
 import com.tranquochuy.parkpin.data.ParkingRepository;
 import com.tranquochuy.parkpin.data.ParkingSpot;
+import com.tranquochuy.parkpin.navigation.MapsNavigation;
 import java.text.DateFormat;
 import java.util.Date;
 
 /** G2: latest real local parking spot, no seeded/demo record. */
 public class HomeFragment extends Fragment {
     private long activeId = -1L;
+    @Nullable private ParkingSpot activeSpot;
 
     public HomeFragment() { super(R.layout.screen_home); }
 
@@ -35,8 +37,19 @@ public class HomeFragment extends Fragment {
             else activity.navigateTo(R.id.nav_save);
         });
         MaterialCardView findCar = view.findViewById(R.id.card_find_car);
-        findCar.setOnClickListener(v -> Toast.makeText(requireContext(),
-                "Chỉ đường sẽ có ở G3 (GPS + Maps).", Toast.LENGTH_SHORT).show());
+        findCar.setOnClickListener(v -> {
+            if (activeSpot == null) {
+                Toast.makeText(requireContext(), "Chưa có vị trí đỗ xe để tìm.", Toast.LENGTH_SHORT).show();
+            } else if (!activeSpot.hasCoordinates()) {
+                Toast.makeText(requireContext(),
+                        "Điểm đỗ chưa có GPS. Hãy chỉnh sửa vị trí và nhấn LẤY GPS.",
+                        Toast.LENGTH_LONG).show();
+            } else if (!MapsNavigation.open(requireContext(), activeSpot.latitude, activeSpot.longitude)) {
+                Toast.makeText(requireContext(),
+                        "Không tìm thấy ứng dụng bản đồ. Dữ liệu đỗ xe vẫn được giữ nguyên.",
+                        Toast.LENGTH_LONG).show();
+            }
+        });
         refresh(view);
     }
 
@@ -45,19 +58,23 @@ public class HomeFragment extends Fragment {
             @Override public void onResult(ParkingSpot spot) {
                 if (!isAdded() || getView() != view) return;
                 activeId = spot == null ? -1L : spot.id;
+                activeSpot = spot;
                 TextView name = view.findViewById(R.id.home_spot_name);
                 TextView details = view.findViewById(R.id.home_spot_details);
                 TextView time = view.findViewById(R.id.home_spot_time);
+                TextView gps = view.findViewById(R.id.home_spot_gps);
                 if (spot == null) {
                     name.setText("Chưa lưu vị trí nào");
                     details.setText("Nhấn LƯU VỊ TRÍ ĐỖ XE để bắt đầu");
                     time.setText("Dữ liệu chỉ lưu trên thiết bị");
+                    gps.setText("Chưa có GPS");
                 } else {
                     name.setText(spot.placeName);
                     details.setText("Tầng " + dash(spot.floor) + " · Khu " + dash(spot.zone)
                             + " · Cột " + dash(spot.columnLabel));
                     time.setText(DateFormat.getDateTimeInstance(DateFormat.SHORT,
                             DateFormat.SHORT).format(new Date(spot.createdAt)));
+                    gps.setText(spot.hasCoordinates() ? "Có GPS · Chạm Tìm xe để mở bản đồ" : "Chưa lưu GPS · Vẫn có thể chỉnh sửa thủ công");
                 }
             }
             @Override public void onError(@NonNull Exception error) {

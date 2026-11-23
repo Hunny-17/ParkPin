@@ -49,15 +49,22 @@ public final class ParkingRepository {
 
     public void saveActive(String name, String floor, String zone, String columnLabel,
                            String note, Callback<Long> callback) {
+        saveActive(name, floor, zone, columnLabel, note, null, callback);
+    }
+
+    public void saveActive(String name, String floor, String zone, String columnLabel,
+                           String note, @Nullable GpsFix fix, Callback<Long> callback) {
         if (name == null || name.trim().isEmpty()) {
             if (callback != null) main.post(() ->
                 callback.onError(new IllegalArgumentException("Tên bãi đỗ không được trống")));
             return;
         }
-        run(() -> dao.saveActive(ParkingSpot.create(name,
-                floor == null ? "" : floor, zone == null ? "" : zone,
-                columnLabel == null ? "" : columnLabel, note == null ? "" : note,
-                System.currentTimeMillis())), callback);
+        run(() -> {
+            ParkingSpot item = ParkingSpot.create(name, safe(floor), safe(zone),
+                    safe(columnLabel), safe(note), System.currentTimeMillis());
+            item.setGpsFix(fix);
+            return dao.saveActive(item);
+        }, callback);
     }
 
     public void getActive(Callback<ParkingSpot> callback) {
@@ -78,13 +85,26 @@ public final class ParkingRepository {
 
     public void updateDetails(long id, String name, String floor, String zone,
                               String columnLabel, String note, Callback<Boolean> callback) {
+        updateDetails(id, name, floor, zone, columnLabel, note, null, callback);
+    }
+
+    public void updateDetails(long id, String name, String floor, String zone,
+                              String columnLabel, String note, @Nullable GpsFix fix,
+                              Callback<Boolean> callback) {
         if (name == null || name.trim().isEmpty()) {
             if (callback != null) main.post(() ->
                 callback.onError(new IllegalArgumentException("Tên bãi đỗ không được trống")));
             return;
         }
-        run(() -> dao.updateDetails(id, name.trim(), safe(floor), safe(zone),
-                safe(columnLabel), safe(note), System.currentTimeMillis()) == 1, callback);
+        run(() -> {
+            long now = System.currentTimeMillis();
+            return (fix == null
+                ? dao.updateDetails(id, name.trim(), safe(floor), safe(zone),
+                        safe(columnLabel), safe(note), now)
+                : dao.updateDetailsAndGps(id, name.trim(), safe(floor), safe(zone),
+                        safe(columnLabel), safe(note), fix.latitude, fix.longitude,
+                        fix.accuracyMeters, fix.capturedAt, now)) == 1;
+        }, callback);
     }
 
     public void activate(long id, Callback<Boolean> callback) {
