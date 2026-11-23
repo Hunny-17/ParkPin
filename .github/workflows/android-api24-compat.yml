@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'app/**'
+      - 'scripts/api24_photo_e2e.py'
       - '.github/workflows/android-api24-compat.yml'
   workflow_dispatch:
 
