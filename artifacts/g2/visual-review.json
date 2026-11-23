@@ -1,0 +1,16 @@
+{
+  "review_date": "2026-11-23",
+  "method": "Opened actual PNGs with image viewer",
+  "mandatory_images_reviewed": [
+    "G2-01-home-empty.png",
+    "G2-04-home-saved.png",
+    "G2-03-save-parking.png",
+    "G2-05-history-data.png",
+    "G2-06-edit-form.png",
+    "G2-07-delete-confirmation.png",
+    "G2-08-keyboard.png",
+    "G2-09-home-restarted.png"
+  ],
+  "result": "PASS",
+  "observations": "No horizontal overflow, blank screen or obstruction of required controls by system bars, Bottom Navigation or IME. History landscape and Find Car G3 toast also opened."
+}

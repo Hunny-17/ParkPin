@@ -1,0 +1,1 @@
+    topResumedActivity=ActivityRecord{138070330 u0 com.tranquochuy.parkpin/.MainActivity t52}

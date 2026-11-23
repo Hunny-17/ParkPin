@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tranquochuy.parkpin.data.ParkingSpotTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-11-23T07:39:10.219Z" hostname="LAPTOP-0BVMS5BD" time="0.004">
+  <properties/>
+  <testcase name="createNormalizesManualInput" classname="com.tranquochuy.parkpin.data.ParkingSpotTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

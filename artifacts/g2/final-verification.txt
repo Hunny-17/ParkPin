@@ -1,0 +1,23 @@
+{
+  "crud": "10/10 PASS",
+  "regression": "6/6 PASS",
+  "jvm": "1/1 PASS",
+  "instrumentation": "5/5 PASS",
+  "crash_analysis": {
+    "app_uid": 10239,
+    "app_log_lines": 513,
+    "crash_marker_lines": [],
+    "crash_buffer_package_references": 0,
+    "scope": "Final installed app UID; unrelated system crashes excluded"
+  },
+  "apk_verification": {
+    "build_apk_sha256": "c8ac8cef897412a95c236eb8111ffa6ccb9f5637228d483e7bbf54296c3f23a5",
+    "installed_apk_sha256": "c8ac8cef897412a95c236eb8111ffa6ccb9f5637228d483e7bbf54296c3f23a5",
+    "installed_matches_build": true,
+    "android_test_apk_sha256": "f987708842a8f26b1bf91fb208c110b9fee90c599d95820dd4a4ab138db8b4b9",
+    "build_tasks": "clean assembleDebug testDebugUnitTest assembleDebugAndroidTest",
+    "crud_cases": 10,
+    "regression_cases": 6
+  },
+  "avd_settings_restored": true
+}

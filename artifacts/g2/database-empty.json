@@ -1,0 +1,7 @@
+{
+  "label": "empty",
+  "rows": [],
+  "count": 0,
+  "active_count": 0,
+  "source": "Read-only app db/WAL capture after UI settled; SQL only reads host copies"
+}

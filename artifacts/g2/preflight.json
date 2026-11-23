@@ -1,0 +1,47 @@
+{
+  "date": "2026-11-23",
+  "timezone": "Asia/Bangkok",
+  "branch": "feat/g2-room-parking-crud",
+  "head": "d65de9fec2c8bbb878df5c360237ea090e9d4ff6",
+  "working_tree_before_qa": "clean",
+  "existing_version": {
+    "exit": 0,
+    "stdout": "versionCode=2 minSdk=24 targetSdk=37\nversionName=0.2.0-g1",
+    "stderr": ""
+  },
+  "existing_app_directory": {
+    "exit": 0,
+    "stdout": "total 52\ndrwx------   5 u0_a233 u0_a233        4096 2026-11-09 16:48 .\ndrwxrwx--x 267 system  system        16384 2026-11-18 22:49 ..\ndrwxrws--x   2 u0_a233 u0_a233_cache  4096 2026-11-09 16:48 cache\ndrwxrws--x   2 u0_a233 u0_a233_cache  4096 2026-11-10 00:19 code_cache\ndrwxrwx--x   2 u0_a233 u0_a233        4096 2026-11-23 13:33 files\n",
+    "stderr": ""
+  },
+  "existing_database_directory": {
+    "exit": 1,
+    "stdout": "",
+    "stderr": "ls: databases: No such file or directory\n"
+  },
+  "devices": {
+    "exit": 0,
+    "stdout": "List of devices attached\nemulator-5554          device product:sdk_gphone16k_x86_64 model:sdk_gphone16k_x86_64 device:emu64xa16k transport_id:5\n\n",
+    "stderr": ""
+  },
+  "avd": {
+    "exit": 0,
+    "stdout": "Medium_Phone\n",
+    "stderr": ""
+  },
+  "api": {
+    "exit": 0,
+    "stdout": "37\n",
+    "stderr": ""
+  },
+  "release": {
+    "exit": 0,
+    "stdout": "17\n",
+    "stderr": ""
+  },
+  "emulator_version": "37.2.12.0 / build 16428233",
+  "data_policy": "No pm clear or production database deletion. Existing G1 install has no database directory. UI CRUD will delete only newly created QA-G2 A/B records. DAO tests use memory or parkpin-instrumented-persistence.db only.",
+  "jdk": "Microsoft OpenJDK 17.0.21.1+2-LTS",
+  "gradle": "9.6.0",
+  "sdk_platform": "Pkg.Desc=Android SDK Platform 17\nPkg.UserSrc=false\nPlatform.Version=17\nPlatform.CodeName=\nPkg.Revision=2\nAndroidVersion.ApiLevel=37.0\nAndroidVersion.CodeName=\nAndroidVersion.ExtensionLevel=22\nAndroidVersion.IsBaseSdk=true\nAndroidVersion.PreviewSdkInt=0\nAndroidVersion.BetaVersion=\nLayoutlib.Api=15\nLayoutlib.Revision=1\nPlatform.MinToolsRev=22\n"
+}
