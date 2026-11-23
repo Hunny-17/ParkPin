@@ -103,6 +103,9 @@ def main():
     adb("shell","am","broadcast","-a","android.intent.action.MEDIA_SCANNER_SCAN_FILE",
         "-d","file:///sdcard/Download/"+MEDIA,check=False)
     time.sleep(1)
+    # Close the standalone DocumentsUI smoke activity from the preceding CI step.
+    # The real picker must start from ParkPin and return its result to ParkPin.
+    adb("shell","am","force-stop","com.android.documentsui",check=False)
     adb("shell","am","force-stop",PKG)
     adb("shell","am","start","-W","-n",PKG+"/.MainActivity")
     click("Lưu xe",timeout=25)
@@ -110,14 +113,27 @@ def main():
     find(["Recent","Downloads","Documents"],timeout=25)
     snap("01-document-picker")
     try:
-        click(MEDIA,timeout=5)
+        file_node=find(MEDIA,timeout=5)
     except AssertionError:
         click(["Show roots","Navigate up","Open navigation drawer"],timeout=12)
         click("Downloads",timeout=12)
-        click(MEDIA,timeout=20)
-    find("btn_remove_photo",timeout=40,scroll=True)
+        file_node=find(MEDIA,timeout=20)
+    # Android 7 DocumentsUI grid item has a non-clickable title. Tap the
+    # thumbnail part of that tile rather than the truncated title label.
+    tx,ty=center(file_node)
+    adb("shell","input","tap",str(tx),str(max(100,ty-72)))
+    time.sleep(2)
+    snap("01b-after-select")
+    if any(n.get("package")=="com.android.documentsui" for n in ui().iter("node")):
+        # Second tap on the text/title is a narrow fallback for old grid UIs.
+        click(MEDIA,timeout=5)
+        time.sleep(2)
+    find("btn_remove_photo",timeout=20,scroll=True)
     snap("02-picked-image-preview")
-    click("input_place_name",timeout=12,scroll=True)
+    # Inputs are above Photo Picker. Restore scroll before editing the name.
+    for _ in range(4):
+        adb("shell","input","swipe","165","230","165","540","300")
+    click("input_place_name",timeout=12)
     adb("shell","input","text",LABEL)
     click("btn_save_parking",timeout=16,scroll=True)
     find(LABEL,timeout=25)
