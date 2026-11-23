@@ -48,20 +48,20 @@
 
             <!-- Current mock parking -->
             <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="23dp" android:orientation="horizontal" android:gravity="center_vertical">
-                <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="Vị trí đỗ gần nhất" android:textStyle="bold" android:textSize="18sp" android:textColor="@color/pp_ink" />
-                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/bg_pill_gray" android:paddingStart="9dp" android:paddingEnd="9dp" android:paddingTop="5dp" android:paddingBottom="5dp" android:text="Dữ liệu mẫu" android:textSize="10sp" android:textColor="@color/pp_ink_muted" />
+                <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="Vị trí đỗ hiện tại" android:textStyle="bold" android:textSize="18sp" android:textColor="@color/pp_ink" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/bg_pill_gray" android:paddingStart="9dp" android:paddingEnd="9dp" android:paddingTop="5dp" android:paddingBottom="5dp" android:text="Lưu trên máy" android:textSize="10sp" android:textColor="@color/pp_ink_muted" />
             </LinearLayout>
-            <com.google.android.material.card.MaterialCardView style="@style/ParkPinCard" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+            <com.google.android.material.card.MaterialCardView style="@style/ParkPinCard" android:id="@+id/card_current_parking" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
                 <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp" android:orientation="horizontal" android:gravity="center_vertical">
                     <FrameLayout android:layout_width="52dp" android:layout_height="52dp" android:background="@drawable/bg_logo_soft">
                         <ImageView android:layout_width="25dp" android:layout_height="25dp" android:layout_gravity="center" android:src="@drawable/ic_car" app:tint="@color/pp_green" android:contentDescription="Xe đã đỗ"/>
                     </FrameLayout>
                     <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="13dp" android:orientation="vertical">
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Bãi xe trung tâm" android:textSize="15sp" android:textStyle="bold" android:textColor="@color/pp_ink"/>
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="Tầng B2  ·  Khu A  ·  Cột 12" android:textSize="12sp" android:textColor="@color/pp_ink_muted"/>
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="Hôm nay, 14:35" android:textSize="11sp" android:textColor="@color/pp_green"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/home_spot_name" android:text="Đang tải dữ liệu..." android:textSize="15sp" android:textStyle="bold" android:textColor="@color/pp_ink"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:id="@+id/home_spot_details" android:text="" android:textSize="12sp" android:textColor="@color/pp_ink_muted"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:id="@+id/home_spot_time" android:text="" android:textSize="11sp" android:textColor="@color/pp_green"/>
                     </LinearLayout>
-                    <ImageView android:layout_width="21dp" android:layout_height="21dp" android:src="@drawable/ic_arrow" app:tint="@color/pp_ink_muted" android:contentDescription="Chi tiết (chưa hoạt động)" />
+                    <ImageView android:layout_width="21dp" android:layout_height="21dp" android:src="@drawable/ic_arrow" app:tint="@color/pp_ink_muted" android:contentDescription="Chạm vào thẻ để chỉnh sửa" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 

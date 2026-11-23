@@ -67,6 +67,13 @@ public class MainActivity extends AppCompatActivity {
         bottomNav.setSelectedItemId(itemId);
     }
 
+    /** Navigate to the existing manual form with an item id; no extra screen or branch. */
+    public void editParking(long id) {
+        bottomNav.getMenu().findItem(R.id.nav_save).setChecked(true);
+        getSupportFragmentManager().beginTransaction().setReorderingAllowed(true)
+                .replace(R.id.fragment_container, SaveParkingFragment.forEdit(id)).commit();
+    }
+
     private boolean showTab(@IdRes int id) {
         Fragment target;
         if (id == R.id.nav_home) target = new HomeFragment();
