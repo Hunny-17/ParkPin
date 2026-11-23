@@ -1,6 +1,8 @@
 package com.tranquochuy.parkpin.ui;
 
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -42,6 +44,14 @@ public class SaveParkingFragment extends Fragment {
         MaterialButton save = view.findViewById(R.id.btn_save_parking);
         TextView status = view.findViewById(R.id.save_status);
         ParkingRepository repository = ParkingRepository.get(requireContext());
+
+        name.addTextChangedListener(new TextWatcher() {
+            @Override public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+            @Override public void onTextChanged(CharSequence s, int start, int before, int count) {}
+            @Override public void afterTextChanged(Editable text) {
+                if (!text.toString().trim().isEmpty()) nameLayout.setError(null);
+            }
+        });
 
         if (editId > 0) {
             save.setText("CẬP NHẬT VỊ TRÍ");

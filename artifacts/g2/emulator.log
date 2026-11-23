@@ -1,0 +1,2344 @@
+Final G2 APK acceptance transcript. UI XML is stored in named captures; database JSON is read from host copies. No pm clear or SQL writes to the live app.
+
+$ adb shell settings get secure show_ime_with_hard_keyboard
+0
+
+exit=0
+
+$ adb shell settings get system accelerometer_rotation
+1
+
+exit=0
+
+$ adb shell settings get system user_rotation
+0
+
+exit=0
+
+$ adb shell settings put secure show_ime_with_hard_keyboard 1
+
+
+exit=0
+
+$ adb shell settings put system accelerometer_rotation 0
+
+
+exit=0
+
+$ adb shell settings put system user_rotation 0
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (27247 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input tap 180 2231
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (27247 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input tap 900 2231
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (15511 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input tap 540 2231
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (25900 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input swipe 540 2046 540 143 450
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (25632 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input tap 540 1929
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (27551 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (27551 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input tap 540 555
+
+
+exit=0
+
+$ adb shell input keycombination 113 29
+
+
+exit=0
+
+$ adb shell input text %s%s%s
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (24795 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input swipe 540 1226 540 143 450
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (18503 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input swipe 540 1226 540 143 450
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (18503 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input tap 540 1109
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (18503 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (18503 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell dumpsys input_method
+      mInputShown=true
+  mIsInputViewShown=true mStatusIcon=0
+
+exit=0
+
+$ adb shell input keyevent 4
+
+
+exit=0
+
+$ adb shell settings put secure show_ime_with_hard_keyboard 0
+
+
+exit=0
+
+$ adb shell settings put system accelerometer_rotation 1
+
+
+exit=0
+
+$ adb shell settings put system user_rotation 0
+
+
+exit=0
+
+$ adb shell am force-stop com.tranquochuy.parkpin
+
+
+exit=0
+
+$ adb shell am start -W -n com.tranquochuy.parkpin/.MainActivity
+Starting: Intent { cmp=com.tranquochuy.parkpin/.MainActivity }
+Status: ok
+LaunchState: COLD
+Activity: com.tranquochuy.parkpin/.MainActivity
+TotalTime: 1588
+WaitTime: 1590
+Complete
+
+exit=0
+
+$ adb shell settings get secure show_ime_with_hard_keyboard
+0
+
+exit=0
+
+$ adb shell settings get system accelerometer_rotation
+1
+
+exit=0
+
+$ adb shell settings get system user_rotation
+0
+
+exit=0
+
+$ adb shell settings put secure show_ime_with_hard_keyboard 1
+
+
+exit=0
+
+$ adb shell settings put system accelerometer_rotation 0
+
+
+exit=0
+
+$ adb shell settings put system user_rotation 0
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (27247 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input tap 180 2231
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (27247 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input tap 900 2231
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (15511 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input tap 540 2231
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (25900 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input swipe 540 2046 540 143 450
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (25632 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input tap 540 1929
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (27551 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (27551 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input tap 540 555
+
+
+exit=0
+
+$ adb shell input keycombination 113 29
+
+
+exit=0
+
+$ adb shell input text %s%s%s
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (24795 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input swipe 540 1226 540 143 450
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (18503 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input swipe 540 1226 540 143 450
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (18503 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input tap 540 1109
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (18503 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input swipe 540 143 540 1226 450
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (24810 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input swipe 540 143 540 1226 450
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (24810 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (24810 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input tap 540 875
+
+
+exit=0
+
+$ adb shell input keycombination 113 29
+
+
+exit=0
+
+$ adb shell input text QA-G2-A
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (23613 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input tap 291 1122
+
+
+exit=0
+
+$ adb shell input keycombination 113 29
+
+
+exit=0
+
+$ adb shell input text B2
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (23611 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input tap 789 1122
+
+
+exit=0
+
+$ adb shell input keycombination 113 29
+
+
+exit=0
+
+$ adb shell input text A
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (23605 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input tap 540 1274
+
+
+exit=0
+
+$ adb shell input keycombination 113 29
+
+
+exit=0
+
+$ adb shell input text 12
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (23584 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (23584 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input swipe 540 1226 540 143 450
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (18494 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input tap 540 339
+
+
+exit=0
+
+$ adb shell input keycombination 113 29
+
+
+exit=0
+
+$ adb shell input text Near_elevator_A
+
+
+exit=0
+
+$ adb shell dumpsys input_method
+      mInputShown=true
+  mIsInputViewShown=true mStatusIcon=0
+
+exit=0
+
+$ adb shell input keyevent 4
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (26320 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input swipe 540 143 540 2046 450
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (26602 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input swipe 540 143 540 2046 450
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (26602 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (26602 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input swipe 540 2046 540 143 450
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (26320 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input tap 540 1929
+
+
+exit=0
+
+$ adb shell dumpsys input_method
+      mInputShown=false
+  mIsInputViewShown=true mStatusIcon=0
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (27214 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (27214 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input tap 540 2231
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (25900 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input tap 540 875
+
+
+exit=0
+
+$ adb shell input keycombination 113 29
+
+
+exit=0
+
+$ adb shell input text QA-G2-B
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (22883 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input tap 291 1068
+
+
+exit=0
+
+$ adb shell input keycombination 113 29
+
+
+exit=0
+
+$ adb shell input text B1
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (22881 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input tap 789 1068
+
+
+exit=0
+
+$ adb shell input keycombination 113 29
+
+
+exit=0
+
+$ adb shell input text B
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (22875 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input tap 540 1247
+
+
+exit=0
+
+$ adb shell input keycombination 113 29
+
+
+exit=0
+
+$ adb shell input text 08
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (22866 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (22866 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input swipe 540 1226 540 143 450
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (18494 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input tap 540 339
+
+
+exit=0
+
+$ adb shell input keycombination 113 29
+
+
+exit=0
+
+$ adb shell input text Near_exit_B
+
+
+exit=0
+
+$ adb shell dumpsys input_method
+      mInputShown=true
+  mIsInputViewShown=true mStatusIcon=0
+
+exit=0
+
+$ adb shell input keyevent 4
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (25600 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input swipe 540 2046 540 143 450
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (25600 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell for n in 1 2 3 4 5; do input tap 540 1929; done
+
+
+exit=0
+
+$ adb shell dumpsys input_method
+      mInputShown=false
+  mIsInputViewShown=true mStatusIcon=0
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (27214 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input tap 900 2231
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (25139 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell settings put system user_rotation 1
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (18938 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (18938 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input swipe 1200 726 1200 143 450
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (21225 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input swipe 1200 726 1200 143 450
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (20817 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell settings put system user_rotation 0
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (25139 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input swipe 540 143 540 2046 450
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (25139 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input swipe 540 143 540 2046 450
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (25139 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (25139 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input tap 316 895
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (25869 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell settings put system user_rotation 1
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (19121 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell settings put system user_rotation 0
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (25869 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (25869 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input tap 540 875
+
+
+exit=0
+
+$ adb shell input keycombination 113 29
+
+
+exit=0
+
+$ adb shell input text QA-G2-B-edited
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (22874 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input tap 291 1068
+
+
+exit=0
+
+$ adb shell input keycombination 113 29
+
+
+exit=0
+
+$ adb shell input text B3
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (22874 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input tap 789 1068
+
+
+exit=0
+
+$ adb shell input keycombination 113 29
+
+
+exit=0
+
+$ adb shell input text C
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (22874 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input tap 540 1247
+
+
+exit=0
+
+$ adb shell input keycombination 113 29
+
+
+exit=0
+
+$ adb shell input text 22
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (22873 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (22873 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input swipe 540 1226 540 143 450
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (18498 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input tap 540 339
+
+
+exit=0
+
+$ adb shell input keycombination 113 29
+
+
+exit=0
+
+$ adb shell input text Edited_near_exit
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (18503 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input swipe 540 1226 540 143 450
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (18503 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input swipe 540 1226 540 143 450
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (18503 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell dumpsys input_method
+      mInputShown=true
+  mIsInputViewShown=true mStatusIcon=0
+
+exit=0
+
+$ adb shell input tap 540 1109
+
+
+exit=0
+
+$ adb shell dumpsys input_method
+      mInputShown=false
+  mIsInputViewShown=true mStatusIcon=0
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (27221 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (27221 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input tap 900 2231
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (25151 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input tap 539 1411
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (25149 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input tap 180 2231
+
+
+exit=0
+
+$ adb shell dumpsys input_method
+      mInputShown=false
+  mIsInputViewShown=true mStatusIcon=0
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (27214 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell pidof com.tranquochuy.parkpin
+22097
+
+exit=0
+
+$ adb shell am force-stop com.tranquochuy.parkpin
+
+
+exit=0
+
+$ adb shell pidof com.tranquochuy.parkpin
+
+
+exit=1
+
+$ adb shell am start -W -n com.tranquochuy.parkpin/.MainActivity
+Starting: Intent { cmp=com.tranquochuy.parkpin/.MainActivity }
+Status: ok
+LaunchState: COLD
+Activity: com.tranquochuy.parkpin/.MainActivity
+TotalTime: 1538
+WaitTime: 1544
+Complete
+
+exit=0
+
+$ adb shell dumpsys input_method
+      mInputShown=false
+  mIsInputViewShown=true mStatusIcon=0
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (27214 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell pidof com.tranquochuy.parkpin
+25665
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (27214 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input tap 900 2231
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (25149 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input tap 838 895
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (7110 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input tap 726 1332
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (25149 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input tap 838 895
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (7110 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input tap 894 1332
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (20086 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (20086 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input tap 764 895
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (7110 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input tap 894 1332
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (15511 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input tap 180 2231
+
+
+exit=0
+
+$ adb shell dumpsys input_method
+      mInputShown=false
+  mIsInputViewShown=true mStatusIcon=0
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (27247 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (27247 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell for n in 1 2 3 4 5 6; do input tap 540 2231; input tap 900 2231; input tap 180 2231; done
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (27247 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input tap 540 1762
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (25900 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (25900 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input swipe 540 2046 540 143 450
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (25632 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input keyevent 4
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (27247 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (27247 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input swipe 540 2046 540 143 450
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (26926 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input tap 789 1701
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (15511 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input keyevent 4
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (27247 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (27247 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input swipe 540 2046 540 143 450
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (26926 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell input tap 291 1701
+
+
+exit=0
+
+$ adb shell dumpsys activity activities
+    topResumedActivity=ActivityRecord{138070330 u0 com.tranquochuy.parkpin/.MainActivity t52}
+exit=0
+
+$ adb shell input keyevent 4
+
+
+exit=0
+
+$ adb shell uiautomator dump /sdcard/parkpin-g2-ui.xml
+UI hierchary dumped to: /sdcard/parkpin-g2-ui.xml
+
+exit=0
+
+$ adb shell cat /sdcard/parkpin-g2-ui.xml
+UI hierarchy read (21886 characters); named captures saved separately.
+
+exit=0
+
+$ adb shell am start -W -n com.tranquochuy.parkpin/.MainActivity
+Starting: Intent { cmp=com.tranquochuy.parkpin/.MainActivity }
+Status: ok
+LaunchState: WARM
+Activity: com.tranquochuy.parkpin/.MainActivity
+TotalTime: 670
+WaitTime: 673
+Complete
+
+exit=0
+
+$ adb shell pm list packages -U com.tranquochuy.parkpin
+package:com.tranquochuy.parkpin uid:10239
+
+exit=0
+
+$ adb logcat -d -v threadtime --uid=10239
+--------- beginning of main
+11-23 14:47:34.945 20810 20810 I Zygote  : Process 20810 created for com.tranquochuy.parkpin
+11-23 14:47:34.945 20810 20810 I quochuy.parkpin: Late-enabling -Xcheck:jni
+11-23 14:47:34.981 20810 20810 I quochuy.parkpin: Using generational CollectorTypeCMC GC.
+11-23 14:47:34.981 20810 20810 W quochuy.parkpin: Unexpected CPU variant for x86: x86_64.
+11-23 14:47:34.981 20810 20810 W quochuy.parkpin: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, goldmont-without-sha-xsaves, tremont, kabylake, alderlake, pantherlake, default
+11-23 14:47:35.013 20810 20810 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+11-23 14:47:35.101 20810 20810 D CompatChangeReporter: Compat change id reported: 333566037; UID 10239; state: ENABLED
+11-23 14:47:35.337 20810 20810 D nativeloader: Configuring clns-9 for other apk /data/app/~~HLhFKiC_Si-ltNOibPTDWg==/com.tranquochuy.parkpin-hSMgV5m2NBYLu6Hx2-H-Fw==/base.apk. target_sdk_version=37, uses_libraries=, library_path=/data/app/~~HLhFKiC_Si-ltNOibPTDWg==/com.tranquochuy.parkpin-hSMgV5m2NBYLu6Hx2-H-Fw==/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/com.tranquochuy.parkpin
+--------- beginning of system
+11-23 14:47:35.351 20810 20810 D ActivityThread: Set OS env TMPDIR to /data/user/0/com.tranquochuy.parkpin/cache
+11-23 14:47:35.355 20810 20810 V GraphicsEnvironment: Currently set values for:
+11-23 14:47:35.355 20810 20810 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+11-23 14:47:35.355 20810 20810 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+11-23 14:47:35.355 20810 20810 V GraphicsEnvironment: com.tranquochuy.parkpin is not listed in per-application setting
+11-23 14:47:35.355 20810 20810 V GraphicsEnvironment: No special selections for ANGLE, returning default driver choice
+11-23 14:47:35.359 20810 20810 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+11-23 14:47:35.366 20810 20810 D CompatChangeReporter: Compat change id reported: 407952621; UID 10239; state: ENABLED
+11-23 14:47:35.366 20810 20810 D CompatChangeReporter: Compat change id reported: 419020719; UID 10239; state: ENABLED
+11-23 14:47:35.422 20810 20866 I DisplayManager: Choreographer implicitly registered for the refresh rate.
+11-23 14:47:35.425 20810 20810 D quochuy.parkpin: Initializing ProtoLog
+11-23 14:47:35.425 20810 20810 D ProtoLog: Initializing ProtoLog DataSource
+11-23 14:47:35.478 20810 20866 I GFXSTREAM: [eglDisplay.cpp(297)] Opening libGLESv1_CM_emulation.so
+11-23 14:47:35.479 20810 20866 I GFXSTREAM: [eglDisplay.cpp(297)] Opening libGLESv2_emulation.so
+11-23 14:47:35.480 20810 20866 W libc    : Access denied finding property "vendor.mesa.virtgpu.kumquat"
+11-23 14:47:35.489 20810 20866 W HWUI    : Failed to initialize 101010-2 format, error = EGL_SUCCESS
+11-23 14:47:35.515 20810 20810 D AppCompatDelegate: Checking for metadata for AppLocalesMetadataHolderService : Service not found
+11-23 14:47:35.596 20810 20810 I quochuy.parkpin: hiddenapi: Accessing hidden method Landroid/view/ViewGroup;->makeOptionalFitsSystemWindows()V (runtime_flags=0, domain=platform, api=unsupported) from Landroidx/appcompat/widget/ViewUtils; (domain=app, TargetSdkVersion=37) using reflection: allowed
+11-23 14:47:35.684 20810 20810 I HWUI    : Using FreeType backend (prop=Auto)
+11-23 14:47:35.929 20810 20810 D CompatChangeReporter: Compat change id reported: 418924588; UID 10239; state: ENABLED
+11-23 14:47:35.955 20810 20810 W HWUI    : Unknown dataspace 0
+11-23 14:47:35.973 20810 20810 I Choreographer: Skipped 33 frames!  The application may be doing too much work on its main thread.
+11-23 14:47:35.976 20810 20874 W libc    : Access denied finding property "vendor.mesa.virtgpu.kumquat"
+11-23 14:47:35.978 20810 20810 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.app.Activity$$ExternalSyntheticLambda0@9e993e6
+11-23 14:47:35.979 20810 20875 D CompatChangeReporter: Compat change id reported: 458413887; UID 10239; state: ENABLED
+11-23 14:47:35.979 20810 20810 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@b2e1bd4
+11-23 14:47:35.980 20810 20875 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@b2e1bd4
+11-23 14:47:35.980 20810 20875 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@b2e1bd4
+11-23 14:47:35.987 20810 20810 D VRI[MainActivity]: WindowInsets changed: 1080x2400 statusBars:[0,63,0,0] navigationBars:[0,0,0,63] mandatorySystemGestures:[0,63,0,84]
+11-23 14:47:36.017 20810 20810 I Surface : Creating surface for consumer unnamed-20810-0 with slotExpansion=1 for 64 slots
+11-23 14:47:36.019 20810 20810 I Surface : Creating surface for consumer VRI[MainActivity]#0(BLAST Consumer)0 with slotExpansion=1 for 64 slots
+11-23 14:47:36.526 20810 20810 I Choreographer: Skipped 32 frames!  The application may be doing too much work on its main thread.
+11-23 14:47:36.549 20810 20830 I HWUI    : Davey! duration=1104ms; Flags=1, FrameTimelineVsyncId=48782, IntendedVsync=1578016857736, Vsync=1578566857714, InputEventId=0, HandleInputStart=1578571613500, AnimationStart=1578571643400, PerformTraversalsStart=1578572026500, DrawStart=1578636139400, FrameDeadline=1578033524402, FrameStartTime=1578570685500, FrameInterval=16666666, WorkloadTarget=16666666, AnimationTime=1578566857714, AnimationCounter=-1, SyncQueued=1578653549200, SyncStart=1578654100900, IssueDrawCommandsStart=1578654282000, SwapBuffers=1579035505900, FrameCompleted=1579121727600, DequeueBufferDuration=15700, QueueBufferDuration=222600, GpuCompleted=1579121579400, SwapBuffersCompleted=1579121727600, DisplayPresentTime=0, CommandSubmissionCompleted=1579035505900,
+11-23 14:47:36.616 20810 20810 D InsetsController: hide(ime())
+11-23 14:47:36.617 20810 20810 I ImeTracker: com.tranquochuy.parkpin:58c23490: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+11-23 14:47:36.821 20810 20821 I quochuy.parkpin: Compiler allocated 4522KB to compile void android.view.ViewRootImpl.performTraversals(long)
+11-23 14:47:41.187 20810 21001 D ProfileInstaller: Installing profile for com.tranquochuy.parkpin
+11-23 14:47:44.929 20810 20810 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:47:44.929 20810 20810 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:47:44.931 20810 20810 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:47:44.932 20810 20810 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:47:50.192 20810 20810 I AssistStructure: Flattened final assist data: 9216 bytes, containing 1 windows, 64 views
+11-23 14:47:54.976 20810 20810 I AutofillManager: showAutofillDialog() return false due to improve fill dialog
+11-23 14:47:54.977 20810 20810 I ImeTracker: com.tranquochuy.parkpin:de644572: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser true userId 0 displayId 0
+11-23 14:47:54.977 20810 20810 D InsetsController: show(ime())
+11-23 14:47:54.978 20810 20810 D InsetsController: Setting requestedVisibleTypes to 511 (was 503)
+11-23 14:47:55.034 20810 20810 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ImeBackAnimationController@73a95ab
+11-23 14:47:55.035 20810 20875 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ImeBackAnimationController@73a95ab
+11-23 14:47:55.136 20810 20810 D VRI[MainActivity]: WindowInsets changed: ime:[0,0,0,883]
+11-23 14:47:55.144 20810 20810 W InteractionJankMonitor: Initializing without READ_DEVICE_CONFIG permission. enabled=false, interval=1, missedFrameThreshold=3, frameTimeThreshold=64, package=com.tranquochuy.parkpin
+11-23 14:47:55.340 20810 20810 I ImeTracker: com.tranquochuy.parkpin:de644572: onShown
+11-23 14:47:55.385 20810 20810 D CompatChangeReporter: Compat change id reported: 417951523; UID 10239; state: ENABLED
+11-23 14:49:06.034 20810 20810 I ImeTracker: com.tranquochuy.parkpin:2850a0f3: onRequestHide at ORIGIN_CLIENT reason HIDE_SOFT_INPUT_REQUEST_HIDE_WITH_CONTROL fromUser true userId 0 displayId 0
+11-23 14:49:06.034 20810 20810 D InsetsController: hide(ime())
+11-23 14:49:06.034 20810 20810 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@b2e1bd4
+11-23 14:49:06.034 20810 20810 D InsetsController: Setting requestedVisibleTypes to 503 (was 511)
+11-23 14:49:06.035 20810 20875 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@b2e1bd4
+11-23 14:49:06.037 20810 20810 D VRI[MainActivity]: WindowInsets changed: ime:null
+11-23 14:49:06.057 20810 20810 I ImeTracker: system_server:cc7bd481: onCancelled at PHASE_CLIENT_ON_CONTROLS_CHANGED
+11-23 14:49:06.630 22097 22097 I Zygote  : Process 22097 created for com.tranquochuy.parkpin
+11-23 14:49:06.630 22097 22097 I quochuy.parkpin: Late-enabling -Xcheck:jni
+11-23 14:49:06.658 22097 22097 I quochuy.parkpin: Using generational CollectorTypeCMC GC.
+11-23 14:49:06.658 22097 22097 W quochuy.parkpin: Unexpected CPU variant for x86: x86_64.
+11-23 14:49:06.658 22097 22097 W quochuy.parkpin: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, goldmont-without-sha-xsaves, tremont, kabylake, alderlake, pantherlake, default
+11-23 14:49:06.671 22097 22097 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+11-23 14:49:06.747 22097 22097 D CompatChangeReporter: Compat change id reported: 333566037; UID 10239; state: ENABLED
+11-23 14:49:06.897 22097 22097 D nativeloader: Configuring clns-9 for other apk /data/app/~~HLhFKiC_Si-ltNOibPTDWg==/com.tranquochuy.parkpin-hSMgV5m2NBYLu6Hx2-H-Fw==/base.apk. target_sdk_version=37, uses_libraries=, library_path=/data/app/~~HLhFKiC_Si-ltNOibPTDWg==/com.tranquochuy.parkpin-hSMgV5m2NBYLu6Hx2-H-Fw==/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/com.tranquochuy.parkpin
+11-23 14:49:06.920 22097 22097 D ActivityThread: Set OS env TMPDIR to /data/user/0/com.tranquochuy.parkpin/cache
+11-23 14:49:06.922 22097 22097 V GraphicsEnvironment: Currently set values for:
+11-23 14:49:06.922 22097 22097 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+11-23 14:49:06.922 22097 22097 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+11-23 14:49:06.922 22097 22097 V GraphicsEnvironment: com.tranquochuy.parkpin is not listed in per-application setting
+11-23 14:49:06.923 22097 22097 V GraphicsEnvironment: No special selections for ANGLE, returning default driver choice
+11-23 14:49:06.923 22097 22097 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+11-23 14:49:06.927 22097 22097 D CompatChangeReporter: Compat change id reported: 407952621; UID 10239; state: ENABLED
+11-23 14:49:06.927 22097 22097 D CompatChangeReporter: Compat change id reported: 419020719; UID 10239; state: ENABLED
+11-23 14:49:07.061 22097 22115 I DisplayManager: Choreographer implicitly registered for the refresh rate.
+11-23 14:49:07.066 22097 22097 D quochuy.parkpin: Initializing ProtoLog
+11-23 14:49:07.066 22097 22097 D ProtoLog: Initializing ProtoLog DataSource
+11-23 14:49:07.121 22097 22115 I GFXSTREAM: [eglDisplay.cpp(297)] Opening libGLESv1_CM_emulation.so
+11-23 14:49:07.122 22097 22115 I GFXSTREAM: [eglDisplay.cpp(297)] Opening libGLESv2_emulation.so
+11-23 14:49:07.124 22097 22115 W libc    : Access denied finding property "vendor.mesa.virtgpu.kumquat"
+11-23 14:49:07.129 22097 22115 W HWUI    : Failed to initialize 101010-2 format, error = EGL_SUCCESS
+11-23 14:49:07.214 22097 22097 D AppCompatDelegate: Checking for metadata for AppLocalesMetadataHolderService : Service not found
+11-23 14:49:07.302 22097 22097 I quochuy.parkpin: hiddenapi: Accessing hidden method Landroid/view/ViewGroup;->makeOptionalFitsSystemWindows()V (runtime_flags=0, domain=platform, api=unsupported) from Landroidx/appcompat/widget/ViewUtils; (domain=app, TargetSdkVersion=37) using reflection: allowed
+11-23 14:49:07.395 22097 22097 I HWUI    : Using FreeType backend (prop=Auto)
+11-23 14:49:07.591 22097 22097 D CompatChangeReporter: Compat change id reported: 418924588; UID 10239; state: ENABLED
+11-23 14:49:07.609 22097 22097 W HWUI    : Unknown dataspace 0
+11-23 14:49:07.624 22097 22148 W libc    : Access denied finding property "vendor.mesa.virtgpu.kumquat"
+11-23 14:49:07.628 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.app.Activity$$ExternalSyntheticLambda0@5992241
+11-23 14:49:07.629 22097 22150 D CompatChangeReporter: Compat change id reported: 458413887; UID 10239; state: ENABLED
+11-23 14:49:07.629 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@d683d27
+11-23 14:49:07.630 22097 22150 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@d683d27
+11-23 14:49:07.630 22097 22150 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@d683d27
+11-23 14:49:07.645 22097 22097 D VRI[MainActivity]: WindowInsets changed: 1080x2400 statusBars:[0,63,0,0] navigationBars:[0,0,0,63] mandatorySystemGestures:[0,63,0,84]
+11-23 14:49:07.666 22097 22097 I Surface : Creating surface for consumer unnamed-22097-0 with slotExpansion=1 for 64 slots
+11-23 14:49:07.667 22097 22097 I Surface : Creating surface for consumer VRI[MainActivity]#0(BLAST Consumer)0 with slotExpansion=1 for 64 slots
+11-23 14:49:08.177 22097 22097 I Choreographer: Skipped 32 frames!  The application may be doing too much work on its main thread.
+11-23 14:49:08.177 22097 22104 I quochuy.parkpin: Compiler allocated 4522KB to compile void android.view.ViewRootImpl.performTraversals(long)
+11-23 14:49:08.263 22097 22097 D InsetsController: hide(ime())
+11-23 14:49:08.263 22097 22097 I ImeTracker: com.tranquochuy.parkpin:61aab0b3: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+11-23 14:49:12.923 22097 22272 D ProfileInstaller: Installing profile for com.tranquochuy.parkpin
+11-23 14:49:16.605 22097 22097 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:49:16.605 22097 22097 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:49:16.608 22097 22097 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:49:16.609 22097 22097 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:49:21.890 22097 22097 I AssistStructure: Flattened final assist data: 9216 bytes, containing 1 windows, 64 views
+11-23 14:49:26.639 22097 22097 I AutofillManager: showAutofillDialog() return false due to improve fill dialog
+11-23 14:49:26.639 22097 22097 I ImeTracker: com.tranquochuy.parkpin:9ef667bf: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser true userId 0 displayId 0
+11-23 14:49:26.640 22097 22097 D InsetsController: show(ime())
+11-23 14:49:26.640 22097 22097 D InsetsController: Setting requestedVisibleTypes to 511 (was 503)
+11-23 14:49:26.690 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ImeBackAnimationController@ace0408
+11-23 14:49:26.690 22097 22150 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ImeBackAnimationController@ace0408
+11-23 14:49:26.737 22097 22097 D VRI[MainActivity]: WindowInsets changed: ime:[0,0,0,883]
+11-23 14:49:26.745 22097 22097 W InteractionJankMonitor: Initializing without READ_DEVICE_CONFIG permission. enabled=false, interval=1, missedFrameThreshold=3, frameTimeThreshold=64, package=com.tranquochuy.parkpin
+11-23 14:49:26.939 22097 22097 I ImeTracker: com.tranquochuy.parkpin:9ef667bf: onShown
+11-23 14:49:27.042 22097 22097 D CompatChangeReporter: Compat change id reported: 417951523; UID 10239; state: ENABLED
+11-23 14:49:45.220 22097 22097 I AutofillManager: showAutofillDialog() return false due to improve fill dialog
+11-23 14:49:45.221 22097 22097 I ImeTracker: com.tranquochuy.parkpin:c2e4f002: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser true userId 0 displayId 0
+11-23 14:49:45.221 22097 22097 D InsetsController: show(ime())
+11-23 14:49:45.221 22097 22097 I ImeTracker: com.tranquochuy.parkpin:c2e4f002: onCancelled at PHASE_CLIENT_APPLY_ANIMATION
+11-23 14:49:45.257 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.widget.PopupWindow$PopupDecorView$$ExternalSyntheticLambda1@78bc5f1
+11-23 14:49:45.258 22097 22150 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.widget.PopupWindow$PopupDecorView$$ExternalSyntheticLambda1@78bc5f1
+11-23 14:49:45.260 22097 22097 I Surface : Creating surface for consumer unnamed-22097-1 with slotExpansion=1 for 64 slots
+11-23 14:49:45.261 22097 22097 I Surface : Creating surface for consumer VRI[PopupWindow:3a32775]#1(BLAST Consumer)1 with slotExpansion=1 for 64 slots
+11-23 14:49:45.272 22097 22115 W BLASTBufferQueue: Attempting to clear sync transaction when none are active
+11-23 14:49:45.627 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): null
+11-23 14:49:47.956 22097 22097 I AutofillManager: showAutofillDialog() return false due to improve fill dialog
+11-23 14:49:47.956 22097 22097 I ImeTracker: com.tranquochuy.parkpin:007281d3: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser true userId 0 displayId 0
+11-23 14:49:47.956 22097 22097 D InsetsController: show(ime())
+11-23 14:49:47.956 22097 22097 I ImeTracker: com.tranquochuy.parkpin:007281d3: onCancelled at PHASE_CLIENT_APPLY_ANIMATION
+11-23 14:49:47.971 22097 22097 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-23 14:49:47.977 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@d683d27
+11-23 14:49:47.979 22097 22150 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@d683d27
+11-23 14:49:48.010 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ImeBackAnimationController@ace0408
+11-23 14:49:48.011 22097 22150 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ImeBackAnimationController@ace0408
+11-23 14:49:50.553 22097 22097 I AutofillManager: showAutofillDialog() return false due to improve fill dialog
+11-23 14:49:50.553 22097 22097 I ImeTracker: com.tranquochuy.parkpin:efcb6e85: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser true userId 0 displayId 0
+11-23 14:49:50.553 22097 22097 D InsetsController: show(ime())
+11-23 14:49:50.553 22097 22097 I ImeTracker: com.tranquochuy.parkpin:efcb6e85: onCancelled at PHASE_CLIENT_APPLY_ANIMATION
+11-23 14:49:50.556 22097 22097 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-23 14:49:50.562 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@d683d27
+11-23 14:49:50.564 22097 22150 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@d683d27
+11-23 14:49:50.601 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ImeBackAnimationController@ace0408
+11-23 14:49:50.601 22097 22150 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ImeBackAnimationController@ace0408
+11-23 14:49:53.133 22097 22097 I AutofillManager: showAutofillDialog() return false due to improve fill dialog
+11-23 14:49:53.133 22097 22097 I ImeTracker: com.tranquochuy.parkpin:fc989b78: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser true userId 0 displayId 0
+11-23 14:49:53.134 22097 22097 D InsetsController: show(ime())
+11-23 14:49:53.134 22097 22097 I ImeTracker: com.tranquochuy.parkpin:fc989b78: onCancelled at PHASE_CLIENT_APPLY_ANIMATION
+11-23 14:49:53.139 22097 22097 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-23 14:49:53.148 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@d683d27
+11-23 14:49:53.149 22097 22150 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@d683d27
+11-23 14:49:53.176 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ImeBackAnimationController@ace0408
+11-23 14:49:53.177 22097 22150 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ImeBackAnimationController@ace0408
+11-23 14:50:00.619 22097 22097 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:50:00.621 22097 22097 I AutofillManager: showAutofillDialog() return false due to improve fill dialog
+11-23 14:50:00.621 22097 22097 I ImeTracker: com.tranquochuy.parkpin:0de17e75: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser true userId 0 displayId 0
+11-23 14:50:00.621 22097 22097 D InsetsController: show(ime())
+11-23 14:50:00.621 22097 22097 I ImeTracker: com.tranquochuy.parkpin:0de17e75: onCancelled at PHASE_CLIENT_APPLY_ANIMATION
+11-23 14:50:00.625 22097 22097 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-23 14:50:00.631 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@d683d27
+11-23 14:50:00.632 22097 22150 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@d683d27
+11-23 14:50:00.664 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ImeBackAnimationController@ace0408
+11-23 14:50:00.665 22097 22150 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ImeBackAnimationController@ace0408
+11-23 14:50:01.474 22097 22097 I ImeTracker: com.tranquochuy.parkpin:8cb0dde8: onRequestHide at ORIGIN_CLIENT reason HIDE_SOFT_INPUT_REQUEST_HIDE_WITH_CONTROL fromUser true userId 0 displayId 0
+11-23 14:50:01.474 22097 22097 D InsetsController: hide(ime())
+11-23 14:50:01.475 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@d683d27
+11-23 14:50:01.475 22097 22097 D InsetsController: Setting requestedVisibleTypes to 503 (was 511)
+11-23 14:50:01.475 22097 22150 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@d683d27
+11-23 14:50:01.487 22097 22097 D VRI[MainActivity]: WindowInsets changed: ime:null
+11-23 14:50:01.514 22097 22097 I ImeTracker: com.tranquochuy.parkpin:06a754c3: onCancelled at PHASE_CLIENT_ON_CONTROLS_CHANGED
+11-23 14:50:14.746 22097 22097 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:50:14.749 22097 22097 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:50:14.750 22097 22097 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:50:14.765 22097 22097 I ImeTracker: com.tranquochuy.parkpin:34c3122a: onRequestHide at ORIGIN_CLIENT reason HIDE_CLOSE_CURRENT_SESSION fromUser false userId 0 displayId 0
+11-23 14:50:14.766 22097 22097 D InsetsController: hide(ime())
+11-23 14:50:14.766 22097 22097 I ImeTracker: com.tranquochuy.parkpin:34c3122a: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+11-23 14:50:19.791 22097 22097 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:50:19.792 22097 22097 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:50:19.794 22097 22097 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:50:19.795 22097 22097 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:50:22.215 22097 22097 I AutofillManager: showAutofillDialog() return false due to improve fill dialog
+11-23 14:50:22.215 22097 22097 I ImeTracker: com.tranquochuy.parkpin:f799fe24: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser true userId 0 displayId 0
+11-23 14:50:22.215 22097 22097 D InsetsController: show(ime())
+11-23 14:50:22.215 22097 22097 D InsetsController: Setting requestedVisibleTypes to 511 (was 503)
+11-23 14:50:22.235 22097 22097 I AssistStructure: Flattened final assist data: 8920 bytes, containing 1 windows, 62 views
+11-23 14:50:22.296 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ImeBackAnimationController@ace0408
+11-23 14:50:22.300 22097 22150 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ImeBackAnimationController@ace0408
+11-23 14:50:22.387 22097 22097 D VRI[MainActivity]: WindowInsets changed: ime:[0,0,0,883]
+11-23 14:50:22.589 22097 22097 I ImeTracker: com.tranquochuy.parkpin:f799fe24: onShown
+11-23 14:50:24.903 22097 22097 I AutofillManager: showAutofillDialog() return false due to improve fill dialog
+11-23 14:50:24.903 22097 22097 I ImeTracker: com.tranquochuy.parkpin:9415e9fa: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser true userId 0 displayId 0
+11-23 14:50:24.903 22097 22097 D InsetsController: show(ime())
+11-23 14:50:24.903 22097 22097 I ImeTracker: com.tranquochuy.parkpin:9415e9fa: onCancelled at PHASE_CLIENT_APPLY_ANIMATION
+11-23 14:50:24.906 22097 22097 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-23 14:50:24.911 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@d683d27
+11-23 14:50:24.912 22097 22150 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@d683d27
+11-23 14:50:24.936 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ImeBackAnimationController@ace0408
+11-23 14:50:24.937 22097 22150 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ImeBackAnimationController@ace0408
+11-23 14:50:27.535 22097 22097 I AutofillManager: showAutofillDialog() return false due to improve fill dialog
+11-23 14:50:27.535 22097 22097 I ImeTracker: com.tranquochuy.parkpin:dc051ca9: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser true userId 0 displayId 0
+11-23 14:50:27.535 22097 22097 D InsetsController: show(ime())
+11-23 14:50:27.535 22097 22097 I ImeTracker: com.tranquochuy.parkpin:dc051ca9: onCancelled at PHASE_CLIENT_APPLY_ANIMATION
+11-23 14:50:27.540 22097 22097 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-23 14:50:27.547 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@d683d27
+11-23 14:50:27.548 22097 22150 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@d683d27
+11-23 14:50:27.579 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ImeBackAnimationController@ace0408
+11-23 14:50:27.579 22097 22150 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ImeBackAnimationController@ace0408
+11-23 14:50:30.169 22097 22097 I AutofillManager: showAutofillDialog() return false due to improve fill dialog
+11-23 14:50:30.170 22097 22097 I ImeTracker: com.tranquochuy.parkpin:17f505d2: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser true userId 0 displayId 0
+11-23 14:50:30.170 22097 22097 D InsetsController: show(ime())
+11-23 14:50:30.170 22097 22097 I ImeTracker: com.tranquochuy.parkpin:17f505d2: onCancelled at PHASE_CLIENT_APPLY_ANIMATION
+11-23 14:50:30.173 22097 22097 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-23 14:50:30.178 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@d683d27
+11-23 14:50:30.181 22097 22150 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@d683d27
+11-23 14:50:30.211 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ImeBackAnimationController@ace0408
+11-23 14:50:30.214 22097 22150 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ImeBackAnimationController@ace0408
+11-23 14:50:37.645 22097 22097 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:50:37.647 22097 22097 I AutofillManager: showAutofillDialog() return false due to improve fill dialog
+11-23 14:50:37.648 22097 22097 I ImeTracker: com.tranquochuy.parkpin:182d4d22: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser true userId 0 displayId 0
+11-23 14:50:37.648 22097 22097 D InsetsController: show(ime())
+11-23 14:50:37.648 22097 22097 I ImeTracker: com.tranquochuy.parkpin:182d4d22: onCancelled at PHASE_CLIENT_APPLY_ANIMATION
+11-23 14:50:37.656 22097 22097 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-23 14:50:37.660 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@d683d27
+11-23 14:50:37.661 22097 22150 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@d683d27
+11-23 14:50:37.695 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ImeBackAnimationController@ace0408
+11-23 14:50:37.698 22097 22150 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ImeBackAnimationController@ace0408
+11-23 14:50:38.497 22097 22097 I ImeTracker: com.tranquochuy.parkpin:81e33b0a: onRequestHide at ORIGIN_CLIENT reason HIDE_SOFT_INPUT_REQUEST_HIDE_WITH_CONTROL fromUser true userId 0 displayId 0
+11-23 14:50:38.497 22097 22097 D InsetsController: hide(ime())
+11-23 14:50:38.497 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@d683d27
+11-23 14:50:38.497 22097 22097 D InsetsController: Setting requestedVisibleTypes to 503 (was 511)
+11-23 14:50:38.497 22097 22150 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@d683d27
+11-23 14:50:38.503 22097 22097 D VRI[MainActivity]: WindowInsets changed: ime:null
+11-23 14:50:38.528 22097 22097 I ImeTracker: com.tranquochuy.parkpin:4de85f9a: onCancelled at PHASE_CLIENT_ON_CONTROLS_CHANGED
+11-23 14:50:43.847 22097 22097 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:50:43.850 22097 22097 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:50:43.850 22097 22097 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:50:43.865 22097 22097 I ImeTracker: com.tranquochuy.parkpin:b966828c: onRequestHide at ORIGIN_CLIENT reason HIDE_CLOSE_CURRENT_SESSION fromUser false userId 0 displayId 0
+11-23 14:50:43.865 22097 22097 D InsetsController: hide(ime())
+11-23 14:50:43.865 22097 22097 I ImeTracker: com.tranquochuy.parkpin:b966828c: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+11-23 14:50:49.345 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.app.Activity$$ExternalSyntheticLambda0@5992241
+11-23 14:50:49.349 22097 22150 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.app.Activity$$ExternalSyntheticLambda0@5992241
+11-23 14:50:49.354 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): null
+11-23 14:50:49.368 22097 22097 D ViewRootImpl: Skipping stats log for color mode
+11-23 14:50:49.429 22097 22105 W quochuy.parkpin: Cleared Reference was only reachable from finalizer (only reported once)
+11-23 14:50:49.451 22097 22105 I quochuy.parkpin: Background concurrent mark compact GC freed 3168KB AllocSpace bytes, 2(64KB) LOS objects, 49% free, 4799KB/9599KB, paused 1.088ms,12.971ms total 47.068ms
+11-23 14:50:49.461 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.app.Activity$$ExternalSyntheticLambda0@3e90aa8
+11-23 14:50:49.461 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@d2a8566
+11-23 14:50:49.462 22097 22097 D VRI[MainActivity]: WindowInsets changed: 2400x1080 statusBars:[0,63,0,0] navigationBars:[0,0,0,63] mandatorySystemGestures:[0,63,0,84]
+11-23 14:50:49.462 22097 22150 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@d2a8566
+11-23 14:50:49.463 22097 22097 I Surface : Creating surface for consumer unnamed-22097-2 with slotExpansion=1 for 64 slots
+11-23 14:50:49.464 22097 22097 I Surface : Creating surface for consumer VRI[MainActivity]#2(BLAST Consumer)2 with slotExpansion=1 for 64 slots
+11-23 14:50:49.549 22097 22097 D InsetsController: hide(ime())
+11-23 14:50:49.549 22097 22097 I ImeTracker: com.tranquochuy.parkpin:34095569: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+11-23 14:51:00.372 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.app.Activity$$ExternalSyntheticLambda0@3e90aa8
+11-23 14:51:00.373 22097 22150 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.app.Activity$$ExternalSyntheticLambda0@3e90aa8
+11-23 14:51:00.379 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): null
+11-23 14:51:00.380 22097 22150 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: null
+11-23 14:51:00.387 22097 22097 D ViewRootImpl: Skipping stats log for color mode
+11-23 14:51:00.434 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.app.Activity$$ExternalSyntheticLambda0@b88f63d
+11-23 14:51:00.434 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@fc3c783
+11-23 14:51:00.435 22097 22097 D VRI[MainActivity]: WindowInsets changed: 1080x2400 statusBars:[0,63,0,0] navigationBars:[0,0,0,63] mandatorySystemGestures:[0,63,0,84]
+11-23 14:51:00.436 22097 22150 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@fc3c783
+11-23 14:51:00.437 22097 22097 I Surface : Creating surface for consumer unnamed-22097-3 with slotExpansion=1 for 64 slots
+11-23 14:51:00.438 22097 22097 I Surface : Creating surface for consumer VRI[MainActivity]#3(BLAST Consumer)3 with slotExpansion=1 for 64 slots
+11-23 14:51:00.519 22097 22097 D InsetsController: hide(ime())
+11-23 14:51:00.519 22097 22097 I ImeTracker: com.tranquochuy.parkpin:36bed6c2: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+11-23 14:51:11.229 22097 22097 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:51:11.230 22097 22097 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:51:11.231 22097 22097 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:51:11.232 22097 22097 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:51:13.904 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.app.Activity$$ExternalSyntheticLambda0@b88f63d
+11-23 14:51:13.913 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): null
+11-23 14:51:13.914 22097 22097 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:51:13.914 22097 22097 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:51:13.924 22097 22097 D ViewRootImpl: Skipping stats log for color mode
+11-23 14:51:14.033 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.app.Activity$$ExternalSyntheticLambda0@887843d
+11-23 14:51:14.033 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@1980583
+11-23 14:51:14.033 22097 22150 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@1980583
+11-23 14:51:14.036 22097 22097 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:51:14.037 22097 22097 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:51:14.041 22097 22097 D VRI[MainActivity]: WindowInsets changed: 2400x1080 statusBars:[0,63,0,0] navigationBars:[0,0,0,63] mandatorySystemGestures:[0,63,0,84]
+11-23 14:51:14.046 22097 22097 I Surface : Creating surface for consumer unnamed-22097-4 with slotExpansion=1 for 64 slots
+11-23 14:51:14.046 22097 22097 I Surface : Creating surface for consumer VRI[MainActivity]#4(BLAST Consumer)4 with slotExpansion=1 for 64 slots
+11-23 14:51:14.145 22097 22097 D InsetsController: hide(ime())
+11-23 14:51:14.145 22097 22097 I ImeTracker: com.tranquochuy.parkpin:b5d01a90: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+11-23 14:51:17.213 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.app.Activity$$ExternalSyntheticLambda0@887843d
+11-23 14:51:17.216 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): null
+11-23 14:51:17.217 22097 22097 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:51:17.217 22097 22097 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:51:17.222 22097 22097 D ViewRootImpl: Skipping stats log for color mode
+11-23 14:51:17.311 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.app.Activity$$ExternalSyntheticLambda0@2623001
+11-23 14:51:17.312 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@1a460e7
+11-23 14:51:17.312 22097 22150 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@1a460e7
+11-23 14:51:17.314 22097 22097 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:51:17.315 22097 22097 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:51:17.316 22097 22097 D VRI[MainActivity]: WindowInsets changed: 1080x2400 statusBars:[0,63,0,0] navigationBars:[0,0,0,63] mandatorySystemGestures:[0,63,0,84]
+11-23 14:51:17.318 22097 22097 I Surface : Creating surface for consumer unnamed-22097-5 with slotExpansion=1 for 64 slots
+11-23 14:51:17.319 22097 22097 I Surface : Creating surface for consumer VRI[MainActivity]#5(BLAST Consumer)5 with slotExpansion=1 for 64 slots
+11-23 14:51:17.349 22097 22105 I quochuy.parkpin: Background young concurrent mark compact GC freed 3600KB AllocSpace bytes, 0(0B) LOS objects, 37% free, 5967KB/9599KB, paused 1.861ms,6.849ms total 30.929ms
+11-23 14:51:17.403 22097 22097 D InsetsController: hide(ime())
+11-23 14:51:17.404 22097 22097 I ImeTracker: com.tranquochuy.parkpin:a9f03f2e: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+11-23 14:51:22.399 22097 22097 I AutofillManager: showAutofillDialog() return false due to improve fill dialog
+11-23 14:51:22.399 22097 22097 I ImeTracker: com.tranquochuy.parkpin:4eef8c4f: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser true userId 0 displayId 0
+11-23 14:51:22.399 22097 22097 D InsetsController: show(ime())
+11-23 14:51:22.399 22097 22097 D InsetsController: Setting requestedVisibleTypes to 511 (was 503)
+11-23 14:51:22.412 22097 22097 I AssistStructure: Flattened final assist data: 9052 bytes, containing 2 windows, 63 views
+11-23 14:51:22.425 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.widget.PopupWindow$PopupDecorView$$ExternalSyntheticLambda1@aa95614
+11-23 14:51:22.426 22097 22150 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.widget.PopupWindow$PopupDecorView$$ExternalSyntheticLambda1@aa95614
+11-23 14:51:22.427 22097 22097 I Surface : Creating surface for consumer unnamed-22097-6 with slotExpansion=1 for 64 slots
+11-23 14:51:22.428 22097 22097 I Surface : Creating surface for consumer VRI[PopupWindow:33ceb68]#6(BLAST Consumer)6 with slotExpansion=1 for 64 slots
+11-23 14:51:22.473 22097 22115 W BLASTBufferQueue: Attempting to clear sync transaction when none are active
+11-23 14:51:22.535 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ImeBackAnimationController@52a07b
+11-23 14:51:22.535 22097 22150 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ImeBackAnimationController@52a07b
+11-23 14:51:22.620 22097 22097 D VRI[MainActivity]: WindowInsets changed: ime:[0,0,0,883]
+11-23 14:51:22.821 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): null
+11-23 14:51:22.840 22097 22097 I ImeTracker: com.tranquochuy.parkpin:4eef8c4f: onShown
+11-23 14:51:25.159 22097 22097 I AutofillManager: showAutofillDialog() return false due to improve fill dialog
+11-23 14:51:25.159 22097 22097 I ImeTracker: com.tranquochuy.parkpin:e7237e0e: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser true userId 0 displayId 0
+11-23 14:51:25.159 22097 22097 D InsetsController: show(ime())
+11-23 14:51:25.160 22097 22097 I ImeTracker: com.tranquochuy.parkpin:e7237e0e: onCancelled at PHASE_CLIENT_APPLY_ANIMATION
+11-23 14:51:25.175 22097 22097 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-23 14:51:25.187 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.widget.PopupWindow$PopupDecorView$$ExternalSyntheticLambda1@e50b647
+11-23 14:51:25.188 22097 22150 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.widget.PopupWindow$PopupDecorView$$ExternalSyntheticLambda1@e50b647
+11-23 14:51:25.190 22097 22097 I Surface : Creating surface for consumer unnamed-22097-7 with slotExpansion=1 for 64 slots
+11-23 14:51:25.191 22097 22097 I Surface : Creating surface for consumer VRI[PopupWindow:c489e6b]#7(BLAST Consumer)7 with slotExpansion=1 for 64 slots
+11-23 14:51:25.202 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@1a460e7
+11-23 14:51:25.203 22097 22150 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@1a460e7
+11-23 14:51:25.206 22097 22115 W BLASTBufferQueue: Attempting to clear sync transaction when none are active
+11-23 14:51:25.215 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ImeBackAnimationController@52a07b
+11-23 14:51:25.216 22097 22150 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ImeBackAnimationController@52a07b
+11-23 14:51:25.556 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): null
+11-23 14:51:27.764 22097 22097 I AutofillManager: showAutofillDialog() return false due to improve fill dialog
+11-23 14:51:27.765 22097 22097 I ImeTracker: com.tranquochuy.parkpin:462d7e8b: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser true userId 0 displayId 0
+11-23 14:51:27.765 22097 22097 D InsetsController: show(ime())
+11-23 14:51:27.765 22097 22097 I ImeTracker: com.tranquochuy.parkpin:462d7e8b: onCancelled at PHASE_CLIENT_APPLY_ANIMATION
+11-23 14:51:27.774 22097 22097 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-23 14:51:27.787 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.widget.PopupWindow$PopupDecorView$$ExternalSyntheticLambda1@d8f9f10
+11-23 14:51:27.788 22097 22150 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.widget.PopupWindow$PopupDecorView$$ExternalSyntheticLambda1@d8f9f10
+11-23 14:51:27.789 22097 22097 I Surface : Creating surface for consumer unnamed-22097-8 with slotExpansion=1 for 64 slots
+11-23 14:51:27.790 22097 22097 I Surface : Creating surface for consumer VRI[PopupWindow:de75ca4]#8(BLAST Consumer)8 with slotExpansion=1 for 64 slots
+11-23 14:51:27.801 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@1a460e7
+11-23 14:51:27.801 22097 22150 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@1a460e7
+11-23 14:51:27.809 22097 22115 W BLASTBufferQueue: Attempting to clear sync transaction when none are active
+11-23 14:51:27.820 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ImeBackAnimationController@52a07b
+11-23 14:51:27.820 22097 22150 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ImeBackAnimationController@52a07b
+11-23 14:51:28.161 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): null
+11-23 14:51:30.356 22097 22097 I AutofillManager: showAutofillDialog() return false due to improve fill dialog
+11-23 14:51:30.356 22097 22097 I ImeTracker: com.tranquochuy.parkpin:f9141cd1: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser true userId 0 displayId 0
+11-23 14:51:30.356 22097 22097 D InsetsController: show(ime())
+11-23 14:51:30.356 22097 22097 I ImeTracker: com.tranquochuy.parkpin:f9141cd1: onCancelled at PHASE_CLIENT_APPLY_ANIMATION
+11-23 14:51:30.375 22097 22097 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-23 14:51:30.388 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.widget.PopupWindow$PopupDecorView$$ExternalSyntheticLambda1@e3a311f
+11-23 14:51:30.389 22097 22097 I Surface : Creating surface for consumer unnamed-22097-9 with slotExpansion=1 for 64 slots
+11-23 14:51:30.389 22097 22097 I Surface : Creating surface for consumer VRI[PopupWindow:c39bc3]#9(BLAST Consumer)9 with slotExpansion=1 for 64 slots
+11-23 14:51:30.397 22097 22150 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.widget.PopupWindow$PopupDecorView$$ExternalSyntheticLambda1@e3a311f
+11-23 14:51:30.402 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@1a460e7
+11-23 14:51:30.402 22097 22150 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@1a460e7
+11-23 14:51:30.434 22097 22115 W BLASTBufferQueue: Attempting to clear sync transaction when none are active
+11-23 14:51:30.437 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ImeBackAnimationController@52a07b
+11-23 14:51:30.438 22097 22150 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ImeBackAnimationController@52a07b
+11-23 14:51:30.751 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): null
+11-23 14:51:37.840 22097 22097 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:51:37.842 22097 22097 I AutofillManager: showAutofillDialog() return false due to improve fill dialog
+11-23 14:51:37.842 22097 22097 I ImeTracker: com.tranquochuy.parkpin:dcc57037: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser true userId 0 displayId 0
+11-23 14:51:37.842 22097 22097 D InsetsController: show(ime())
+11-23 14:51:37.842 22097 22097 I ImeTracker: com.tranquochuy.parkpin:dcc57037: onCancelled at PHASE_CLIENT_APPLY_ANIMATION
+11-23 14:51:37.857 22097 22097 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-23 14:51:37.870 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.widget.PopupWindow$PopupDecorView$$ExternalSyntheticLambda1@8e36046
+11-23 14:51:37.870 22097 22150 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.widget.PopupWindow$PopupDecorView$$ExternalSyntheticLambda1@8e36046
+11-23 14:51:37.870 22097 22097 I Surface : Creating surface for consumer unnamed-22097-10 with slotExpansion=1 for 64 slots
+11-23 14:51:37.871 22097 22097 I Surface : Creating surface for consumer VRI[PopupWindow:556567a]#10(BLAST Consumer)10 with slotExpansion=1 for 64 slots
+11-23 14:51:37.884 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@1a460e7
+11-23 14:51:37.884 22097 22150 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@1a460e7
+11-23 14:51:37.905 22097 22115 W BLASTBufferQueue: Attempting to clear sync transaction when none are active
+11-23 14:51:37.930 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ImeBackAnimationController@52a07b
+11-23 14:51:37.930 22097 22150 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ImeBackAnimationController@52a07b
+11-23 14:51:38.242 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): null
+11-23 14:51:46.736 22097 22105 I quochuy.parkpin: Background concurrent mark compact GC freed 5040KB AllocSpace bytes, 4(128KB) LOS objects, 49% free, 4479KB/8959KB, paused 842us,6.211ms total 33.491ms
+11-23 14:51:46.764 22097 22097 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:51:46.767 22097 22097 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:51:46.767 22097 22097 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:51:46.775 22097 22097 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@1a460e7
+11-23 14:51:46.775 22097 22150 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@1a460e7
+11-23 14:51:46.776 22097 22097 I ImeTracker: com.tranquochuy.parkpin:70394d77: onRequestHide at ORIGIN_CLIENT reason HIDE_CLOSE_CURRENT_SESSION fromUser false userId 0 displayId 0
+11-23 14:51:46.776 22097 22097 D InsetsController: hide(ime())
+11-23 14:51:46.776 22097 22097 D InsetsController: Setting requestedVisibleTypes to 503 (was 511)
+11-23 14:51:46.778 22097 22097 D VRI[MainActivity]: WindowInsets changed: ime:null
+11-23 14:51:46.811 22097 22097 I ImeTracker: com.tranquochuy.parkpin:0d9c14ac: onCancelled at PHASE_CLIENT_ON_CONTROLS_CHANGED
+11-23 14:51:46.994 22097 22097 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-23 14:51:47.002 22097 22097 W ImeBackCallbackProxy: Ime callback not found. Ignoring unregisterReceivedCallback. callbackId: 171607576 remaining callbacks: 0
+11-23 14:52:00.018 25665 25665 I Zygote  : Process 25665 created for com.tranquochuy.parkpin
+11-23 14:52:00.018 25665 25665 I quochuy.parkpin: Late-enabling -Xcheck:jni
+11-23 14:52:00.041 25665 25665 I quochuy.parkpin: Using generational CollectorTypeCMC GC.
+11-23 14:52:00.041 25665 25665 W quochuy.parkpin: Unexpected CPU variant for x86: x86_64.
+11-23 14:52:00.041 25665 25665 W quochuy.parkpin: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, goldmont-without-sha-xsaves, tremont, kabylake, alderlake, pantherlake, default
+11-23 14:52:00.055 25665 25665 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+11-23 14:52:00.148 25665 25665 D CompatChangeReporter: Compat change id reported: 333566037; UID 10239; state: ENABLED
+11-23 14:52:00.324 25665 25665 D nativeloader: Configuring clns-9 for other apk /data/app/~~HLhFKiC_Si-ltNOibPTDWg==/com.tranquochuy.parkpin-hSMgV5m2NBYLu6Hx2-H-Fw==/base.apk. target_sdk_version=37, uses_libraries=, library_path=/data/app/~~HLhFKiC_Si-ltNOibPTDWg==/com.tranquochuy.parkpin-hSMgV5m2NBYLu6Hx2-H-Fw==/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/com.tranquochuy.parkpin
+11-23 14:52:00.340 25665 25665 D ActivityThread: Set OS env TMPDIR to /data/user/0/com.tranquochuy.parkpin/cache
+11-23 14:52:00.342 25665 25665 V GraphicsEnvironment: Currently set values for:
+11-23 14:52:00.342 25665 25665 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+11-23 14:52:00.342 25665 25665 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+11-23 14:52:00.342 25665 25665 V GraphicsEnvironment: com.tranquochuy.parkpin is not listed in per-application setting
+11-23 14:52:00.342 25665 25665 V GraphicsEnvironment: No special selections for ANGLE, returning default driver choice
+11-23 14:52:00.346 25665 25665 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+11-23 14:52:00.354 25665 25665 D CompatChangeReporter: Compat change id reported: 407952621; UID 10239; state: ENABLED
+11-23 14:52:00.354 25665 25665 D CompatChangeReporter: Compat change id reported: 419020719; UID 10239; state: ENABLED
+11-23 14:52:00.436 25665 25695 I DisplayManager: Choreographer implicitly registered for the refresh rate.
+11-23 14:52:00.445 25665 25665 D quochuy.parkpin: Initializing ProtoLog
+11-23 14:52:00.445 25665 25665 D ProtoLog: Initializing ProtoLog DataSource
+11-23 14:52:00.487 25665 25695 I GFXSTREAM: [eglDisplay.cpp(297)] Opening libGLESv1_CM_emulation.so
+11-23 14:52:00.487 25665 25695 I GFXSTREAM: [eglDisplay.cpp(297)] Opening libGLESv2_emulation.so
+11-23 14:52:00.488 25665 25695 W libc    : Access denied finding property "vendor.mesa.virtgpu.kumquat"
+11-23 14:52:00.496 25665 25695 W HWUI    : Failed to initialize 101010-2 format, error = EGL_SUCCESS
+11-23 14:52:00.546 25665 25665 D AppCompatDelegate: Checking for metadata for AppLocalesMetadataHolderService : Service not found
+11-23 14:52:00.642 25665 25665 I quochuy.parkpin: hiddenapi: Accessing hidden method Landroid/view/ViewGroup;->makeOptionalFitsSystemWindows()V (runtime_flags=0, domain=platform, api=unsupported) from Landroidx/appcompat/widget/ViewUtils; (domain=app, TargetSdkVersion=37) using reflection: allowed
+11-23 14:52:00.729 25665 25665 I HWUI    : Using FreeType backend (prop=Auto)
+11-23 14:52:00.939 25665 25665 D CompatChangeReporter: Compat change id reported: 418924588; UID 10239; state: ENABLED
+11-23 14:52:00.960 25665 25665 W HWUI    : Unknown dataspace 0
+11-23 14:52:00.971 25665 25701 W libc    : Access denied finding property "vendor.mesa.virtgpu.kumquat"
+11-23 14:52:00.979 25665 25665 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.app.Activity$$ExternalSyntheticLambda0@5992241
+11-23 14:52:00.982 25665 25702 D CompatChangeReporter: Compat change id reported: 458413887; UID 10239; state: ENABLED
+11-23 14:52:00.983 25665 25665 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@b2e1bd4
+11-23 14:52:00.983 25665 25702 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@b2e1bd4
+11-23 14:52:00.984 25665 25702 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@b2e1bd4
+11-23 14:52:00.990 25665 25665 D VRI[MainActivity]: WindowInsets changed: 1080x2400 statusBars:[0,63,0,0] navigationBars:[0,0,0,63] mandatorySystemGestures:[0,63,0,84]
+11-23 14:52:01.014 25665 25665 I Surface : Creating surface for consumer unnamed-25665-0 with slotExpansion=1 for 64 slots
+11-23 14:52:01.016 25665 25665 I Surface : Creating surface for consumer VRI[MainActivity]#0(BLAST Consumer)0 with slotExpansion=1 for 64 slots
+11-23 14:52:01.519 25665 25670 I quochuy.parkpin: Compiler allocated 4522KB to compile void android.view.ViewRootImpl.performTraversals(long)
+11-23 14:52:01.604 25665 25665 D InsetsController: hide(ime())
+11-23 14:52:01.604 25665 25665 I ImeTracker: com.tranquochuy.parkpin:69d11b2d: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+11-23 14:52:06.021 25665 25798 D ProfileInstaller: Installing profile for com.tranquochuy.parkpin
+11-23 14:52:09.030 25665 25665 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.app.Dialog$$ExternalSyntheticLambda2@ce94372
+11-23 14:52:09.031 25665 25702 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.app.Dialog$$ExternalSyntheticLambda2@ce94372
+11-23 14:52:09.035 25665 25665 I Surface : Creating surface for consumer unnamed-25665-1 with slotExpansion=1 for 64 slots
+11-23 14:52:09.036 25665 25665 I Surface : Creating surface for consumer VRI[MainActivity]#1(BLAST Consumer)1 with slotExpansion=1 for 64 slots
+11-23 14:52:11.637 25665 25665 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): null
+11-23 14:52:11.644 25665 25695 D HWUI    : endAllActiveAnimators on 0x7522f20abe70 (RippleDrawable) with handle 0x7522520645e0
+11-23 14:52:11.678 25665 25665 D InsetsController: hide(ime())
+11-23 14:52:11.678 25665 25665 I ImeTracker: com.tranquochuy.parkpin:2a45bdbd: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+11-23 14:52:14.179 25665 25665 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.app.Dialog$$ExternalSyntheticLambda2@7c35c4
+11-23 14:52:14.180 25665 25702 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.app.Dialog$$ExternalSyntheticLambda2@7c35c4
+11-23 14:52:14.183 25665 25665 I Surface : Creating surface for consumer unnamed-25665-2 with slotExpansion=1 for 64 slots
+11-23 14:52:14.183 25665 25665 I Surface : Creating surface for consumer VRI[MainActivity]#2(BLAST Consumer)2 with slotExpansion=1 for 64 slots
+11-23 14:52:16.804 25665 25665 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): null
+11-23 14:52:16.807 25665 25695 D HWUI    : endAllActiveAnimators on 0x7522f206a520 (RippleDrawable) with handle 0x75225204b710
+11-23 14:52:16.848 25665 25665 D InsetsController: hide(ime())
+11-23 14:52:16.848 25665 25665 I ImeTracker: com.tranquochuy.parkpin:372c89ce: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+11-23 14:52:21.340 25665 25665 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.app.Dialog$$ExternalSyntheticLambda2@e94e202
+11-23 14:52:21.341 25665 25702 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.app.Dialog$$ExternalSyntheticLambda2@e94e202
+11-23 14:52:21.345 25665 25665 I Surface : Creating surface for consumer unnamed-25665-3 with slotExpansion=1 for 64 slots
+11-23 14:52:21.346 25665 25665 I Surface : Creating surface for consumer VRI[MainActivity]#3(BLAST Consumer)3 with slotExpansion=1 for 64 slots
+11-23 14:52:23.838 25665 25665 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): null
+11-23 14:52:23.842 25665 25695 D HWUI    : endAllActiveAnimators on 0x7522f20b9fc0 (RippleDrawable) with handle 0x752252059600
+11-23 14:52:23.877 25665 25665 D InsetsController: hide(ime())
+11-23 14:52:23.877 25665 25665 I ImeTracker: com.tranquochuy.parkpin:0e6925df: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+11-23 14:52:31.531 25665 25665 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:52:31.532 25665 25665 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:52:31.533 25665 25665 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:52:31.534 25665 25665 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:52:31.601 25665 25665 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:52:31.601 25665 25665 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:52:31.675 25665 25665 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:52:31.675 25665 25665 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:52:31.676 25665 25665 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:52:31.676 25665 25665 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:52:31.686 25665 25671 W quochuy.parkpin: Cleared Reference was only reachable from finalizer (only reported once)
+11-23 14:52:31.696 25665 25671 I quochuy.parkpin: Background young concurrent mark compact GC freed 3289KB AllocSpace bytes, 1(32KB) LOS objects, 41% free, 4578KB/7790KB, paused 741us,6.552ms total 26.769ms
+11-23 14:52:31.736 25665 25665 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:52:31.737 25665 25665 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:52:31.848 25665 25665 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:52:31.848 25665 25665 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:52:31.849 25665 25665 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:52:31.849 25665 25665 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:52:31.894 25665 25665 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:52:31.894 25665 25665 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:52:34.609 25665 25665 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:52:34.610 25665 25665 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:52:34.611 25665 25665 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:52:34.612 25665 25665 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:52:38.207 25665 25671 I quochuy.parkpin: Background concurrent mark compact GC freed 3491KB AllocSpace bytes, 0(0B) LOS objects, 49% free, 4287KB/8575KB, paused 1.252ms,7.895ms total 20.472ms
+11-23 14:52:41.981 25665 25665 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:52:41.981 25665 25665 D AutofillManager: view not autofillable - has multiline input type
+11-23 14:52:59.969 25665 25665 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.app.Activity$$ExternalSyntheticLambda0@5992241
+11-23 14:52:59.970 25665 25702 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.app.Activity$$ExternalSyntheticLambda0@5992241
+11-23 14:53:01.069 25665 25665 D VRI[MainActivity]: visibilityChanged oldVisibility=true newVisibility=false
+11-23 14:53:01.123 25665 25665 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): null
+11-23 14:53:01.123 25665 25702 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: null
+11-23 14:53:01.130 25665 25665 D ViewRootImpl: Skipping stats log for color mode
+11-23 14:53:03.130 25665 25695 I GFXSTREAM: [eglDisplay.cpp(297)] Opening libGLESv1_CM_emulation.so
+11-23 14:53:03.130 25665 25695 I GFXSTREAM: [eglDisplay.cpp(297)] Opening libGLESv2_emulation.so
+11-23 14:53:03.131 25665 25695 W libc    : Access denied finding property "vendor.mesa.virtgpu.kumquat"
+11-23 14:53:03.139 25665 25695 W HWUI    : Failed to initialize 101010-2 format, error = EGL_SUCCESS
+11-23 14:53:03.204 25665 25665 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.app.Activity$$ExternalSyntheticLambda0@8296b98
+11-23 14:53:03.204 25665 25665 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@dc2a7d6
+11-23 14:53:03.204 25665 25702 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@dc2a7d6
+11-23 14:53:03.205 25665 25665 D VRI[MainActivity]: WindowInsets changed: 1080x2400 statusBars:[0,63,0,0] navigationBars:[0,0,0,63] mandatorySystemGestures:[0,63,0,84]
+11-23 14:53:03.209 25665 25665 I Surface : Creating surface for consumer unnamed-25665-4 with slotExpansion=1 for 64 slots
+11-23 14:53:03.210 25665 25665 I Surface : Creating surface for consumer VRI[MainActivity]#4(BLAST Consumer)4 with slotExpansion=1 for 64 slots
+11-23 14:53:03.741 25665 25665 I Choreographer: Skipped 31 frames!  The application may be doing too much work on its main thread.
+11-23 14:53:03.831 25665 25665 D InsetsController: hide(ime())
+11-23 14:53:03.831 25665 25665 I ImeTracker: com.tranquochuy.parkpin:1f471328: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+
+exit=0
+
+$ adb logcat -d -b crash -v threadtime
+Crash buffer inspected: 0 ParkPin references; unrelated system text omitted.
+exit=0
+
+$ adb shell pm path com.tranquochuy.parkpin
+package:/data/app/~~HLhFKiC_Si-ltNOibPTDWg==/com.tranquochuy.parkpin-hSMgV5m2NBYLu6Hx2-H-Fw==/base.apk
+
+exit=0
+
+$ adb pull /data/app/~~HLhFKiC_Si-ltNOibPTDWg==/com.tranquochuy.parkpin-hSMgV5m2NBYLu6Hx2-H-Fw==/base.apk C:\Users\ASUS\Documents\ChatGPT\ParkPin\.qa-tools\g2-final-installed.apk
+
+/data/app/~~HLhFKiC_Si-ltNOibPTDWg==/com.tranquochuy.parkpin-hSMgV5m2NBYLu6Hx2-H-Fw==/base.apk: 1 file pulled, 0 skipped. 66.0 MB/s (7244314 bytes in 0.105s)
+exit=0
+
+$ adb shell settings put secure show_ime_with_hard_keyboard 0
+
+
+exit=0
+
+$ adb shell settings get secure show_ime_with_hard_keyboard
+0
+
+exit=0
+
+$ adb shell settings put system accelerometer_rotation 1
+
+
+exit=0
+
+$ adb shell settings get system accelerometer_rotation
+1
+
+exit=0
+
+$ adb shell settings put system user_rotation 0
+
+
+exit=0
+
+$ adb shell settings get system user_rotation
+0
+
+exit=0

@@ -1,0 +1,30 @@
+{
+  "label": "cancel-delete",
+  "rows": [
+    {
+      "id": 1,
+      "placeName": "QA-G2-A",
+      "floor": "B2",
+      "zone": "A",
+      "columnLabel": "12",
+      "note": "Near_elevator_A",
+      "active": 1,
+      "createdAt": 1795420214673,
+      "updatedAt": 1795420314206
+    },
+    {
+      "id": 2,
+      "placeName": "QA-G2-B-edited",
+      "floor": "B3",
+      "zone": "C",
+      "columnLabel": "22",
+      "note": "Edited_near_exit",
+      "active": 0,
+      "createdAt": 1795420243773,
+      "updatedAt": 1795420306658
+    }
+  ],
+  "count": 2,
+  "active_count": 1,
+  "source": "Read-only app db/WAL capture after UI settled; SQL only reads host copies"
+}

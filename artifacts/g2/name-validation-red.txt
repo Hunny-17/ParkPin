@@ -1,0 +1,6 @@
+Corrected nonblank name; stale required-name messages: 1
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Documents\ChatGPT\ParkPin\artifacts\g2\check_name_validation.py", line 10, in <module>
+    assert not errors, 'FAIL: required-name error remains after a valid name is entered'
+           ^^^^^^^^^^
+AssertionError: FAIL: required-name error remains after a valid name is entered

@@ -1,7 +1,7 @@
-# ParkPin G2 — Room + local CRUD integration (QA pending)
+# ParkPin G2 — Room + local CRUD integration (QA 23/11/2026)
 
 Base: G1 merge commit `315aaf17681af2c3edca216c91b6e5a0b72c2f80`.
-PR: https://github.com/Hunny-17/ParkPin/pull/2 (Draft)
+PR và trạng thái xuất bản cuối: https://github.com/Hunny-17/ParkPin/pull/2
 
 ## Implemented source (code review and runtime QA separate)
 - Room 2.8.5 entity + DAO + database + async repository, persisted locally offline.
@@ -13,15 +13,14 @@ PR: https://github.com/Hunny-17/ParkPin/pull/2 (Draft)
 - Android instrumentation DAO test source: active switching, CRUD, ordering, empty DB, persistence after close/reopen.
 - Existing G1 navigation / keyboard insets retained.
 
-## Pending verification (do not mark G2 PASS)
-- Confirm PR #2 CI `assemble-debug` on final HEAD. CI build alone does not run instrumented tests.
-- Android Studio / ADB: install APK on existing `Medium_Phone` emulator with API 37; run tests via:
-  `gradlew.bat :app:connectedDebugAndroidTest`
-- Manual UI QA on installed APK: empty state; invalid name blocked; create A and B; one active;
-  history contains A and B; edit B; activate A; delete B; restart app retains A;
-  delete A shows empty state; Back/rotation/keyboard regression. Save actual screenshots and logs.
-- Verify Android test APK compiles; review any SDK/API warnings, error states and G1 regression.
-- Update test table and screenshot evidence; keep Draft until CI + emulator + visual QA PASS.
+## Verified on Emulator
+- Clean build bằng JDK 17, Gradle 9.6 và SDK 37: PASS.
+- JVM: 1/1 PASS; connected instrumentation DAO tests trên Medium_Phone API 37.2: 5/5 PASS.
+- CRUD qua UI thực tế: 10/10 PASS; rapid-save, keyboard, rotation, tab stress, G1 regression và validation correction: 6/6 PASS.
+- Đã mở kiểm tra đủ 8 ảnh bắt buộc; Logcat ứng dụng không có crash marker.
+- Sửa 1 lỗi thông báo required-name còn đỏ sau khi nhập tên hợp lệ; kiểm tra red/green và chạy lại toàn bộ QA.
+- [Báo cáo nghiệm thu](G2_ACCEPTANCE.md), bằng chứng trong `artifacts/g2/`.
+- CI của final HEAD được xác minh sau push và ghi trên PR #2; chỉ chuyển Ready for Review khi SUCCESS. Không merge.
 
 ## Acceptance policy
 No `allowMainThreadQueries` in production; tests may use it with an in-memory/test DB.

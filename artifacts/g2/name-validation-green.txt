@@ -1,0 +1,2 @@
+Corrected nonblank name; stale required-name messages: 0
+PASS: required-name error clears when corrected

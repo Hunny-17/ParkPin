@@ -1,0 +1,50 @@
+[
+  {
+    "kind": "jvm",
+    "tests": 1,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "cases": [
+      {
+        "name": "createNormalizesManualInput",
+        "classname": "com.tranquochuy.parkpin.data.ParkingSpotTest",
+        "failed": false
+      }
+    ]
+  },
+  {
+    "kind": "instrumentation",
+    "tests": 5,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "cases": [
+      {
+        "name": "persistsAfterDatabaseCloseAndReopen",
+        "classname": "com.tranquochuy.parkpin.data.ParkingDaoTest",
+        "failed": false
+      },
+      {
+        "name": "savesOneActiveAndArchivesOlder",
+        "classname": "com.tranquochuy.parkpin.data.ParkingDaoTest",
+        "failed": false
+      },
+      {
+        "name": "readUpdateAndDelete",
+        "classname": "com.tranquochuy.parkpin.data.ParkingDaoTest",
+        "failed": false
+      },
+      {
+        "name": "reactivationIsAtomicAndIdempotent",
+        "classname": "com.tranquochuy.parkpin.data.ParkingDaoTest",
+        "failed": false
+      },
+      {
+        "name": "emptyDatabaseAndHistoryOrder",
+        "classname": "com.tranquochuy.parkpin.data.ParkingDaoTest",
+        "failed": false
+      }
+    ]
+  }
+]
