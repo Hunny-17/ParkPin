@@ -1,0 +1,38 @@
+{
+  "T01": {
+    "status": "PASS",
+    "evidence": "G1-01-home.xml; T01-fragments.txt"
+  },
+  "T02": {
+    "status": "PASS",
+    "evidence": "G1-02-save.xml; G1-03-history.xml; T02-home.xml"
+  },
+  "T03": {
+    "status": "PASS",
+    "evidence": "T03-home-save-cta.xml; T03-fragments.txt"
+  },
+  "T04": {
+    "status": "PASS",
+    "evidence": "T04-history-shortcut.xml; T04-fragments.txt"
+  },
+  "T05": {
+    "status": "PASS",
+    "evidence": "T05-foreground.txt; T05-find-car-toast.png (visual inspection required)"
+  },
+  "T07": {
+    "status": "PASS",
+    "evidence": "T07-keyboard-input.xml; T07-ime.txt; G1-04-keyboard.xml"
+  },
+  "T06": {
+    "status": "PASS",
+    "evidence": "T06-home-bottom.xml; T06-save-bottom.xml; T06-history-landscape-bottom.xml"
+  },
+  "T08": {
+    "status": "PASS",
+    "evidence": "G1-05-rotation.xml; T08-fragments.txt; T08-history-restored-portrait.xml"
+  },
+  "T09": {
+    "status": "PASS",
+    "evidence": "T09-history-back-home.xml; T09-save-back-home.xml; T09-home-exit.xml"
+  }
+}

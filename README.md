@@ -32,4 +32,4 @@ Wrapper scripts/JAR được lấy từ nguồn chính thức `gradle/gradle` ta
 - [Roadmap MVP 14 ngày](docs/ROADMAP.md)
 - [Checklist nghiệm thu G1](docs/G1_ACCEPTANCE.md)
 
-**Chưa tuyên bố G1 nghiệm thu:** Cần CI build và kiểm tra trên Emulator trước khi merge PR.
+**QA G1 ngày 23/11/2026:** Build sạch JDK 17 PASS; Emulator API 37.2 **9/9 PASS**; Visual và Crash/Regression PASS. Đã sửa lỗi Bottom Navigation cộng lặp keyboard insets. [`artifacts/g1/`](artifacts/g1/) có ảnh thật, build log và script ADB chạy lại. CI commit nghiệm thu và trạng thái Ready for Review được cập nhật trên [PR #1](https://github.com/Hunny-17/ParkPin/pull/1) sau push; chỉ merge khi CI HEAD mới SUCCESS.

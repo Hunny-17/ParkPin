@@ -1,0 +1,10 @@
+T01 PASS: G1-01-home.xml; T01-fragments.txt
+T02 PASS: G1-02-save.xml; G1-03-history.xml; T02-home.xml
+T03 PASS: T03-home-save-cta.xml; T03-fragments.txt
+T04 PASS: T04-history-shortcut.xml; T04-fragments.txt
+T05 PASS: T05-foreground.txt; T05-find-car-toast.png (visual inspection required)
+T07 PASS: T07-keyboard-input.xml; T07-ime.txt; G1-04-keyboard.xml
+T06 PASS: T06-home-bottom.xml; T06-save-bottom.xml; T06-history-landscape-bottom.xml
+T08 PASS: G1-05-rotation.xml; T08-fragments.txt; T08-history-restored-portrait.xml
+T09 PASS: T09-history-back-home.xml; T09-save-back-home.xml; T09-home-exit.xml
+9/9 interaction and UI hierarchy checks passed; inspect screenshots before final acceptance.

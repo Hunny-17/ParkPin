@@ -1,0 +1,8 @@
+{
+  "app_uid": 10233,
+  "app_log_lines": 414,
+  "app_crash_marker_lines": [],
+  "crash_buffer_parkpin_references": 0,
+  "critical_open_app_defects": 0,
+  "note": "System crash-buffer entries without ParkPin references are excluded. App UID log reviewed separately."
+}

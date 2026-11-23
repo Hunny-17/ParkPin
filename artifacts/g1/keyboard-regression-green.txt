@@ -1,0 +1,2 @@
+Bottom Navigation: normal=211px, keyboard=211px
+PASS: Keyboard does not inflate Bottom Navigation

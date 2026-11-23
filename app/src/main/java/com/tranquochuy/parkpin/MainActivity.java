@@ -36,7 +36,8 @@ public class MainActivity extends AppCompatActivity {
             Insets safe = insets.getInsets(
                     WindowInsetsCompat.Type.systemBars() | WindowInsetsCompat.Type.ime());
             view.setPadding(l + safe.left, t + safe.top, r + safe.right, b + safe.bottom);
-            return insets;
+            // The root owns these insets; do not let BottomNavigationView apply them again.
+            return WindowInsetsCompat.CONSUMED;
         });
         ViewCompat.requestApplyInsets(root);
 
