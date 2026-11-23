@@ -1,0 +1,156 @@
+{
+  "rapid_save": {
+    "status": "PASS",
+    "detail": "Five real consecutive Save taps produced one B row",
+    "evidence": [
+      "database-manual-after-denial.json"
+    ]
+  },
+  "navigation": {
+    "status": "PASS",
+    "detail": "18 rapid tab transitions completed; Home valid; database unchanged; crash checks reviewed separately",
+    "executed_case_ids": [
+      "R04"
+    ],
+    "evidence": [
+      "crud-results.json",
+      "regression.log"
+    ]
+  },
+  "back": {
+    "status": "PASS",
+    "detail": "Home CTA/History shortcut/Find Car empty-state toast; 3-screen scrolling; History rotation; Back from both tabs and Home exit passed",
+    "executed_case_ids": [
+      "R05"
+    ],
+    "evidence": [
+      "crud-results.json",
+      "regression.log"
+    ]
+  },
+  "home_cta": {
+    "status": "PASS",
+    "detail": "Home CTA/History shortcut/Find Car empty-state toast; 3-screen scrolling; History rotation; Back from both tabs and Home exit passed",
+    "executed_case_ids": [
+      "R05"
+    ],
+    "evidence": [
+      "crud-results.json",
+      "regression.log"
+    ]
+  },
+  "save_form": {
+    "status": "PASS",
+    "detail": "Blank and whitespace-only names blocked; validation visible; database remains empty; Saved A through form; exact Home details and all database fields verified; Required-name error clears after entering a valid name",
+    "executed_case_ids": [
+      "T02",
+      "T03",
+      "R06"
+    ],
+    "evidence": [
+      "crud-results.json",
+      "regression.log"
+    ]
+  },
+  "crud": {
+    "status": "PASS",
+    "detail": "Empty Room database; Home and History show actual empty states; Blank and whitespace-only names blocked; validation visible; database remains empty; Saved A through form; exact Home details and all database fields verified; B is the only active record; A remains archived; History shows A and B, with B active and A archived; Edited B in place; ID retained; exact name/floor/zone/column/note updated in Home and Room; A reactivated; edited B inactive; exactly one active record; Force-stop killed process; new process reopened; both rows and active A persisted unchanged; Cancel preserved both records; confirmed deletion removed only B from History and Room; Deleted only QA-created A; Home and History returned to empty; zero database rows",
+    "executed_case_ids": [
+      "T01",
+      "T02",
+      "T03",
+      "T04",
+      "T05",
+      "T06",
+      "T07",
+      "T08",
+      "T09",
+      "T10"
+    ],
+    "evidence": [
+      "crud-results.json",
+      "regression.log"
+    ]
+  },
+  "history": {
+    "status": "PASS",
+    "detail": "History shows A and B, with B active and A archived; Home CTA/History shortcut/Find Car empty-state toast; 3-screen scrolling; History rotation; Back from both tabs and Home exit passed",
+    "executed_case_ids": [
+      "T05",
+      "R05"
+    ],
+    "evidence": [
+      "crud-results.json",
+      "regression.log"
+    ]
+  },
+  "edit": {
+    "status": "PASS",
+    "detail": "Edited B in place; ID retained; exact name/floor/zone/column/note updated in Home and Room",
+    "executed_case_ids": [
+      "T06"
+    ],
+    "evidence": [
+      "crud-results.json",
+      "regression.log"
+    ]
+  },
+  "delete_confirmation": {
+    "status": "PASS",
+    "detail": "Cancel preserved both records; confirmed deletion removed only B from History and Room; Deleted only QA-created A; Home and History returned to empty; zero database rows",
+    "executed_case_ids": [
+      "T09",
+      "T10"
+    ],
+    "evidence": [
+      "crud-results.json",
+      "regression.log"
+    ]
+  },
+  "active_switch": {
+    "status": "PASS",
+    "detail": "B is the only active record; A remains archived; A reactivated; edited B inactive; exactly one active record",
+    "executed_case_ids": [
+      "T04",
+      "T07"
+    ],
+    "evidence": [
+      "crud-results.json",
+      "regression.log"
+    ]
+  },
+  "keyboard_insets": {
+    "status": "PASS",
+    "detail": "Software keyboard open; Update button fully above Bottom Navigation; update succeeded with IME open",
+    "executed_case_ids": [
+      "R02"
+    ],
+    "evidence": [
+      "crud-results.json",
+      "regression.log"
+    ]
+  },
+  "rotation": {
+    "status": "PASS",
+    "detail": "Edit form and Save tab survive portrait/landscape rotation without crash or lost values; Home CTA/History shortcut/Find Car empty-state toast; 3-screen scrolling; History rotation; Back from both tabs and Home exit passed",
+    "executed_case_ids": [
+      "R03",
+      "R05"
+    ],
+    "evidence": [
+      "crud-results.json",
+      "regression.log"
+    ]
+  },
+  "restart_persistence": {
+    "status": "PASS",
+    "detail": "Force-stop killed process; new process reopened; both rows and active A persisted unchanged",
+    "executed_case_ids": [
+      "T08"
+    ],
+    "evidence": [
+      "crud-results.json",
+      "regression.log"
+    ]
+  }
+}

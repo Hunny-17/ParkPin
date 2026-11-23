@@ -1,0 +1,9 @@
+{
+  "build_apk_sha256": "2c4884438366b8a998bf0934b6131a28a63fba83ac534685c1c89c8909d30a93",
+  "installed_apk_sha256": "2c4884438366b8a998bf0934b6131a28a63fba83ac534685c1c89c8909d30a93",
+  "installed_matches_build": true,
+  "tested_source_sha": "1574a7faf6bb26232334fe38b4df07d2ba522443",
+  "tested_app_tree": "d40f6d6004776d4f51eace45e90100168c2ce436",
+  "android_test_apk_sha256": "d86f72e6fe6c6620845cd19a9744bca86c92fe7ee93a704f78539926dec94a31",
+  "production_source_changes_during_acceptance": false
+}

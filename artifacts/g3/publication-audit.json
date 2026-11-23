@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "files_reviewed": 236,
+  "total_bytes": 10964085,
+  "credential_pattern_hits": [],
+  "excluded": "Local JDK/SDK/AVD images, DB/WAL copies, APKs, signing keystores and Python cache remain outside the staged payload",
+  "payload": "QA source, controlled emulator evidence and acceptance documentation only",
+  "required_case_counts": {
+    "gps_permission": 7,
+    "gps_persistence": 8,
+    "maps": 9,
+    "crud": 10,
+    "regression": 6
+  },
+  "required_screenshot_hashes_reverified": 10
+}

@@ -1,0 +1,7 @@
+Observed before DNS restart on isolated emulator-5556:
+  adb shell ping -c 1 -W 2 8.8.8.8
+  1 packets transmitted, 1 received, 0% packet loss
+  adb shell ping -c 1 -W 2 www.google.com
+  ping: unknown host www.google.com
+Google Maps received the exact Room destination, but tiles/routes remained loading.
+Only the copied QA AVD was restarted with -dns-server 8.8.8.8.

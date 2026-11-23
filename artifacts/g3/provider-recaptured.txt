@@ -1,0 +1,4 @@
+      last location=Location[gps 21.028510,105.804817 hAcc=5.0 et=+1h20m23s188ms alt=0.0 vAcc=0.5 vel=0.0 sAcc=0.5 bear=0.0 bAcc=30.0 {Bundle[{satellites=0, maxCn0=0, meanCn0=0}]}]
+      last location=null
+      last location=Location[fused 21.028510,105.804817 hAcc=5.0 et=+1h20m23s188ms alt=0.0 vAcc=0.5 vel=0.0 sAcc=0.5]
+      last location=Location[gps 21.028510,105.804817 hAcc=5.0 et=+1h20m23s188ms alt=0.0 vAcc=0.5 vel=0.0 sAcc=0.5 bear=0.0 bAcc=30.0 {Bundle[{satellites=0, maxCn0=0, meanCn0=0}]}]

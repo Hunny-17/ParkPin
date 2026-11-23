@@ -1,0 +1,105 @@
+{
+  "label": "migration-v1-before-upgrade",
+  "rows": [
+    {
+      "id": 1,
+      "placeName": "QA-G3-MIG-A",
+      "floor": "B2",
+      "zone": "A",
+      "columnLabel": "12",
+      "note": "Migration_A",
+      "active": 0,
+      "createdAt": 1795423179928,
+      "updatedAt": 1795423179928
+    },
+    {
+      "id": 2,
+      "placeName": "QA-G3-MIG-B",
+      "floor": "B3",
+      "zone": "C",
+      "columnLabel": "22",
+      "note": "Migration_B",
+      "active": 1,
+      "createdAt": 1795423208192,
+      "updatedAt": 1795423208192
+    }
+  ],
+  "count": 2,
+  "active_count": 1,
+  "user_version": 1,
+  "columns": [
+    {
+      "cid": 0,
+      "name": "id",
+      "type": "INTEGER",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 1
+    },
+    {
+      "cid": 1,
+      "name": "placeName",
+      "type": "TEXT",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 2,
+      "name": "floor",
+      "type": "TEXT",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 3,
+      "name": "zone",
+      "type": "TEXT",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 4,
+      "name": "columnLabel",
+      "type": "TEXT",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 5,
+      "name": "note",
+      "type": "TEXT",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 6,
+      "name": "active",
+      "type": "INTEGER",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 7,
+      "name": "createdAt",
+      "type": "INTEGER",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 8,
+      "name": "updatedAt",
+      "type": "INTEGER",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    }
+  ],
+  "source": "Read-only app db/WAL capture after UI settled; SQL only reads host copies"
+}

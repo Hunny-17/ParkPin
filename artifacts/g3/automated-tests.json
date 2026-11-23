@@ -1,0 +1,40 @@
+[
+  {
+    "kind": "jvm",
+    "tests": 3,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "cases": [
+      "navigationUriUsesLocaleIndependentDecimalPoint",
+      "acceptsValidCoordinatesIncludingZero",
+      "assignsOptionalFixWithoutChangingManualData"
+    ]
+  },
+  {
+    "kind": "jvm",
+    "tests": 1,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "cases": [
+      "createNormalizesManualInput"
+    ]
+  },
+  {
+    "kind": "instrumentation",
+    "tests": 7,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "cases": [
+      "persistsAfterDatabaseCloseAndReopen",
+      "savesOneActiveAndArchivesOlder",
+      "readUpdateAndDelete",
+      "reactivationIsAtomicAndIdempotent",
+      "migration1To2PreservesExistingParkingRecords",
+      "gpsCoordinatesPersistAndManualUpdatePreservesThem",
+      "emptyDatabaseAndHistoryOrder"
+    ]
+  }
+]

@@ -1,0 +1,145 @@
+{
+  "label": "gps-A-restarted",
+  "rows": [
+    {
+      "id": 3,
+      "placeName": "QA-G3-B",
+      "floor": "B2",
+      "zone": "B",
+      "columnLabel": "08",
+      "note": "Manual_after_denial",
+      "active": 0,
+      "createdAt": 1795423425931,
+      "updatedAt": 1795423425931,
+      "latitude": null,
+      "longitude": null,
+      "accuracyMeters": null,
+      "locationCapturedAt": null
+    },
+    {
+      "id": 4,
+      "placeName": "QA-G3-A",
+      "floor": "B4",
+      "zone": "D",
+      "columnLabel": "44",
+      "note": "GPS_HCMC",
+      "active": 1,
+      "createdAt": 1795428119845,
+      "updatedAt": 1795428119845,
+      "latitude": 10.7768883,
+      "longitude": 106.700805,
+      "accuracyMeters": 5.0,
+      "locationCapturedAt": 1795428091420
+    }
+  ],
+  "count": 2,
+  "active_count": 1,
+  "user_version": 2,
+  "columns": [
+    {
+      "cid": 0,
+      "name": "id",
+      "type": "INTEGER",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 1
+    },
+    {
+      "cid": 1,
+      "name": "placeName",
+      "type": "TEXT",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 2,
+      "name": "floor",
+      "type": "TEXT",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 3,
+      "name": "zone",
+      "type": "TEXT",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 4,
+      "name": "columnLabel",
+      "type": "TEXT",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 5,
+      "name": "note",
+      "type": "TEXT",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 6,
+      "name": "active",
+      "type": "INTEGER",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 7,
+      "name": "createdAt",
+      "type": "INTEGER",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 8,
+      "name": "updatedAt",
+      "type": "INTEGER",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 9,
+      "name": "latitude",
+      "type": "REAL",
+      "notnull": 0,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 10,
+      "name": "longitude",
+      "type": "REAL",
+      "notnull": 0,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 11,
+      "name": "accuracyMeters",
+      "type": "REAL",
+      "notnull": 0,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 12,
+      "name": "locationCapturedAt",
+      "type": "INTEGER",
+      "notnull": 0,
+      "dflt_value": null,
+      "pk": 0
+    }
+  ],
+  "source": "Read-only app db/WAL capture after UI settled; SQL only reads host copies"
+}

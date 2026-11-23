@@ -12,7 +12,7 @@
 | `v0.1.1-ui` | Baseline | Home UI tĩnh, các màn Save/History ở XML preview, AGP 9.4.0 | UI Home đã được người dùng chạy và xác nhận trên Emulator API 37.2 |
 | `v0.2.0` | Ngày 2–3 | Tạo 3 Fragments, Bottom Navigation hoạt động, sửa cuộn/keyboard | QA 23/11/2026: build sạch JDK 17, Emulator 9/9, Visual/Crash PASS; CI HEAD nghiệm thu xem PR #1 |
 | `v0.3.0` | Ngày 4–6 | Room, ParkingEntity/Dao/Repository, tạo/xem/sửa/xóa và lịch sử | G2 QA 23/11/2026: JVM 1/1, instrumentation 5/5, CRUD 10/10, hồi quy 6/6 PASS; CI final HEAD xem PR #2 |
-| `v0.4.0` | Ngày 7–10 | Runtime permission, lấy GPS, lưu lat/lng, mở Google Maps | G3 code đang triển khai trên branch riêng; CI/Emulator QA chưa nghiệm thu |
+| `v0.4.0` | Ngày 7–10 | Runtime permission, lấy GPS, lưu lat/lng, mở Google Maps | G3 QA 23/11/2026: JVM 4/4, instrumentation 7/7, quyền 7/7, migration APK thật PASS, persistence 8/8, Maps Intent 9/9, hồi quy PASS; CI HEAD cuối xem PR #3 |
 | `v0.5.0` | Ngày 11–12 | Photo Picker, ảnh điểm đỗ, trạng thái rỗng/lỗi | Chưa thực hiện |
 | `v1.0.0` | Ngày 13–14 | Kiểm thử hồi quy, sửa lỗi, tài liệu, APK nộp môn | Chưa thực hiện |
 
@@ -32,9 +32,9 @@
 - [x] Sửa/xóa điểm đỗ hợp lệ, có dialog xác nhận xóa; xem [G2_ACCEPTANCE.md](G2_ACCEPTANCE.md).
 
 ### GPS & tìm đường
-- [ ] Xin quyền khi cần; từ chối quyền vẫn lưu thủ công.
-- [ ] Có thể lưu tọa độ nếu dịch vụ vị trí khả dụng.
-- [ ] Mở Maps đúng tọa độ đã lưu và xử lý thiếu app bản đồ.
+- [x] Xin quyền khi cần; từ chối quyền vẫn lưu thủ công — GPS permissions 7/7.
+- [x] Có thể lưu tọa độ nếu dịch vụ vị trí khả dụng — GPS persistence 8/8 và migration v1→v2 thực tế PASS.
+- [x] Mở Maps đúng tọa độ đã lưu và xử lý thiếu app bản đồ — Maps Intent 9/9, generic fallback qua QA receiver; xem [G3_ACCEPTANCE.md](G3_ACCEPTANCE.md).
 
 ### Ảnh & release
 - [ ] Chọn ảnh và lưu tham chiếu bền vững.
@@ -52,4 +52,4 @@ Không thêm đăng nhập, Firebase, AI, bản đồ nhúng, hệ thống đặ
 ## Mốc tích hợp
 G1 đã merge qua PR #1 và G2 đã merge qua PR #2 vào `main` ngày 23/11/2026. G3 phát triển riêng tại `feat/g3-gps-maps-intent`, dựa trên merge commit G2 `87bafe7293afa455cde3fe2ed686f54bf79102ea`.
 
-[Kiểm thử G3 đang chờ](G3_PROGRESS.md). Không mở rộng sang G4 trước khi chốt G3.
+[G3 đã nghiệm thu Emulator](G3_ACCEPTANCE.md); CI commit nghiệm thu và trạng thái review tại PR #3. G3 chưa được tự merge. Không triển khai G4 trong lần nghiệm thu này.

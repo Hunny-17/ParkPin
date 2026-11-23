@@ -1,0 +1,87 @@
+{
+  "status": "PASS",
+  "required_count": 10,
+  "screenshots": [
+    {
+      "file": "screenshots/G3-01-home-no-gps.png",
+      "sha256": "64c3d23515819fa38e1bb194ef2415ff736b6ae639acef021f20f8c65b279031",
+      "width": 1080,
+      "height": 2400,
+      "opened_and_visually_reviewed": true,
+      "status": "PASS"
+    },
+    {
+      "file": "screenshots/G3-02-gps-permission.png",
+      "sha256": "a847d38edcd72c4378c4213caa41e4d95e36ce25c74ba69f70c3afc8fc8c52da",
+      "width": 1080,
+      "height": 2400,
+      "opened_and_visually_reviewed": true,
+      "status": "PASS"
+    },
+    {
+      "file": "screenshots/G3-03-permission-denied.png",
+      "sha256": "4637cdc1612be1d27fae0017c73544410803070a0d1c63fa3a15905dc98d0708",
+      "width": 1080,
+      "height": 2400,
+      "opened_and_visually_reviewed": true,
+      "status": "PASS"
+    },
+    {
+      "file": "screenshots/G3-04-approximate-location.png",
+      "sha256": "71aca92196eec3e80b75360db97ab6c3e75ce5c40ab0ef4de5925ccf55532b10",
+      "width": 1080,
+      "height": 2400,
+      "opened_and_visually_reviewed": true,
+      "status": "PASS"
+    },
+    {
+      "file": "screenshots/G3-05-precise-location.png",
+      "sha256": "b5281c3b8066b27843d23526e4c2a9149fcc4f3ba47fbb36677df46bf851554a",
+      "width": 1080,
+      "height": 2400,
+      "opened_and_visually_reviewed": true,
+      "status": "PASS"
+    },
+    {
+      "file": "screenshots/G3-06-save-with-gps.png",
+      "sha256": "971772db9f4f28b47c624535f698ce177e141d7167eec203f0e57ed55ae51a27",
+      "width": 1080,
+      "height": 2400,
+      "opened_and_visually_reviewed": true,
+      "status": "PASS"
+    },
+    {
+      "file": "screenshots/G3-07-history-with-gps.png",
+      "sha256": "e86361ba9d47e506e4c42127a63e6e5e2d2634eed84f2d78c781e7dc08a8f1d0",
+      "width": 1080,
+      "height": 2400,
+      "opened_and_visually_reviewed": true,
+      "status": "PASS"
+    },
+    {
+      "file": "screenshots/G3-08-maps-navigation.png",
+      "sha256": "c720a93709c83669e94d7169e4e0f27ebb9b9d45bc667f87c21400aedeaac75e",
+      "width": 1080,
+      "height": 2400,
+      "opened_and_visually_reviewed": true,
+      "status": "PASS"
+    },
+    {
+      "file": "screenshots/G3-09-location-unavailable.png",
+      "sha256": "2af6a19ad7972248477a082c9ab01d9b1977626ec16f9893112664ed5a4e92dd",
+      "width": 1080,
+      "height": 2400,
+      "opened_and_visually_reviewed": true,
+      "status": "PASS"
+    },
+    {
+      "file": "screenshots/G3-10-home-after-restart.png",
+      "sha256": "c5c822435b64a7793f9232c4b2ee8a0ee3e0e3b75a73aa34f1fa6c663571f429",
+      "width": 1080,
+      "height": 2400,
+      "opened_and_visually_reviewed": true,
+      "status": "PASS"
+    }
+  ],
+  "review": "All ten actual emulator images opened individually. Vietnamese text, GPS/permission states, safe areas and navigation reviewed. Maps tiles and exact task Intent observed; no claim of computed driving route."
+}

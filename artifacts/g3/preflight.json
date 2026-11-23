@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-23",
+  "timezone": "Asia/Bangkok",
+  "branch": "feat/g3-gps-maps-intent",
+  "input_head": "1574a7faf6bb26232334fe38b4df07d2ba522443",
+  "expected_head": "1574a7faf6bb26232334fe38b4df07d2ba522443",
+  "initial_worktree": "clean before artifacts/g3 creation",
+  "jdk": "Microsoft OpenJDK 17.0.21.1+2-LTS",
+  "gradle": "9.6.0",
+  "compile_target_sdk": 37,
+  "emulator": "37.2.12.0 build 16428233",
+  "avd": "Medium_Phone (workspace-isolated data/profile copy)",
+  "serial": "emulator-5556",
+  "android_release": "17",
+  "android_api": "37",
+  "system_image": "Google Play Store 16 KB, x86_64, API 37.2",
+  "google_play_services": "26.32.34 (260800-968093310)",
+  "google_maps": "26.34.04.965633971",
+  "original_avd_data_used_directly": false,
+  "pm_clear_used": false,
+  "initial_ci": "https://github.com/Hunny-17/ParkPin/actions/runs/45137925696 — SUCCESS on input HEAD"
+}

@@ -1,0 +1,66 @@
+{
+  "status": "PASS",
+  "method": "Actual G2 APK seeded through UI; adb install -r G3 without clearing data",
+  "g2_merged_app_tree": "4fd2251eaf624eb6893aaf5e6b4336068e670275",
+  "g2_apk_sha256": "c8ac8cef897412a95c236eb8111ffa6ccb9f5637228d483e7bbf54296c3f23a5",
+  "g3_apk_sha256": "2c4884438366b8a998bf0934b6131a28a63fba83ac534685c1c89c8909d30a93",
+  "v1_rows": [
+    {
+      "id": 1,
+      "placeName": "QA-G3-MIG-A",
+      "floor": "B2",
+      "zone": "A",
+      "columnLabel": "12",
+      "note": "Migration_A",
+      "active": 0,
+      "createdAt": 1795423179928,
+      "updatedAt": 1795423179928
+    },
+    {
+      "id": 2,
+      "placeName": "QA-G3-MIG-B",
+      "floor": "B3",
+      "zone": "C",
+      "columnLabel": "22",
+      "note": "Migration_B",
+      "active": 1,
+      "createdAt": 1795423208192,
+      "updatedAt": 1795423208192
+    }
+  ],
+  "v2_rows": [
+    {
+      "id": 1,
+      "placeName": "QA-G3-MIG-A",
+      "floor": "B2",
+      "zone": "A",
+      "columnLabel": "12",
+      "note": "Migration_A",
+      "active": 0,
+      "createdAt": 1795423179928,
+      "updatedAt": 1795423179928,
+      "latitude": null,
+      "longitude": null,
+      "accuracyMeters": null,
+      "locationCapturedAt": null
+    },
+    {
+      "id": 2,
+      "placeName": "QA-G3-MIG-B",
+      "floor": "B3",
+      "zone": "C",
+      "columnLabel": "22",
+      "note": "Migration_B",
+      "active": 1,
+      "createdAt": 1795423208192,
+      "updatedAt": 1795423208192,
+      "latitude": null,
+      "longitude": null,
+      "accuracyMeters": null,
+      "locationCapturedAt": null
+    }
+  ],
+  "all_legacy_fields_identical": true,
+  "new_gps_columns_nullable_and_null": true,
+  "active_flag_and_history_preserved": true
+}
