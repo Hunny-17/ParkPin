@@ -1,0 +1,6 @@
+{
+  "jdk17_apk_sha256": "1ce25483e6c6e8cdb0d405f889475f567514dec63b2eec12da9bf45a1b71897d",
+  "installed_apk_sha256": "1ce25483e6c6e8cdb0d405f889475f567514dec63b2eec12da9bf45a1b71897d",
+  "installed_matches_build": true,
+  "acceptance_rerun_on_final_jdk17_apk": "9/9 PASS"
+}

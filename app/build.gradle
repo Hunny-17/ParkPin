@@ -10,8 +10,8 @@ android {
         applicationId 'com.tranquochuy.parkpin'
         minSdk 24
         targetSdk 37
-        versionCode 1
-        versionName '0.1.0-ui'
+        versionCode 2
+        versionName '0.2.0-g1'
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
@@ -21,5 +21,6 @@ android {
 
 dependencies {
     implementation 'androidx.appcompat:appcompat:1.8.0'
+    implementation 'androidx.fragment:fragment:1.8.9'
     implementation 'com.google.android.material:material:1.14.0'
 }

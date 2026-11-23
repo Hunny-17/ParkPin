@@ -10,7 +10,7 @@
 | Mốc | Dự kiến | Công việc chính | Trạng thái |
 |---|---|---|---|
 | `v0.1.1-ui` | Baseline | Home UI tĩnh, các màn Save/History ở XML preview, AGP 9.4.0 | UI Home đã được người dùng chạy và xác nhận trên Emulator API 37.2 |
-| `v0.2.0` | Ngày 2–3 | Tạo 3 Fragments, Bottom Navigation hoạt động, sửa cuộn/keyboard | Chưa thực hiện |
+| `v0.2.0` | Ngày 2–3 | Tạo 3 Fragments, Bottom Navigation hoạt động, sửa cuộn/keyboard | QA 23/11/2026: build sạch JDK 17, Emulator 9/9, Visual/Crash PASS; CI HEAD nghiệm thu xem PR #1 |
 | `v0.3.0` | Ngày 4–6 | Room, ParkingEntity/Dao/Repository, tạo/xem/sửa/xóa và lịch sử | Chưa thực hiện |
 | `v0.4.0` | Ngày 7–10 | Runtime permission, lấy GPS, lưu lat/lng, mở Google Maps | Chưa thực hiện |
 | `v0.5.0` | Ngày 11–12 | Photo Picker, ảnh điểm đỗ, trạng thái rỗng/lỗi | Chưa thực hiện |
@@ -20,8 +20,10 @@
 
 ### UI & Navigation
 - [x] Home UI render trên Emulator (đã được người dùng xác nhận).
-- [ ] Chuyển Home / Lưu xe / Lịch sử không crash.
-- [ ] Nội dung cuộn không bị bottom bar che.
+- [x] Điều hướng 3 Fragments đã kiểm thử trên Emulator.
+- [x] Cuộn và IME insets đã kiểm thử; sửa lỗi thanh tab cộng lặp insets.
+- [x] GitHub Actions assembleDebug HEAD đầu vào thành công; CI commit nghiệm thu xem PR #1.
+- [x] Emulator 9/9 và Visual/Crash QA PASS theo [G1_ACCEPTANCE.md](G1_ACCEPTANCE.md), ngày 23/11/2026.
 
 ### Local CRUD
 - [ ] Lưu vị trí bãi xe, tầng, khu, cột, ghi chú.
@@ -45,4 +47,7 @@ Không thêm đăng nhập, Firebase, AI, bản đồ nhúng, hệ thống đặ
 ## Lưu ý về baseline
 - Source snapshot này xuất phát từ file `ParkPin_UI_Starter_AGP_9.4.0.zip` đã gửi trong cuộc trò chuyện; **không tự động đồng bộ** các chỉnh sửa nếu bạn đã thay đổi code trên máy.
 - Bản ZIP nguồn chưa có `gradle-wrapper.jar`. Nếu cần khôi phục wrapper, xem README.
-- Chưa có chứng cứ build APK trong môi trường đóng gói; đã có ảnh người dùng chạy UI Home thành công trên emulator.
+- Nghiệm thu G1 ngày 23/11/2026 bổ sung build log JDK 17, ảnh và kết quả thao tác Emulator trong `artifacts/g1/`.
+
+## G1 branch
+Feature: `feat/g1-navigation-fragments-wrapper`. Nhánh `main` giữ nguyên tới khi người dùng merge. Local QA G1 PASS; Ready to Merge phụ thuộc CI HEAD nghiệm thu mới, được ghi tại [PR #1](https://github.com/Hunny-17/ParkPin/pull/1). Chưa triển khai G2/G3.

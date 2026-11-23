@@ -1,0 +1,6 @@
+Bottom Navigation: normal=274px, keyboard=1094px
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Documents\ChatGPT\ParkPin\artifacts\g1\check-keyboard.py", line 20, in <module>
+    assert keyboard <= normal + normal // 4, 'FAIL: Bottom Navigation grows when keyboard opens'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: FAIL: Bottom Navigation grows when keyboard opens

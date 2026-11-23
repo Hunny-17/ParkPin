@@ -1,0 +1,276 @@
+TASK 10233:com.tranquochuy.parkpin id=47 userId=0 displayId=0(type=INTERNAL)
+  ACTIVITY com.tranquochuy.parkpin/.MainActivity a7ef199 pid=13270 userId=0 uid=10233 displayId=0(type=INTERNAL)
+    Local Activity d0dfe53 State:
+      mResumed=true mStopped=false mFinished=false
+      mIsInMultiWindowMode=false mIsInPictureInPictureMode=false
+      mChangingConfigurations=false
+      mCurrentConfig={1.0 310mcc260mnc [en_US] ldltr sw411dp w411dp h914dp 420dpi nrml long compactNeeded port finger qwerty/v/v dpad/v winConfig={ mBounds=Rect(0, 0 - 1080, 2400) mAppBounds=Rect(0, 0 - 1080, 2400) mMaxBounds=Rect(0, 0 - 1080, 2400) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=standard mAlwaysOnTop=undefined mRotation=ROTATION_0} as.2 s.2 fontWeightAdjustment=0}
+      mLoadersStarted=true
+      Active Fragments in 9660133:
+        #0: ReportFragment{53e3cf0 #0 androidx.lifecycle.LifecycleDispatcher.report_fragment_tag}
+          mFragmentId=#0 mContainerId=#0 mTag=androidx.lifecycle.LifecycleDispatcher.report_fragment_tag
+          mState=5 mIndex=0 mWho=android:fragment:0 mBackStackNesting=0
+          mAdded=true mRemoving=false mFromLayout=false mInLayout=false
+          mHidden=false mDetached=false mMenuVisible=true mHasMenu=false
+          mRetainInstance=false mRetaining=false mUserVisibleHint=true
+          mFragmentManager=FragmentManager{9660133 in HostCallbacks{3b14269}}
+          mHost=android.app.Activity$HostCallbacks@3b14269
+          Child FragmentManager{aeb74ee in ReportFragment{53e3cf0}}:
+            FragmentManager misc state:
+              mHost=android.app.Activity$HostCallbacks@3b14269
+              mContainer=android.app.Fragment$1@1f57d8f
+              mParent=ReportFragment{53e3cf0 #0 androidx.lifecycle.LifecycleDispatcher.report_fragment_tag}
+              mCurState=5 mStateSaved=false mDestroyed=false
+      Added Fragments:
+        #0: ReportFragment{53e3cf0 #0 androidx.lifecycle.LifecycleDispatcher.report_fragment_tag}
+      FragmentManager misc state:
+        mHost=android.app.Activity$HostCallbacks@3b14269
+        mContainer=android.app.Activity$HostCallbacks@3b14269
+        mCurState=5 mStateSaved=false mDestroyed=false
+    ViewRoot:
+      mAdded=true
+      mRemoved=false
+      mStopped=false
+      mPausedForTransition=false
+      mConsumeBatchedInputScheduled=false
+      mConsumeBatchedInputImmediatelyScheduled=false
+      mPendingInputEventCount=0
+      mProcessInputEventsScheduled=false
+      mTraversalScheduled=false
+      mTraversalState=UNSET (v222)
+      mIsInTraversal=false
+      mWillDrawSoon=false
+      mReportNextDraw=false
+      mLastReportedMergedConfiguration={mGlobalConfig={1.0 310mcc260mnc [en_US] ldltr sw411dp w411dp h914dp 420dpi nrml long compactNeeded port finger qwerty/v/v dpad/v winConfig={ mBounds=Rect(0, 0 - 1080, 2400) mAppBounds=Rect(0, 0 - 1080, 2400) mMaxBounds=Rect(0, 0 - 1080, 2400) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0} as.2 s.306 fontWeightAdjustment=0} mOverrideConfig={1.0 310mcc260mnc [en_US] ldltr sw411dp w411dp h914dp 420dpi nrml long compactNeeded port finger qwerty/v/v dpad/v winConfig={ mBounds=Rect(0, 0 - 1080, 2400) mAppBounds=Rect(0, 0 - 1080, 2400) mMaxBounds=Rect(0, 0 - 1080, 2400) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=standard mAlwaysOnTop=undefined mRotation=ROTATION_0} as.2 s.2 fontWeightAdjustment=0}}
+      mLastConfigurationFromResources={1.0 310mcc260mnc [en_US] ldltr sw411dp w411dp h914dp 420dpi nrml long compactNeeded port finger qwerty/v/v dpad/v winConfig={ mBounds=Rect(0, 0 - 1080, 2400) mAppBounds=Rect(0, 0 - 1080, 2400) mMaxBounds=Rect(0, 0 - 1080, 2400) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=standard mAlwaysOnTop=undefined mRotation=ROTATION_0} as.2 s.2 fontWeightAdjustment=0}
+      mLastReportedActivityWindowInfo=ActivityWindowInfo{isEmbedded=false, taskBounds=Rect(0, 0 - 1080, 2400), taskFragmentBounds=Rect(0, 0 - 1080, 2400)}
+      mIsAmbientMode=false
+      mUnbufferedInputSource=0
+      mIsHardwareRendererOutputDisabled=false
+      mIsDisablingViewAnimationsRequested=false
+      mAttachInfo=       AttachInfo:
+        mHasWindowFocus=true
+        mWindowVisibility=0
+        mInTouchMode=true
+        mUnbufferedDispatchRequested=false
+      android.view.ViewRootImpl$NativePreImeInputStage: mQueueLength=0
+      android.view.ViewRootImpl$ImeInputStage: mQueueLength=0
+      android.view.ViewRootImpl$NativePostImeInputStage: mQueueLength=0
+      android.view.ViewRootImpl$WindowInputEventReceiver
+       mSeqMap: {}
+       mReceiverPtr:
+          mOutboundQueue: <empty>
+          mBatches: <empty>
+
+    Choreographer:
+      mFrameScheduled=false
+      mLastFrameTime=865784 (2344 ms ago)
+    InsetsController:
+        InsetsState
+          mDisplayFrame=Rect(0, 0 - 1080, 2400)
+          mDisplayCutout=DisplayCutout{insets=Rect(0, 0 - 0, 0) waterfall=Insets{left=0, top=0, right=0, bottom=0} boundingRect={Bounds=[Rect(0, 0 - 0, 0), Rect(0, 0 - 0, 0), Rect(0, 0 - 0, 0), Rect(0, 0 - 0, 0)]} cutoutPathParserInfo={CutoutPathParserInfo{displayWidth=0 displayHeight=0 physicalDisplayWidth=0 physicalDisplayHeight=0 density={0.0} cutoutSpec={} rotation={0} scale={0.0} physicalPixelDisplaySizeRatio={0.0}}} sideOverrides=null}
+          mRoundedCorners=RoundedCorners{[RoundedCorner{position=TopLeft, radius=0, center=Point(0, 0)}, RoundedCorner{position=TopRight, radius=0, center=Point(0, 0)}, RoundedCorner{position=BottomRight, radius=0, center=Point(0, 0)}, RoundedCorner{position=BottomLeft, radius=0, center=Point(0, 0)}]}
+          mRoundedCornerFrame=Rect(0, 0 - 1080, 2400)
+          mPrivacyIndicatorBounds=PrivacyIndicatorBounds {static bounds=Rect(827, 0 - 1043, 63) rotation=0}
+          mDisplayShape=DisplayShape{type=2, displayWidth=1080, displayHeight=2400, physicalPixelDisplaySizeRatio=1.0, rotation=0, offsetX=0, offsetY=0, scale=1.0}
+            InsetsSource id=901f0000 type=statusBars frame=[0,0][1080,63] visible=true flags= sideHint=TOP
+            InsetsSource id=901f0005 type=mandatorySystemGestures frame=[0,0][1080,63] visible=true flags= sideHint=TOP
+            InsetsSource id=901f0006 type=tappableElement frame=[0,0][1080,63] visible=true flags= sideHint=TOP
+            InsetsSource id=3 type=ime frame=[0,0][0,0] visibleFrame=[0,954][2400,1080] visible=false flags=INVALID sideHint=NONE
+            InsetsSource id=1b390001 type=navigationBars frame=[0,2337][1080,2400] visible=true flags=SUPPRESS_SCRIM|ANIMATE_RESIZING sideHint=BOTTOM
+            InsetsSource id=1b390004 type=systemGestures frame=[0,0][78,2400] visible=true flags= sideHint=LEFT
+            InsetsSource id=1b390005 type=mandatorySystemGestures frame=[0,2316][1080,2400] visible=true flags= sideHint=BOTTOM
+            InsetsSource id=1b390006 type=tappableElement frame=[0,0][0,0] visible=true flags= sideHint=NONE
+            InsetsSource id=1b390024 type=systemGestures frame=[1002,0][1080,2400] visible=true flags= sideHint=RIGHT
+        mIsPredictiveBackImeHideAnimInProgress=false
+    WindowOnBackDispatcher:
+        Top Callback: androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@b1e34f6
+        Callbacks:
+          Callback: androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@b1e34f6 Priority=0
+          Callback: android.app.Activity$$ExternalSyntheticLambda0@d67abb8 Priority=-1
+    ImeBackAnimationController:
+        mLastProgress=0.0
+        mTriggerBack=false
+        mIsPreCommitAnimationInProgress=false
+        mStartRootScrollY=0
+        isBackAnimationAllowed=true
+        isAdjustPan=false
+        isHideAnimationInProgress=false
+    View Hierarchy:
+      com.android.internal.policy.DecorView{d62381c V.E...... R....... 0,0-1080,2400 aid=1073741824}[MainActivity]
+        android.widget.FrameLayout{d302973 V.E...... ........ 0,0-1080,2400}
+          android.widget.FrameLayout{c14e030 V.E...... ........ 0,0-1080,2400}
+            androidx.appcompat.widget.FitWindowsLinearLayout{65244a9 V.E...... ........ 0,0-1080,2400 #7f080037 app:id/action_bar_root}
+              androidx.appcompat.widget.ViewStubCompat{1929c25 G.E...... ......I. 0,0-0,0 #7f080042 app:id/action_mode_bar_stub}
+              androidx.appcompat.widget.ContentFrameLayout{5a8ea2e V.E...... ........ 0,0-1080,2400 #1020002 android:id/content}
+                android.widget.LinearLayout{dd9e9cf V.E...... ........ 0,0-1080,2400 #7f080190 app:id/root_container}
+                  android.widget.FrameLayout{b140968 V.E...... ........ 0,63-1080,2126 #7f0800d2 app:id/fragment_container}
+                    android.widget.ScrollView{ae654c8 VFED..... ........ 0,0-1080,2063}
+                      android.widget.LinearLayout{c973961 V.E...... ........ 0,0-1080,2383}
+                        com.google.android.material.textview.MaterialTextView{1e52c86 V.ED..... ........ 58,58-1022,97}
+                        com.google.android.material.textview.MaterialTextView{7c8f947 V.ED..... ........ 58,118-1022,206}
+                        com.google.android.material.textview.MaterialTextView{6ff574 V.ED..... ........ 58,224-1022,270}
+                        com.google.android.material.card.MaterialCardView{82d0a9d V.E...... ........ 58,333-1022,560}
+                          android.widget.LinearLayout{706cb5b V.E...... ........ 0,0-964,227}
+                            android.widget.FrameLayout{33c7ff8 V.E...... ........ 45,45-182,182}
+                              androidx.appcompat.widget.AppCompatImageView{adcc237 V.ED..... ........ 35,35-101,101}
+                            android.widget.LinearLayout{1903cd1 V.E...... ........ 216,59-792,168}
+                              com.google.android.material.textview.MaterialTextView{b5a3a4 V.ED..... ........ 0,0-346,53}
+                              com.google.android.material.textview.MaterialTextView{a0ad50d V.ED..... ........ 0,66-282,109}
+                            com.google.android.material.textview.MaterialTextView{797c336 V.ED..... ........ 792,76-919,151}
+                        com.google.android.material.textview.MaterialTextView{6d78b12 V.ED..... ........ 58,628-1022,691}
+                        com.google.android.material.textfield.TextInputLayout{811e2e3 V.ED..... ........ 58,725-1022,886}
+                          android.widget.FrameLayout{894dcc2 V.E...... ........ 0,14-964,161}
+                            com.google.android.material.textfield.TextInputEditText{2b14ad3 VFED..CL. ........ 0,0-964,147 aid=1073741830}
+                            com.google.android.material.textfield.StartCompoundLayout{b28ec3 G.E...... ......I. 0,0-0,0}
+                              com.google.android.material.internal.CheckableImageButton{1586340 G.ED..... ......I. 0,0-0,0 #7f0801ea app:id/text_input_start_icon}
+                              androidx.appcompat.widget.AppCompatTextView{45ff279 G.ED..... ......ID 0,0-0,0 #7f0801ef app:id/textinput_prefix_text}
+                            com.google.android.material.textfield.EndCompoundLayout{b514bbe G.E...... ......I. 0,0-0,0}
+                              androidx.appcompat.widget.AppCompatTextView{9a5541f G.ED..... ......ID 0,0-0,0 #7f0801f0 app:id/textinput_suffix_text}
+                              android.widget.FrameLayout{a00736c G.E...... ......I. 0,0-0,0}
+                                com.google.android.material.internal.CheckableImageButton{6e43d35 GFED..C.. ......I. 0,0-0,0 #7f0801e8 app:id/text_input_end_icon}
+                              com.google.android.material.internal.CheckableImageButton{5d265ca G.ED..... ......I. 0,0-0,0 #7f0801e9 app:id/text_input_error_icon}
+                        android.widget.LinearLayout{150f4e0 V.E...... ........ 58,918-1022,1079}
+                          com.google.android.material.textfield.TextInputLayout{c7b5610 V.ED..... ........ 0,0-466,161}
+                            android.widget.FrameLayout{a58030e V.E...... ........ 0,14-466,161}
+                              com.google.android.material.textfield.TextInputEditText{33bc12f VFED..CL. ........ 0,0-466,147 aid=1073741831}
+                              com.google.android.material.textfield.StartCompoundLayout{9d5133b G.E...... ......I. 0,0-0,0}
+                                com.google.android.material.internal.CheckableImageButton{6375a58 G.ED..... ......I. 0,0-0,0 #7f0801ea app:id/text_input_start_icon}
+                                androidx.appcompat.widget.AppCompatTextView{b2877b1 G.ED..... ......ID 0,0-0,0 #7f0801ef app:id/textinput_prefix_text}
+                              com.google.android.material.textfield.EndCompoundLayout{8991496 G.E...... ......I. 0,0-0,0}
+                                androidx.appcompat.widget.AppCompatTextView{f77a817 G.ED..... ......ID 0,0-0,0 #7f0801f0 app:id/textinput_suffix_text}
+                                android.widget.FrameLayout{3f3c404 G.E...... ......I. 0,0-0,0}
+                                  com.google.android.material.internal.CheckableImageButton{39bdded GFED..C.. ......I. 0,0-0,0 #7f0801e8 app:id/text_input_end_icon}
+                                com.google.android.material.internal.CheckableImageButton{949e422 G.ED..... ......I. 0,0-0,0 #7f0801e9 app:id/text_input_error_icon}
+                          com.google.android.material.textfield.TextInputLayout{51cb509 V.ED..... ........ 498,0-964,161}
+                            android.widget.FrameLayout{ea7c33c V.E...... ........ 0,14-466,161}
+                              com.google.android.material.textfield.TextInputEditText{75298c5 VFED..CL. ........ 0,0-466,147 aid=1073741832}
+                              com.google.android.material.textfield.StartCompoundLayout{c44aeb3 G.E...... ......I. 0,0-0,0}
+                                com.google.android.material.internal.CheckableImageButton{7eb1c70 G.ED..... ......I. 0,0-0,0 #7f0801ea app:id/text_input_start_icon}
+                                androidx.appcompat.widget.AppCompatTextView{656be9 G.ED..... ......ID 0,0-0,0 #7f0801ef app:id/textinput_prefix_text}
+                              com.google.android.material.textfield.EndCompoundLayout{146206e G.E...... ......I. 0,0-0,0}
+                                androidx.appcompat.widget.AppCompatTextView{bd1830f G.ED..... ......ID 0,0-0,0 #7f0801f0 app:id/textinput_suffix_text}
+                                android.widget.FrameLayout{abd8f9c G.E...... ......I. 0,0-0,0}
+                                  com.google.android.material.internal.CheckableImageButton{31fdda5 GFED..C.. ......I. 0,0-0,0 #7f0801e8 app:id/text_input_end_icon}
+                                com.google.android.material.internal.CheckableImageButton{cb7d57a G.ED..... ......I. 0,0-0,0 #7f0801e9 app:id/text_input_error_icon}
+                        com.google.android.material.textfield.TextInputLayout{f54b399 V.ED..... ........ 58,1111-1022,1272}
+                          android.widget.FrameLayout{615421a V.E...... ........ 0,14-964,161}
+                            com.google.android.material.textfield.TextInputEditText{b4d414b VFED..CL. ........ 0,0-964,147 aid=1073741833}
+                            com.google.android.material.textfield.StartCompoundLayout{3ad412b G.E...... ......I. 0,0-0,0}
+                              com.google.android.material.internal.CheckableImageButton{ce20988 G.ED..... ......I. 0,0-0,0 #7f0801ea app:id/text_input_start_icon}
+                              androidx.appcompat.widget.AppCompatTextView{255af21 G.ED..... ......ID 0,0-0,0 #7f0801ef app:id/textinput_prefix_text}
+                            com.google.android.material.textfield.EndCompoundLayout{e5dcf46 G.E...... ......I. 0,0-0,0}
+                              androidx.appcompat.widget.AppCompatTextView{93cc507 G.ED..... ......ID 0,0-0,0 #7f0801f0 app:id/textinput_suffix_text}
+                              android.widget.FrameLayout{d523634 G.E...... ......I. 0,0-0,0}
+                                com.google.android.material.internal.CheckableImageButton{8bd1c5d GFED..C.. ......I. 0,0-0,0 #7f0801e8 app:id/text_input_end_icon}
+                              com.google.android.material.internal.CheckableImageButton{41799d2 G.ED..... ......I. 0,0-0,0 #7f0801e9 app:id/text_input_error_icon}
+                        com.google.android.material.textfield.TextInputLayout{71f465e V.ED..... ........ 58,1304-1022,1514}
+                          android.widget.FrameLayout{4cbd728 V.E...... ........ 0,14-964,210}
+                            com.google.android.material.textfield.TextInputEditText{748fc41 VFED..CL. ........ 0,0-964,196}
+                            com.google.android.material.textfield.StartCompoundLayout{956aaa3 G.E...... ......I. 0,0-0,0}
+                              com.google.android.material.internal.CheckableImageButton{ef681a0 G.ED..... ......I. 0,0-0,0 #7f0801ea app:id/text_input_start_icon}
+                              androidx.appcompat.widget.AppCompatTextView{c342159 G.ED..... ......ID 0,0-0,0 #7f0801ef app:id/textinput_prefix_text}
+                            com.google.android.material.textfield.EndCompoundLayout{831811e G.E...... ......I. 0,0-0,0}
+                              androidx.appcompat.widget.AppCompatTextView{d9f4dff G.ED..... ......ID 0,0-0,0 #7f0801f0 app:id/textinput_suffix_text}
+                              android.widget.FrameLayout{8d217cc G.E...... ......I. 0,0-0,0}
+                                com.google.android.material.internal.CheckableImageButton{87c7a15 GFED..C.. ......I. 0,0-0,0 #7f0801e8 app:id/text_input_end_icon}
+                              com.google.android.material.internal.CheckableImageButton{b70912a G.ED..... ......I. 0,0-0,0 #7f0801e9 app:id/text_input_error_icon}
+                        com.google.android.material.textview.MaterialTextView{a75ca3f V.ED..... ........ 58,1572-1022,1635}
+                        android.widget.LinearLayout{3807f0c V.E...... ........ 58,1661-1022,2050}
+                          androidx.appcompat.widget.AppCompatImageView{23565e6 V.ED..... ........ 440,91-524,175}
+                          com.google.android.material.textview.MaterialTextView{baca727 V.ED..... ........ 342,199-622,250}
+                          com.google.android.material.textview.MaterialTextView{29b3dd4 V.ED..... ........ 268,258-695,297}
+                        com.google.android.material.button.MaterialButton{3b3f055 VFED..C.. ........ 58,2113-1022,2260}
+                        com.google.android.material.textview.MaterialTextView{d956a6a V.ED..... ........ 58,2286-1022,2325}
+                  com.google.android.material.bottomnavigation.BottomNavigationView{1fcf5c V.E...... ........ 0,2126-1080,2337 #7f080065 app:id/bottom_nav}
+                    com.google.android.material.bottomnavigation.BottomNavigationMenuView{cb19d23 V.E...... ........ 0,0-1080,211}
+                      com.google.android.material.bottomnavigation.BottomNavigationItemView{5f3e2c1 VFE...C.. ........ 0,0-360,211 #7f080144 app:id/nav_home}
+                        android.widget.LinearLayout{192c220 V.E...... ........ 96,32-264,211 #7f080147 app:id/navigation_bar_item_content_container}
+                          android.widget.FrameLayout{a348a66 V.E...... ........ 0,0-168,84 #7f080148 app:id/navigation_bar_item_icon_container}
+                            android.view.View{f363654 V.ED..... ........ 0,0-168,84 #7f080146 app:id/navigation_bar_item_active_indicator_view}
+                            android.widget.LinearLayout{79ae9fd V.E...... ........ 52,10-115,73 #7f08014a app:id/navigation_bar_item_inner_content_container}
+                              androidx.appcompat.widget.AppCompatImageView{6eee6f2 V.ED..... ........ 0,0-63,63 #7f080149 app:id/navigation_bar_item_icon_view}
+                          com.google.android.material.internal.BaselineLayout{b6e31a7 V.E...... ........ 6,95-162,179 #7f08014b app:id/navigation_bar_item_labels_group}
+                            com.google.android.material.textview.MaterialTextView{76297d9 V.ED..... ........ 1,0-155,42 #7f08014d app:id/navigation_bar_item_small_label_view}
+                            com.google.android.material.textview.MaterialTextView{f424143 I.ED..... ......ID 0,0-156,42 #7f08014c app:id/navigation_bar_item_large_label_view}
+                      com.google.android.material.bottomnavigation.BottomNavigationItemView{a14f59e VFE...C.. ..S..... 360,0-720,211 #7f080145 app:id/nav_save}
+                        android.widget.LinearLayout{bea63c0 V.E...... ..S..... 96,32-264,211 #7f080147 app:id/navigation_bar_item_content_container}
+                          android.widget.FrameLayout{3b128f9 V.E...... ..S..... 0,0-168,84 #7f080148 app:id/navigation_bar_item_icon_container}
+                            android.view.View{9bdae9f V.ED..... ..S..... 0,0-168,84 #7f080146 app:id/navigation_bar_item_active_indicator_view}
+                            android.widget.LinearLayout{ef1fbec V.E...... ..S..... 52,10-115,73 #7f08014a app:id/navigation_bar_item_inner_content_container}
+                              androidx.appcompat.widget.AppCompatImageView{c525bb5 V.ED..... ..S..... 0,0-63,63 #7f080149 app:id/navigation_bar_item_icon_view}
+                          com.google.android.material.internal.BaselineLayout{680803e V.E...... ..S..... 33,95-135,179 #7f08014b app:id/navigation_bar_item_labels_group}
+                            com.google.android.material.textview.MaterialTextView{3f6e87f I.ED..... ..S...ID 0,0-102,42 #7f08014d app:id/navigation_bar_item_small_label_view}
+                            com.google.android.material.textview.MaterialTextView{c31e04c V.ED..... ..S..... 0,0-102,42 #7f08014c app:id/navigation_bar_item_large_label_view}
+                      com.google.android.material.bottomnavigation.BottomNavigationItemView{a5bd895 VFE...C.. ........ 720,0-1080,211 #7f080143 app:id/nav_history}
+                        android.widget.LinearLayout{a00624a V.E...... ........ 96,32-264,211 #7f080147 app:id/navigation_bar_item_content_container}
+                          android.widget.FrameLayout{f5895bb V.E...... ........ 0,0-168,84 #7f080148 app:id/navigation_bar_item_icon_container}
+                            android.view.View{f99fe31 V.ED..... ........ 0,0-168,84 #7f080146 app:id/navigation_bar_item_active_indicator_view}
+                            android.widget.LinearLayout{aea5916 V.E...... ........ 52,10-115,73 #7f08014a app:id/navigation_bar_item_inner_content_container}
+                              androidx.appcompat.widget.AppCompatImageView{9f0d297 V.ED..... ........ 0,0-63,63 #7f080149 app:id/navigation_bar_item_icon_view}
+                          com.google.android.material.internal.BaselineLayout{ff8ead8 V.E...... ........ 27,95-141,179 #7f08014b app:id/navigation_bar_item_labels_group}
+                            com.google.android.material.textview.MaterialTextView{37ddc84 V.ED..... ........ 0,0-113,42 #7f08014d app:id/navigation_bar_item_small_label_view}
+                            com.google.android.material.textview.MaterialTextView{d56cdaa I.ED..... ......ID 0,0-114,42 #7f08014c app:id/navigation_bar_item_large_label_view}
+          android.view.ViewStub{c1b8d9b G.E...... ......I. 0,0-0,0 #1020202 android:id/action_mode_bar_stub}
+    Looper (main, tid 2) {dc2b538}
+      (MessageQueue is using DeliQueue implementation)
+      Message 0: { when=+374ms what=40 target=android.view.ViewRootImpl$ViewRootHandler async=false heapIndex=1 }
+      Message 1: { when=+178ms what=39 target=android.view.ViewRootImpl$ViewRootHandler async=false heapIndex=0 }
+      (Total messages: 2, polling=false, quitting=false)
+    ResourcesManager:
+      total apks: 3
+      resources: 3
+      resource impls: 2
+    1 dumpables:
+    #0: AutofillManager
+        AutofillManager:
+          sessionId: 2147483647
+          state: UNKNOWN
+          context: com.tranquochuy.parkpin.MainActivity@d0dfe53
+          service client: null
+          client: android.view.autofill.AutofillClientController@6e6911 (android.os.BinderProxy@53e88e1)
+          enabled: false
+          enabledAugmentedOnly: false
+          hasService: true
+          hasCallback: false
+          onInvisibleCalled false
+          last autofilled data: null
+          id of last fill UI shown: null
+          tracked views: null
+          fillable ids: null
+          entered ids: null
+          save trigger id: null
+          save on finish(): false
+          options: logLvl=0, compatMode=false, augmented=false, appDisabledExpiration=0
+          fill dialog enabled: false
+          fill dialog enabled hints: []
+          compat mode enabled: false
+          debug: false verbose: false
+        Autofill Compat Mode: false
+    Local FragmentActivity d0dfe53 State:
+      mCreated=true mResumed=true mStopped=false    Active Fragments:
+    SaveParkingFragment{95c5db6} (05922ffa-b8f1-4453-932f-2298c2c1fb6f id=0x7f0800d2)
+        mFragmentId=#7f0800d2 mContainerId=#7f0800d2 mTag=null
+        mState=7 mWho=05922ffa-b8f1-4453-932f-2298c2c1fb6f mBackStackNesting=0
+        mAdded=true mRemoving=false mFromLayout=false mInLayout=false
+        mHidden=false mDetached=false mMenuVisible=true mHasMenu=false
+        mRetainInstance=false mUserVisibleHint=true
+        mFragmentManager=FragmentManager{72c1a76 in HostCallbacks{b1b6877}}}
+        mHost=androidx.fragment.app.FragmentActivity$HostCallbacks@b1b6877
+        mPopDirection=false
+        mContainer=android.widget.FrameLayout{b140968 V.E...... ........ 0,63-1080,2126 #7f0800d2 app:id/fragment_container}
+        mView=android.widget.ScrollView{ae654c8 VFED..... ........ 0,0-1080,2063}
+        Child FragmentManager{ba4cb1b in SaveParkingFragment{95c5db6}}}:
+          Back Stack Index: 0
+          FragmentManager misc state:
+            mHost=androidx.fragment.app.FragmentActivity$HostCallbacks@b1b6877
+            mContainer=androidx.fragment.app.Fragment$5@ceee4b8
+            mParent=SaveParkingFragment{95c5db6} (05922ffa-b8f1-4453-932f-2298c2c1fb6f id=0x7f0800d2)
+            mCurState=7 mStateSaved=false mStopped=false mDestroyed=false
+    Added Fragments:
+      #0: SaveParkingFragment{95c5db6} (05922ffa-b8f1-4453-932f-2298c2c1fb6f id=0x7f0800d2)
+    Back Stack Index: 0
+    FragmentManager misc state:
+      mHost=androidx.fragment.app.FragmentActivity$HostCallbacks@b1b6877
+      mContainer=androidx.fragment.app.FragmentActivity$HostCallbacks@b1b6877
+      mCurState=7 mStateSaved=false mStopped=false mDestroyed=false
