@@ -65,6 +65,7 @@ jobs:
             adb shell am start -W -a android.intent.action.OPEN_DOCUMENT -c android.intent.category.OPENABLE -t 'image/*' | tee api24-documents-ui-launch.txt
             grep -q 'Status: ok' api24-documents-ui-launch.txt
             adb exec-out screencap -p > api24-documents-ui.png
+            python3 scripts/api24_photo_e2e.py
       - name: Upload API 24 acceptance evidence
         if: always()
         uses: actions/upload-artifact@v4
@@ -76,5 +77,6 @@ jobs:
             api24-documents-ui-launch.txt
             api24-app-home.png
             api24-documents-ui.png
+            api24-e2e-evidence/**
             app/build/outputs/androidTest-results/connected/**
             app/build/reports/androidTests/connected/**
