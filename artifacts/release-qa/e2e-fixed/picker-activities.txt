@@ -1,0 +1,141 @@
+ACTIVITY MANAGER ACTIVITIES (dumpsys activity activities)
+Display #0 (activities from top to bottom):
+  Stack #1:
+  mFullscreen=true
+  mBounds=null
+    Task id #12
+    mFullscreen=true
+    mBounds=null
+    mMinWidth=-1
+    mMinHeight=-1
+    mLastNonFullscreenBounds=null
+    * TaskRecord{57245a3 #12 A=com.tranquochuy.parkpin U=0 StackId=1 sz=2}
+      userId=0 effectiveUid=u0a85 mCallingUid=2000 mUserSetupComplete=true mCallingPackage=null
+      affinity=com.tranquochuy.parkpin
+      intent={flg=0x10000000 cmp=com.tranquochuy.parkpin/.MainActivity}
+      realActivity=com.tranquochuy.parkpin/.MainActivity
+      autoRemoveRecents=false isPersistable=true numFullscreen=2 taskType=0 mTaskToReturnTo=1
+      rootWasReset=false mNeverRelinquishIdentity=true mReuseTask=false mLockTaskAuth=LOCK_TASK_AUTH_PINNABLE
+      Activities=[ActivityRecord{7d646e5 u0 com.tranquochuy.parkpin/.MainActivity t12}, ActivityRecord{9a0ccd4 u0 com.android.documentsui/.DocumentsActivity t12}]
+      askedCompatMode=false inRecents=true isAvailable=true
+      lastThumbnail=null lastThumbnailFile=/data/system_ce/0/recent_images/12_task_thumbnail.png
+      stackId=1
+      hasBeenVisible=true mResizeMode=RESIZE_MODE_RESIZEABLE isResizeable=true firstActiveTime=1795540337528 lastActiveTime=1795540337528 (inactive for 1s)
+      * Hist #1: ActivityRecord{9a0ccd4 u0 com.android.documentsui/.DocumentsActivity t12}
+          packageName=com.android.documentsui processName=com.android.documentsui
+          launchedFromUid=10085 launchedFromPackage=com.tranquochuy.parkpin userId=0
+          app=ProcessRecord{1f180a0 8495:com.android.documentsui/u0a10}
+          Intent { act=android.intent.action.OPEN_DOCUMENT typ=image/* cmp=com.android.documentsui/.DocumentsActivity }
+          frontOfTask=false task=TaskRecord{57245a3 #12 A=com.tranquochuy.parkpin U=0 StackId=1 sz=2}
+          taskAffinity=com.android.documentsui
+          realActivity=com.android.documentsui/.DocumentsActivity
+          baseDir=/system/priv-app/DocumentsUI/DocumentsUI.apk
+          dataDir=/data/user/0/com.android.documentsui
+          stateNotNeeded=false componentSpecified=false mActivityType=0
+          compat={160dpi} labelRes=0x7f0b0024 icon=0x7f02006e theme=0x7f0c0167
+          config={1.0 310mcc260mnc [en_US] ldltr sw320dp w320dp h616dp 160dpi nrml long port finger qwerty/v/v tball/v s.6}
+          taskConfigOverride={1.0 ?mcc?mnc ?localeList ?layoutDir ?swdp ?wdp ?hdp ?density ?lsize ?long ?orien ?uimode ?night ?touch ?keyb/?/? ?nav/?}
+          resultTo=ActivityRecord{7d646e5 u0 com.tranquochuy.parkpin/.MainActivity t12} resultWho=null resultCode=1195656597
+          taskDescription: iconFilename=null label="null" color=ff263238
+          launchFailed=false launchCount=1 lastLaunchTime=-1s984ms
+          haveState=false icicle=null
+          state=RESUMED stopped=false delayedResume=false finishing=false
+          keysPaused=false inHistory=true visible=true sleeping=false idle=true mStartingWindowState=STARTING_WINDOW_SHOWN
+          fullscreen=true noDisplay=false immersive=false launchMode=0
+          frozenBeforeDestroy=false forceNewConfig=false
+          mActivityType=APPLICATION_ACTIVITY_TYPE
+          waitingVisible=false nowVisible=true lastVisibleTime=-1s448ms
+          resizeMode=RESIZE_MODE_RESIZEABLE
+      * Hist #0: ActivityRecord{7d646e5 u0 com.tranquochuy.parkpin/.MainActivity t12}
+          packageName=com.tranquochuy.parkpin processName=com.tranquochuy.parkpin
+          launchedFromUid=2000 launchedFromPackage=null userId=0
+          app=ProcessRecord{4c4b459 8380:com.tranquochuy.parkpin/u0a85}
+          Intent { flg=0x10000000 cmp=com.tranquochuy.parkpin/.MainActivity }
+          frontOfTask=true task=TaskRecord{57245a3 #12 A=com.tranquochuy.parkpin U=0 StackId=1 sz=2}
+          taskAffinity=com.tranquochuy.parkpin
+          realActivity=com.tranquochuy.parkpin/.MainActivity
+          baseDir=/data/app/com.tranquochuy.parkpin-1/base.apk
+          dataDir=/data/user/0/com.tranquochuy.parkpin
+          stateNotNeeded=false componentSpecified=true mActivityType=0
+          compat={160dpi} labelRes=0x7f0f001d icon=0x7f0700b8 theme=0x7f100353
+          config={1.0 310mcc260mnc [en_US] ldltr sw320dp w320dp h616dp 160dpi nrml long port finger qwerty/v/v tball/v s.6}
+          taskConfigOverride={1.0 ?mcc?mnc ?localeList ?layoutDir ?swdp ?wdp ?hdp ?density ?lsize ?long ?orien ?uimode ?night ?touch ?keyb/?/? ?nav/?}
+          taskDescription: iconFilename=null label="null" color=ff087f69
+          launchFailed=false launchCount=0 lastLaunchTime=-10s657ms
+          haveState=true icicle=Bundle[mParcelledData.dataSize=8912]
+          state=STOPPED stopped=true delayedResume=false finishing=false
+          keysPaused=false inHistory=true visible=false sleeping=false idle=true mStartingWindowState=STARTING_WINDOW_SHOWN
+          fullscreen=true noDisplay=false immersive=false launchMode=0
+          frozenBeforeDestroy=false forceNewConfig=false
+          mActivityType=APPLICATION_ACTIVITY_TYPE
+          waitingVisible=false nowVisible=false lastVisibleTime=-9s564ms
+          resizeMode=RESIZE_MODE_RESIZEABLE
+
+    Running activities (most recent first):
+      TaskRecord{57245a3 #12 A=com.tranquochuy.parkpin U=0 StackId=1 sz=2}
+        Run #1: ActivityRecord{9a0ccd4 u0 com.android.documentsui/.DocumentsActivity t12}
+        Run #0: ActivityRecord{7d646e5 u0 com.tranquochuy.parkpin/.MainActivity t12}
+
+    mResumedActivity: ActivityRecord{9a0ccd4 u0 com.android.documentsui/.DocumentsActivity t12}
+    mLastPausedActivity: ActivityRecord{7d646e5 u0 com.tranquochuy.parkpin/.MainActivity t12}
+
+  Stack #0:
+  mFullscreen=true
+  mBounds=null
+    Task id #4
+    mFullscreen=true
+    mBounds=null
+    mMinWidth=-1
+    mMinHeight=-1
+    mLastNonFullscreenBounds=null
+    * TaskRecord{8417995 #4 I=com.android.launcher3/.Launcher U=0 StackId=0 sz=1}
+      userId=0 effectiveUid=u0a20 mCallingUid=0 mUserSetupComplete=true mCallingPackage=null
+      intent={act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10000100 cmp=com.android.launcher3/.Launcher}
+      realActivity=com.android.launcher3/.Launcher
+      autoRemoveRecents=false isPersistable=true numFullscreen=1 taskType=1 mTaskToReturnTo=1
+      rootWasReset=false mNeverRelinquishIdentity=true mReuseTask=false mLockTaskAuth=LOCK_TASK_AUTH_PINNABLE
+      Activities=[ActivityRecord{c8d6c78 u0 com.android.launcher3/.Launcher t4}]
+      askedCompatMode=false inRecents=true isAvailable=true
+      lastThumbnail=null lastThumbnailFile=/data/system_ce/0/recent_images/4_task_thumbnail.png
+      stackId=0
+      hasBeenVisible=true mResizeMode=RESIZE_MODE_FORCE_RESIZEABLE isResizeable=false firstActiveTime=1795540328837 lastActiveTime=1795540328837 (inactive for 10s)
+      * Hist #0: ActivityRecord{c8d6c78 u0 com.android.launcher3/.Launcher t4}
+          packageName=com.android.launcher3 processName=com.android.launcher3
+          launchedFromUid=0 launchedFromPackage=null userId=0
+          app=ProcessRecord{739b954 2359:com.android.launcher3/u0a20}
+          Intent { act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10000100 cmp=com.android.launcher3/.Launcher }
+          frontOfTask=true task=TaskRecord{8417995 #4 I=com.android.launcher3/.Launcher U=0 StackId=0 sz=1}
+          taskAffinity=null
+          realActivity=com.android.launcher3/.Launcher
+          baseDir=/system/priv-app/Launcher3/Launcher3.apk
+          dataDir=/data/user/0/com.android.launcher3
+          stateNotNeeded=true componentSpecified=false mActivityType=1
+          compat={160dpi} labelRes=0x7f0d0004 icon=0x7f030000 theme=0x7f10000f
+          config={1.0 310mcc260mnc [en_US] ldltr sw320dp w320dp h616dp 160dpi nrml long port finger qwerty/v/v tball/v s.6}
+          taskConfigOverride={1.0 ?mcc?mnc ?localeList ?layoutDir ?swdp ?wdp ?hdp ?density ?lsize ?long ?orien ?uimode ?night ?touch ?keyb/?/? ?nav/?}
+          taskDescription: iconFilename=null label="null" color=ff009688
+          launchFailed=false launchCount=0 lastLaunchTime=-19m53s197ms
+          haveState=true icicle=Bundle[mParcelledData.dataSize=4016]
+          state=STOPPED stopped=true delayedResume=false finishing=false
+          keysPaused=false inHistory=true visible=false sleeping=false idle=true mStartingWindowState=STARTING_WINDOW_SHOWN
+          fullscreen=true noDisplay=false immersive=false launchMode=2
+          frozenBeforeDestroy=false forceNewConfig=false
+          mActivityType=HOME_ACTIVITY_TYPE
+          waitingVisible=false nowVisible=false lastVisibleTime=-32s818ms
+          resizeMode=RESIZE_MODE_FORCE_RESIZEABLE
+
+    Running activities (most recent first):
+      TaskRecord{8417995 #4 I=com.android.launcher3/.Launcher U=0 StackId=0 sz=1}
+        Run #0: ActivityRecord{c8d6c78 u0 com.android.launcher3/.Launcher t4}
+
+    mLastPausedActivity: ActivityRecord{c8d6c78 u0 com.android.launcher3/.Launcher t4}
+
+  mFocusedActivity: ActivityRecord{9a0ccd4 u0 com.android.documentsui/.DocumentsActivity t12}
+  mFocusedStack=ActivityStack{c8a181e stackId=1, 1 tasks} mLastFocusedStack=ActivityStack{c8a181e stackId=1, 1 tasks}
+  mSleepTimeout=false
+  mCurTaskIdForUser={0=12}
+  mUserStackInFront={}
+  mActivityContainers={0=ActivtyContainer{0}A, 1=ActivtyContainer{1}A}
+  mLockTaskModeState=NONE mLockTaskPackages (userId:packages)=
+    0:[]
+ mLockTaskModeTasks[]

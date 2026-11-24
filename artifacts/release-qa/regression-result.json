@@ -1,0 +1,13 @@
+{
+  "Starts with no QA records": "PASS",
+  "Blank name blocked": "PASS",
+  "Save reachable with IME shown": "PASS",
+  "Manual save without GPS permission": "PASS",
+  "Photo draft survives rotation": "PASS",
+  "Rapid save creates one B; B solely active": "PASS",
+  "Replace image and edit persist; old file removed": "PASS",
+  "Remove image persists and cleans file": "PASS",
+  "Reactivation is exclusive": "PASS",
+  "Delete through UI returns empty Room": "PASS",
+  "Three tabs and Back operational": "PASS"
+}

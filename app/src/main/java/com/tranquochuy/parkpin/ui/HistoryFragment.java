@@ -91,7 +91,7 @@ public class HistoryFragment extends Fragment {
         map.setOnClickListener(v -> {
             if (spot.hasCoordinates() &&
                     !MapsNavigation.open(requireContext(), spot.latitude, spot.longitude)) {
-                Toast.makeText(requireContext(),
+                Toast.makeText(requireContext().getApplicationContext(),
                         "Không có ứng dụng bản đồ để mở vị trí này.", Toast.LENGTH_LONG).show();
             }
         });
@@ -102,7 +102,7 @@ public class HistoryFragment extends Fragment {
                     @Override public void onResult(Boolean ok) {
                         if (!isAdded() || getView() != root) return;
                         if (Boolean.TRUE.equals(ok)) load(root);
-                        else Toast.makeText(requireContext(), "Vị trí đã bị xóa", Toast.LENGTH_SHORT).show();
+                        else Toast.makeText(requireContext().getApplicationContext(), "Vị trí đã bị xóa", Toast.LENGTH_SHORT).show();
                     }
                     @Override public void onError(@NonNull Exception error) { showError(root, error); }
                 }));
@@ -117,7 +117,7 @@ public class HistoryFragment extends Fragment {
                                 @Override public void onResult(Boolean ok) {
                                     if (!isAdded() || getView() != root) return;
                                     if (Boolean.TRUE.equals(ok)) load(root);
-                                    else Toast.makeText(requireContext(), "Vị trí không còn tồn tại", Toast.LENGTH_SHORT).show();
+                                    else Toast.makeText(requireContext().getApplicationContext(), "Vị trí không còn tồn tại", Toast.LENGTH_SHORT).show();
                                 }
                                 @Override public void onError(@NonNull Exception error) { showError(root, error); }
                             }))
@@ -127,7 +127,7 @@ public class HistoryFragment extends Fragment {
 
     private void showError(View root, Exception error) {
         if (isAdded() && getView() == root) {
-            Toast.makeText(requireContext(), "Lỗi dữ liệu: " + error.getMessage(), Toast.LENGTH_LONG).show();
+            Toast.makeText(requireContext().getApplicationContext(), "Lỗi dữ liệu: " + error.getMessage(), Toast.LENGTH_LONG).show();
         }
     }
 

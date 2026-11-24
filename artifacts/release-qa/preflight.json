@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-24",
+  "timezone": "Asia/Bangkok",
+  "branch": "main",
+  "initial_worktree": "clean",
+  "jdk": "Microsoft 17.0.21.1+2-LTS",
+  "gradle": "9.6.0",
+  "compile_sdk": 37,
+  "avd": "ParkPin_Release_API24",
+  "serial": "emulator-5558",
+  "api": 24,
+  "abi": "x86_64",
+  "resolution": "320x640",
+  "isolated_qa_avd": true,
+  "avd_directory": ".qa-tools/release-qa/avd/ParkPin_Release_API24.avd",
+  "image_sha1": "46d09c0723b77ddba00f2281099a2c44a88ac971",
+  "initial_physical_devices": [],
+  "release_apk_published": false,
+  "baseline_source_sha": "f12cf4966f3168730b0edbd7cdb2aa3d7b02d405",
+  "qa_dates_local": [
+    "2026-11-24",
+    "2026-11-25"
+  ],
+  "production_delta": "Three Fragment Toast contexts only; exact reviewed source file hashes are recorded separately"
+}

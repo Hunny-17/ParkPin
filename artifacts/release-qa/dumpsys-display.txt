@@ -1,0 +1,145 @@
+DISPLAY MANAGER (dumpsys display)
+  mOnlyCode=false
+  mSafeMode=false
+  mPendingTraversal=false
+  mGlobalDisplayState=ON
+  mNextNonDefaultDisplayId=1
+  mDefaultViewport=DisplayViewport{valid=true, displayId=0, orientation=0, logicalFrame=Rect(0, 0 - 320, 640), physicalFrame=Rect(0, 0 - 320, 640), deviceWidth=320, deviceHeight=640}
+  mExternalTouchViewport=DisplayViewport{valid=false, displayId=0, orientation=0, logicalFrame=Rect(0, 0 - 0, 0), physicalFrame=Rect(0, 0 - 0, 0), deviceWidth=0, deviceHeight=0}
+  mSingleDisplayDemoMode=false
+  mWifiDisplayScanRequestCount=0
+
+Display Adapters: size=3
+  LocalDisplayAdapter
+  OverlayDisplayAdapter
+    mCurrentOverlaySetting=
+    mOverlays: size=0
+  VirtualDisplayAdapter
+
+Display Devices: size=1
+  DisplayDeviceInfo{"Built-in Screen": uniqueId="local:0", 320 x 640, modeId 1, defaultModeId 1, supportedModes [{id=1, width=320, height=640, fps=60.000004}], colorTransformId 1, defaultColorTransformId 1, supportedColorTransforms [{id=1, colorTransform=0}], HdrCapabilities android.view.Display$HdrCapabilities@70ef80e, density 160, 160.0 x 160.0 dpi, appVsyncOff 0, presDeadline 17666666, touch INTERNAL, rotation 0, type BUILT_IN, state ON, FLAG_DEFAULT_DISPLAY, FLAG_ROTATES_WITH_CONTENT, FLAG_SECURE, FLAG_SUPPORTS_PROTECTED_BUFFERS}
+    mAdapter=LocalDisplayAdapter
+    mUniqueId=local:0
+    mDisplayToken=android.os.BinderProxy@206726b
+    mCurrentLayerStack=0
+    mCurrentOrientation=0
+    mCurrentLayerStackRect=Rect(0, 0 - 320, 640)
+    mCurrentDisplayRect=Rect(0, 0 - 320, 640)
+    mCurrentSurface=null
+    mBuiltInDisplayId=0
+    mActivePhysIndex=0
+    mActiveModeId=1
+    mActiveColorTransformId=1
+    mState=ON
+    mBrightness=102
+    mBacklight=com.android.server.lights.LightsService$LightImpl@d5d81c8
+    mDisplayInfos=
+      PhysicalDisplayInfo{320 x 640, 60.000004 fps, density 1.0, 160.0 x 160.0 dpi, secure true, appVsyncOffset 0, bufferDeadline 17666666, colorTransform 0}
+    mSupportedModes=
+      DisplayModeRecord{mMode={id=1, width=320, height=640, fps=60.000004}}
+    mSupportedColorTransforms=[
+    {id=1, colorTransform=0}]
+
+Logical Displays: size=1
+  Display 0:
+    mDisplayId=0
+    mLayerStack=0
+    mHasContent=true
+    mRequestedMode=0
+    mRequestedColorTransformId=0
+    mDisplayOffset=(0, 0)
+    mPrimaryDisplayDevice=Built-in Screen
+    mBaseDisplayInfo=DisplayInfo{"Built-in Screen", uniqueId "local:0", app 320 x 640, real 320 x 640, largest app 320 x 640, smallest app 320 x 640, mode 1, defaultMode 1, modes [{id=1, width=320, height=640, fps=60.000004}], colorTransformId 1, defaultColorTransformId 1, supportedColorTransforms [{id=1, colorTransform=0}], hdrCapabilities android.view.Display$HdrCapabilities@70ef80e, rotation 0, density 160 (160.0 x 160.0) dpi, layerStack 0, appVsyncOff 0, presDeadline 17666666, type BUILT_IN, state ON, FLAG_SECURE, FLAG_SUPPORTS_PROTECTED_BUFFERS}
+    mOverrideDisplayInfo=DisplayInfo{"Built-in Screen", uniqueId "local:0", app 320 x 640, real 320 x 640, largest app 640 x 616, smallest app 320 x 296, mode 1, defaultMode 1, modes [{id=1, width=320, height=640, fps=60.000004}], colorTransformId 1, defaultColorTransformId 1, supportedColorTransforms [{id=1, colorTransform=0}], hdrCapabilities android.view.Display$HdrCapabilities@70ef80e, rotation 0, density 160 (160.0 x 160.0) dpi, layerStack 0, appVsyncOff 0, presDeadline 17666666, type BUILT_IN, state ON, FLAG_SECURE, FLAG_SUPPORTS_PROTECTED_BUFFERS}
+
+Callbacks: size=26
+  0: mPid=1628, mWifiDisplayScanRequested=false
+  1: mPid=1729, mWifiDisplayScanRequested=false
+  2: mPid=1745, mWifiDisplayScanRequested=false
+  3: mPid=1790, mWifiDisplayScanRequested=false
+  4: mPid=1869, mWifiDisplayScanRequested=false
+  5: mPid=2076, mWifiDisplayScanRequested=false
+  6: mPid=2106, mWifiDisplayScanRequested=false
+  7: mPid=2141, mWifiDisplayScanRequested=false
+  8: mPid=2155, mWifiDisplayScanRequested=false
+  9: mPid=2308, mWifiDisplayScanRequested=false
+  10: mPid=2359, mWifiDisplayScanRequested=false
+  11: mPid=2373, mWifiDisplayScanRequested=false
+  12: mPid=2459, mWifiDisplayScanRequested=false
+  13: mPid=2602, mWifiDisplayScanRequested=false
+  14: mPid=2679, mWifiDisplayScanRequested=false
+  15: mPid=2773, mWifiDisplayScanRequested=false
+  16: mPid=3974, mWifiDisplayScanRequested=false
+  17: mPid=4170, mWifiDisplayScanRequested=false
+  18: mPid=4189, mWifiDisplayScanRequested=false
+  19: mPid=4424, mWifiDisplayScanRequested=false
+  20: mPid=4478, mWifiDisplayScanRequested=false
+  21: mPid=4590, mWifiDisplayScanRequested=false
+  22: mPid=4705, mWifiDisplayScanRequested=false
+  23: mPid=4801, mWifiDisplayScanRequested=false
+  24: mPid=4824, mWifiDisplayScanRequested=false
+  25: mPid=5287, mWifiDisplayScanRequested=false
+
+Display Power Controller Locked State:
+  mDisplayReadyLocked=true
+  mPendingRequestLocked=policy=BRIGHT, useProximitySensor=false, screenBrightness=102, screenAutoBrightnessAdjustment=0.0, brightnessSetByUser=true, useAutoBrightness=false, blockScreenOn=false, lowPowerMode=false, boostScreenBrightness=false, dozeScreenBrightness=-1, dozeScreenState=UNKNOWN, useTwilight=false
+  mPendingRequestChangedLocked=false
+  mPendingWaitForNegativeProximityLocked=false
+  mPendingUpdatePowerStateLocked=false
+
+Display Power Controller Configuration:
+  mScreenBrightnessDozeConfig=1
+  mScreenBrightnessDimConfig=10
+  mScreenBrightnessDarkConfig=1
+  mScreenBrightnessRangeMinimum=1
+  mScreenBrightnessRangeMaximum=255
+  mUseSoftwareAutoBrightnessConfig=false
+  mAllowAutoBrightnessWhileDozingConfig=false
+  mColorFadeFadesConfig=false
+
+Display Power Controller Thread State:
+  mPowerRequest=policy=BRIGHT, useProximitySensor=false, screenBrightness=102, screenAutoBrightnessAdjustment=0.0, brightnessSetByUser=true, useAutoBrightness=false, blockScreenOn=false, lowPowerMode=false, boostScreenBrightness=false, dozeScreenBrightness=-1, dozeScreenState=UNKNOWN, useTwilight=false
+  mWaitingForNegativeProximity=false
+  mProximitySensor={Sensor name="Goldfish Proximity sensor", vendor="The Android Open Source Project", version=1, type=8, maxRange=1.0, resolution=1.0, power=20.0, minDelay=10000}
+  mProximitySensorEnabled=false
+  mProximityThreshold=1.0
+  mProximity=Unknown
+  mPendingProximity=Unknown
+  mPendingProximityDebounceTime=-1 (460758 ms ago)
+  mScreenOffBecauseOfProximity=false
+  mAppliedAutoBrightness=false
+  mAppliedDimming=false
+  mAppliedLowPower=false
+  mPendingScreenOnUnblocker=null
+  mPendingScreenOff=false
+  mReportedToPolicy=REPORTED_TO_POLICY_SCREEN_ON
+  mScreenBrightnessRampAnimator.isAnimating()=false
+  mColorFadeOnAnimator.isStarted()=false
+  mColorFadeOffAnimator.isStarted()=false
+
+Display Power State:
+  mScreenState=ON
+  mScreenBrightness=102
+  mScreenReady=true
+  mScreenUpdatePending=false
+  mColorFadePrepared=false
+  mColorFadeLevel=1.0
+  mColorFadeReady=true
+  mColorFadeDrawPending=false
+
+Photonic Modulator State:
+  mPendingState=ON
+  mPendingBacklight=102
+  mActualState=ON
+  mActualBacklight=102
+  mStateChangeInProgress=false
+  mBacklightChangeInProgress=false
+
+Color Fade State:
+  mPrepared=false
+  mMode=0
+  mDisplayLayerStack=0
+  mDisplayWidth=0
+  mDisplayHeight=0
+  mSurfaceVisible=false
+  mSurfaceAlpha=0.0

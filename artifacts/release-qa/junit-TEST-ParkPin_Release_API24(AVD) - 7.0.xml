@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuites tests="18" failures="0" errors="0" skipped="0" time="0.000" timestamp="2026-11-24T16:53:45" hostname="localhost">
+  <testsuite name="com.tranquochuy.parkpin.data.Api24CompatibilityTest" tests="2" failures="0" errors="0" skipped="0" time="2.054" timestamp="2026-11-24T16:53:45" hostname="localhost">
+    <properties>
+      <property name="device" value="emulator-5558" />
+    </properties>
+    <testcase name="imagePickerContractResolvesOnApi24" classname="com.tranquochuy.parkpin.data.Api24CompatibilityTest" time="0.001" />
+    <testcase name="mainActivityLaunchesOnApi24" classname="com.tranquochuy.parkpin.data.Api24CompatibilityTest" time="2.053" />
+  </testsuite>
+  <testsuite name="com.tranquochuy.parkpin.data.ParkingDaoTest" tests="7" failures="0" errors="0" skipped="0" time="0.411" timestamp="2026-11-24T16:53:45" hostname="localhost">
+    <properties>
+      <property name="device" value="emulator-5558" />
+    </properties>
+    <testcase name="persistsAfterDatabaseCloseAndReopen" classname="com.tranquochuy.parkpin.data.ParkingDaoTest" time="0.093" />
+    <testcase name="savesOneActiveAndArchivesOlder" classname="com.tranquochuy.parkpin.data.ParkingDaoTest" time="0.034" />
+    <testcase name="readUpdateAndDelete" classname="com.tranquochuy.parkpin.data.ParkingDaoTest" time="0.052" />
+    <testcase name="reactivationIsAtomicAndIdempotent" classname="com.tranquochuy.parkpin.data.ParkingDaoTest" time="0.076" />
+    <testcase name="migration1To2PreservesExistingParkingRecords" classname="com.tranquochuy.parkpin.data.ParkingDaoTest" time="0.095" />
+    <testcase name="gpsCoordinatesPersistAndManualUpdatePreservesThem" classname="com.tranquochuy.parkpin.data.ParkingDaoTest" time="0.038" />
+    <testcase name="emptyDatabaseAndHistoryOrder" classname="com.tranquochuy.parkpin.data.ParkingDaoTest" time="0.023" />
+  </testsuite>
+  <testsuite name="com.tranquochuy.parkpin.data.ParkingPhotoTest" tests="9" failures="0" errors="0" skipped="0" time="1.716" timestamp="2026-11-24T16:53:45" hostname="localhost">
+    <properties>
+      <property name="device" value="emulator-5558" />
+    </properties>
+    <testcase name="migration2To3RetainsGpsAndAddsNullablePhoto" classname="com.tranquochuy.parkpin.data.ParkingPhotoTest" time="0.065" />
+    <testcase name="corruptSourceFailsWithoutLeavingOwnedFiles" classname="com.tranquochuy.parkpin.data.ParkingPhotoTest" time="0.028" />
+    <testcase name="jpegExifOrientationIsAppliedBeforeSaving" classname="com.tranquochuy.parkpin.data.ParkingPhotoTest" time="0.033" />
+    <testcase name="photoDeletionCannotEscapePrivatePhotoDirectory" classname="com.tranquochuy.parkpin.data.ParkingPhotoTest" time="0.004" />
+    <testcase name="pruningOldDraftsNeverDeletesReferencedPhotos" classname="com.tranquochuy.parkpin.data.ParkingPhotoTest" time="0.002" />
+    <testcase name="importedPhotoIsBoundedAndSurvivesSourceDeletion" classname="com.tranquochuy.parkpin.data.ParkingPhotoTest" time="0.372" />
+    <testcase name="roomPhotoPersistsAndManualGpsUpdatesPreserveIt" classname="com.tranquochuy.parkpin.data.ParkingPhotoTest" time="0.070" />
+    <testcase name="oversizedSourceIsRejectedAndTemporaryFilesAreCleaned" classname="com.tranquochuy.parkpin.data.ParkingPhotoTest" time="0.126" />
+    <testcase name="clearingOffscreenPhotoReleasesBitmapAndRejectsLateDecode" classname="com.tranquochuy.parkpin.data.ParkingPhotoTest" time="1.016" />
+  </testsuite>
+</testsuites>

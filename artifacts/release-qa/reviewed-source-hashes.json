@@ -1,0 +1,7 @@
+{
+  "app/src/main/java/com/tranquochuy/parkpin/ui/HomeFragment.java": "115bddf231c22a100824e02a76df93c83ec9e64ba56f1856343fcbbeebdb2f54",
+  "app/src/main/java/com/tranquochuy/parkpin/ui/SaveParkingFragment.java": "f257bd8aedd7146abda60ff8924cbf6c68833e267a0a13643b1b133096f8cea9",
+  "app/src/main/java/com/tranquochuy/parkpin/ui/HistoryFragment.java": "3e29071447ca2f83455c0b94f040cb176c1ae32931da387a1de935869f13ed9e",
+  "app/src/androidTest/java/com/tranquochuy/parkpin/data/Api24CompatibilityTest.java": "1b21768837cab4078fe86d32c9b2056d1150d7f392ffaaedb42ad656d2d9fcf7",
+  "scripts/api24_photo_e2e.py": "c844a99594b2ff190b864179dea3cf2cccd04415d115af739cfeaaea5615ef1f"
+}

@@ -1,0 +1,20 @@
+{
+  "api": 24,
+  "status": "PASS",
+  "recordId": 1,
+  "photoPath": "eb685e56-f2c3-4c25-a28b-aaaefab52e0d.jpg",
+  "records": [
+    [
+      1,
+      "QA_API24_RELEASE",
+      "eb685e56-f2c3-4c25-a28b-aaaefab52e0d.jpg",
+      1
+    ]
+  ],
+  "privateJpeg": true,
+  "deletedViaUi": true,
+  "fileCleaned": true,
+  "intent": "ACTION_OPEN_DOCUMENT image/*; resultTo ParkPin MainActivity",
+  "callbackEvidence": "Only real system selection: preview + new private JPEG + Room; no URI injection",
+  "screenshots": 10
+}

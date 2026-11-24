@@ -1,0 +1,323 @@
+INPUT MANAGER (dumpsys input)
+
+Input Manager State:
+  Interactive: true
+  System UI Visibility: 0x608
+  Pointer Speed: 0
+  Pointer Gestures Enabled: true
+  Show Touches: false
+
+Event Hub State:
+  BuiltInKeyboardId: 2
+  Devices:
+    -1: Virtual
+      Classes: 0x40000023
+      Path: <virtual>
+      Descriptor: a718a782d34bc767f4689c232d64d527998ea7fd
+      Location: 
+      ControllerNumber: 0
+      UniqueId: <virtual>
+      Identifier: bus=0x0000, vendor=0x0000, product=0x0000, version=0x0000
+      KeyLayoutFile: /system/usr/keylayout/Generic.kl
+      KeyCharacterMapFile: /system/usr/keychars/Virtual.kcm
+      ConfigurationFile: 
+      HaveKeyboardLayoutOverlay: false
+    1: Power Button
+      Classes: 0x00000001
+      Path: /dev/input/event0
+      Descriptor: 26d13db3fa0f6bd5d05831266fb01ea6c500b88c
+      Location: LNXPWRBN/button/input0
+      ControllerNumber: 0
+      UniqueId: 
+      Identifier: bus=0x0019, vendor=0x0000, product=0x0001, version=0x0000
+      KeyLayoutFile: /system/usr/keylayout/Generic.kl
+      KeyCharacterMapFile: /system/usr/keychars/Generic.kcm
+      ConfigurationFile: 
+      HaveKeyboardLayoutOverlay: false
+    2: qwerty2 (aka device 0 - built-in keyboard)
+      Classes: 0x000000bf
+      Path: /dev/input/event1
+      Descriptor: 04c0f71d9920e1e448166e8a4feebf80d1849c2f
+      Location: 
+      ControllerNumber: 0
+      UniqueId: 
+      Identifier: bus=0x0019, vendor=0x0000, product=0x0000, version=0x0000
+      KeyLayoutFile: /system/usr/keylayout/qwerty.kl
+      KeyCharacterMapFile: /system/usr/keychars/qwerty2.kcm
+      ConfigurationFile: /system/usr/idc/qwerty2.idc
+      HaveKeyboardLayoutOverlay: false
+
+Input Reader State:
+  Device -1: Virtual
+    Generation: 2
+    IsExternal: false
+    HasMic:     false
+    Sources: 0x00000301
+    KeyboardType: 2
+    Keyboard Input Mapper:
+      Parameters:
+        HasAssociatedDisplay: false
+        OrientationAware: false
+        HandlesKeyRepeat: false
+      KeyboardType: 2
+      Orientation: 0
+      KeyDowns: 0 keys currently down
+      MetaState: 0x0
+      DownTime: 0
+  Device 0: qwerty2
+    Generation: 10
+    IsExternal: false
+    HasMic:     false
+    Sources: 0x80015307
+    KeyboardType: 2
+    Motion Ranges:
+      X: source=0x00010004, min=-1.000, max=1.000, flat=0.000, fuzz=0.167, resolution=0.000
+      Y: source=0x00010004, min=-1.000, max=1.000, flat=0.000, fuzz=0.167, resolution=0.000
+      PRESSURE: source=0x00010004, min=0.000, max=1.000, flat=0.000, fuzz=0.000, resolution=0.000
+      X: source=0x00005002, min=0.000, max=319.000, flat=0.000, fuzz=0.000, resolution=0.000
+      Y: source=0x00005002, min=0.000, max=639.000, flat=0.000, fuzz=0.000, resolution=0.000
+      PRESSURE: source=0x00005002, min=0.000, max=1.000, flat=0.000, fuzz=0.000, resolution=0.000
+      SIZE: source=0x00005002, min=0.000, max=1.000, flat=0.000, fuzz=0.000, resolution=0.000
+      TOUCH_MAJOR: source=0x00005002, min=0.000, max=715.542, flat=0.000, fuzz=0.000, resolution=0.000
+      TOUCH_MINOR: source=0x00005002, min=0.000, max=715.542, flat=0.000, fuzz=0.000, resolution=0.000
+      TOOL_MAJOR: source=0x00005002, min=0.000, max=715.542, flat=0.000, fuzz=0.000, resolution=0.000
+      TOOL_MINOR: source=0x00005002, min=0.000, max=715.542, flat=0.000, fuzz=0.000, resolution=0.000
+      ORIENTATION: source=0x00005002, min=-1.571, max=1.571, flat=0.000, fuzz=0.000, resolution=0.000
+    Switch Input Mapper:
+      SwitchValues: 0
+    Keyboard Input Mapper:
+      Parameters:
+        HasAssociatedDisplay: true
+        OrientationAware: true
+        HandlesKeyRepeat: false
+      KeyboardType: 2
+      Orientation: 0
+      KeyDowns: 0 keys currently down
+      MetaState: 0x0
+      DownTime: 0
+    Cursor Input Mapper:
+      Parameters:
+        HasAssociatedDisplay: true
+        Mode: navigation
+        OrientationAware: true
+      XScale: 0.167
+      YScale: 0.167
+      XPrecision: 6.000
+      YPrecision: 6.000
+      HaveVWheel: false
+      HaveHWheel: false
+      VWheelScale: 1.000
+      HWheelScale: 1.000
+      Orientation: 0
+      ButtonState: 0x00000000
+      Down: false
+      DownTime: 0
+    Touch Input Mapper:
+      Parameters:
+        GestureMode: multi-touch
+        DeviceType: touchScreen
+        AssociatedDisplay: hasAssociatedDisplay=true, isExternal=false
+        OrientationAware: true
+      Raw Touch Axes:
+        X: min=0, max=32767, flat=0, fuzz=0, resolution=0
+        Y: min=0, max=32767, flat=0, fuzz=0, resolution=0
+        Pressure: min=0, max=1024, flat=0, fuzz=0, resolution=0
+        TouchMajor: min=0, max=2147483647, flat=0, fuzz=0, resolution=0
+        TouchMinor: min=0, max=2147483647, flat=0, fuzz=0, resolution=0
+        ToolMajor: unknown range
+        ToolMinor: unknown range
+        Orientation: min=0, max=90, flat=0, fuzz=0, resolution=0
+        Distance: unknown range
+        TiltX: unknown range
+        TiltY: unknown range
+        TrackingId: min=0, max=11, flat=0, fuzz=0, resolution=0
+        Slot: min=0, max=10, flat=0, fuzz=0, resolution=0
+      Calibration:
+        touch.size.calibration: geometric
+        touch.pressure.calibration: physical
+        touch.orientation.calibration: interpolated
+        touch.distance.calibration: none
+        touch.coverage.calibration: none
+      Affine Transformation:
+        X scale: 1.000
+        X ymix: 0.000
+        X offset: 0.000
+        Y xmix: 0.000
+        Y scale: 1.000
+        Y offset: 0.000
+      Viewport: displayId=0, orientation=0, logicalFrame=[0, 0, 320, 640], physicalFrame=[0, 0, 320, 640], deviceSize=[320, 640]
+      SurfaceWidth: 320px
+      SurfaceHeight: 640px
+      SurfaceLeft: 0
+      SurfaceTop: 0
+      SurfaceOrientation: 0
+      Translation and Scaling Factors:
+        XTranslate: 0.000
+        YTranslate: 0.000
+        XScale: 0.010
+        YScale: 0.020
+        XPrecision: 102.400
+        YPrecision: 51.200
+        GeometricScale: 0.015
+        PressureScale: 0.001
+        SizeScale: 0.000
+        OrientationScale: 0.017
+        DistanceScale: 0.000
+        HaveTilt: false
+        TiltXCenter: 0.000
+        TiltXScale: 0.000
+        TiltYCenter: 0.000
+        TiltYScale: 0.000
+      Last Raw Button State: 0x00000000
+      Last Raw Touch: pointerCount=0
+      Last Cooked Button State: 0x00000000
+      Last Cooked Touch: pointerCount=0
+      Stylus Fusion:
+        ExternalStylusConnected: false
+        External Stylus ID: -1
+        External Stylus Data Timeout: 9223372036854775807
+      External Stylus State:
+        When: 9223372036854775807
+        Pressure: 0.000000
+        Button State: 0x00000000
+        Tool Type: 0
+  Device 1: Power Button
+    Generation: 7
+    IsExternal: false
+    HasMic:     false
+    Sources: 0x00000101
+    KeyboardType: 1
+    Keyboard Input Mapper:
+      Parameters:
+        HasAssociatedDisplay: false
+        OrientationAware: false
+        HandlesKeyRepeat: false
+      KeyboardType: 1
+      Orientation: 0
+      KeyDowns: 0 keys currently down
+      MetaState: 0x0
+      DownTime: 0
+  Configuration:
+    ExcludedDeviceNames: []
+    VirtualKeyQuietTime: 0.0ms
+    PointerVelocityControlParameters: scale=1.000, lowThreshold=500.000, highThreshold=3000.000, acceleration=3.000
+    WheelVelocityControlParameters: scale=1.000, lowThreshold=15.000, highThreshold=50.000, acceleration=4.000
+    PointerGesture:
+      Enabled: true
+      QuietInterval: 100.0ms
+      DragMinSwitchSpeed: 50.0px/s
+      TapInterval: 150.0ms
+      TapDragInterval: 300.0ms
+      TapSlop: 20.0px
+      MultitouchSettleInterval: 100.0ms
+      MultitouchMinDistance: 15.0px
+      SwipeTransitionAngleCosine: 0.3
+      SwipeMaxWidthRatio: 0.2
+      MovementSpeedRatio: 0.8
+      ZoomSpeedRatio: 0.3
+
+Input Dispatcher State:
+  DispatchEnabled: 1
+  DispatchFrozen: 0
+  FocusedApplication: name='AppWindowToken{fcf90b2 token=Token{fd122bd ActivityRecord{572da14 u0 com.android.documentsui/.DocumentsActivity t6}}}', dispatchingTimeout=5000.000ms
+  FocusedWindow: name='Window{1ad8380 u0 com.android.documentsui/com.android.documentsui.DocumentsActivity}'
+  TouchStates: <no displays touched>
+  Windows:
+    0: name='Window{a2834b8 u0 StatusBar}', displayId=0, paused=false, hasFocus=false, hasWallpaper=false, visible=true, canReceiveKeys=false, flags=0x81840048, type=0x000007d0, layer=161000, frame=[0,0][320,24], scale=1.000000, touchableRegion=[0,0][320,24], inputFeatures=0x00000000, ownerPid=1790, ownerUid=10027, dispatchingTimeout=5000.000ms
+    1: name='Window{280baf u0 KeyguardScrim}', displayId=0, paused=false, hasFocus=false, hasWallpaper=false, visible=false, canReceiveKeys=false, flags=0x01110900, type=0x000007ed, layer=141000, frame=[0,0][320,640], scale=1.000000, touchableRegion=[0,0][320,640], inputFeatures=0x00000000, ownerPid=1628, ownerUid=1000, dispatchingTimeout=5000.000ms
+    2: name='Window{b9ab769 u0 DockedStackDivider}', displayId=0, paused=false, hasFocus=false, hasWallpaper=false, visible=false, canReceiveKeys=false, flags=0x21840028, type=0x000007f2, layer=21020, frame=[0,0][0,0], scale=1.000000, touchableRegion=[-48,0][48,48], inputFeatures=0x00000000, ownerPid=1790, ownerUid=10027, dispatchingTimeout=5000.000ms
+    3: name='Window{1ad8380 u0 com.android.documentsui/com.android.documentsui.DocumentsActivity}', displayId=0, paused=false, hasFocus=true, hasWallpaper=false, visible=true, canReceiveKeys=true, flags=0x81810120, type=0x00000001, layer=21015, frame=[0,0][320,640], scale=1.000000, touchableRegion=[0,0][320,640], inputFeatures=0x00000000, ownerPid=4801, ownerUid=10010, dispatchingTimeout=5000.000ms
+    4: name='Window{f772255 u0 com.tranquochuy.parkpin/com.tranquochuy.parkpin.MainActivity}', displayId=0, paused=false, hasFocus=false, hasWallpaper=false, visible=false, canReceiveKeys=false, flags=0x81810120, type=0x00000001, layer=21010, frame=[0,0][320,640], scale=1.000000, touchableRegion=[0,0][320,640], inputFeatures=0x00000000, ownerPid=4705, ownerUid=10080, dispatchingTimeout=5000.000ms
+    5: name='Window{d7bba57 u0 com.android.launcher3/com.android.launcher3.Launcher}', displayId=0, paused=false, hasFocus=false, hasWallpaper=false, visible=false, canReceiveKeys=false, flags=0x81910120, type=0x00000001, layer=21005, frame=[0,0][320,640], scale=1.000000, touchableRegion=[0,0][320,640], inputFeatures=0x00000000, ownerPid=2359, ownerUid=10020, dispatchingTimeout=5000.000ms
+    6: name='Window{5a06201 u0 com.android.systemui.ImageWallpaper}', displayId=0, paused=false, hasFocus=false, hasWallpaper=false, visible=false, canReceiveKeys=false, flags=0x00000318, type=0x000007dd, layer=21000, frame=[0,0][1243,1024], scale=1.000000, touchableRegion=[0,0][1243,1024], inputFeatures=0x00000000, ownerPid=1790, ownerUid=10027, dispatchingTimeout=5000.000ms
+  MonitoringChannels:
+    0: 'WindowManager (server)'
+  RecentQueue: length=10
+    MotionEvent(deviceId=0, source=0x00001002, action=0, actionButton=0x00000000, flags=0x00000000, metaState=0x00000000, buttonState=0x00000000, edgeFlags=0x00000000, xPrecision=1.0, yPrecision=1.0, displayId=0, pointers=[0: (152.0, 225.0)]), policyFlags=0x6b000000, age=53776.7ms
+    MotionEvent(deviceId=0, source=0x00001002, action=1, actionButton=0x00000000, flags=0x00000000, metaState=0x00000000, buttonState=0x00000000, edgeFlags=0x00000000, xPrecision=1.0, yPrecision=1.0, displayId=0, pointers=[0: (152.0, 225.0)]), policyFlags=0x6b000000, age=53776.7ms
+    KeyEvent(deviceId=-1, source=0x00000101, action=0, flags=0x00000000, keyCode=4, scanCode=0, metaState=0x00000000, repeatCount=0), policyFlags=0x6b000000, age=41491.7ms
+    KeyEvent(deviceId=-1, source=0x00000101, action=1, flags=0x00000000, keyCode=4, scanCode=0, metaState=0x00000000, repeatCount=0), policyFlags=0x6b000000, age=41491.7ms
+    MotionEvent(deviceId=0, source=0x00001002, action=0, actionButton=0x00000000, flags=0x00000000, metaState=0x00000000, buttonState=0x00000000, edgeFlags=0x00000000, xPrecision=1.0, yPrecision=1.0, displayId=0, pointers=[0: (160.0, 419.0)]), policyFlags=0x6b000000, age=23882.7ms
+    MotionEvent(deviceId=0, source=0x00001002, action=1, actionButton=0x00000000, flags=0x00000000, metaState=0x00000000, buttonState=0x00000000, edgeFlags=0x00000000, xPrecision=1.0, yPrecision=1.0, displayId=0, pointers=[0: (160.0, 419.0)]), policyFlags=0x6b000000, age=23882.7ms
+    MotionEvent(deviceId=0, source=0x00001002, action=0, actionButton=0x00000000, flags=0x00000000, metaState=0x00000000, buttonState=0x00000000, edgeFlags=0x00000000, xPrecision=1.0, yPrecision=1.0, displayId=0, pointers=[0: (208.0, 52.0)]), policyFlags=0x6b000000, age=21086.7ms
+    MotionEvent(deviceId=0, source=0x00001002, action=1, actionButton=0x00000000, flags=0x00000000, metaState=0x00000000, buttonState=0x00000000, edgeFlags=0x00000000, xPrecision=1.0, yPrecision=1.0, displayId=0, pointers=[0: (208.0, 52.0)]), policyFlags=0x6b000000, age=21086.7ms
+    MotionEvent(deviceId=0, source=0x00001002, action=0, actionButton=0x00000000, flags=0x00000000, metaState=0x00000000, buttonState=0x00000000, edgeFlags=0x00000000, xPrecision=1.0, yPrecision=1.0, displayId=0, pointers=[0: (168.0, 107.0)]), policyFlags=0x6b000000, age=17886.7ms
+    MotionEvent(deviceId=0, source=0x00001002, action=1, actionButton=0x00000000, flags=0x00000000, metaState=0x00000000, buttonState=0x00000000, edgeFlags=0x00000000, xPrecision=1.0, yPrecision=1.0, displayId=0, pointers=[0: (168.0, 107.0)]), policyFlags=0x6b000000, age=17886.7ms
+  PendingEvent: <none>
+  InboundQueue: <empty>
+  ReplacedKeys: <empty>
+  Connections:
+    0: channelName='WindowManager (server)', windowName='monitor', status=NORMAL, monitor=true, inputPublisherBlocked=false
+      OutboundQueue: <empty>
+      WaitQueue: <empty>
+    1: channelName='280baf KeyguardScrim (server)', windowName='Window{280baf u0 KeyguardScrim}', status=NORMAL, monitor=false, inputPublisherBlocked=false
+      OutboundQueue: <empty>
+      WaitQueue: <empty>
+    2: channelName='d7bba57 com.android.launcher3/com.android.launcher3.Launcher (server)', windowName='Window{d7bba57 u0 com.android.launcher3/com.android.launcher3.Launcher}', status=NORMAL, monitor=false, inputPublisherBlocked=false
+      OutboundQueue: <empty>
+      WaitQueue: <empty>
+    3: channelName='a2834b8 StatusBar (server)', windowName='Window{a2834b8 u0 StatusBar}', status=NORMAL, monitor=false, inputPublisherBlocked=false
+      OutboundQueue: <empty>
+      WaitQueue: <empty>
+    4: channelName='5a06201 com.android.systemui.ImageWallpaper (server)', windowName='Window{5a06201 u0 com.android.systemui.ImageWallpaper}', status=NORMAL, monitor=false, inputPublisherBlocked=false
+      OutboundQueue: <empty>
+      WaitQueue: <empty>
+    5: channelName='1ad8380 com.android.documentsui/com.android.documentsui.DocumentsActivity (server)', windowName='Window{1ad8380 u0 com.android.documentsui/com.android.documentsui.DocumentsActivity}', status=NORMAL, monitor=false, inputPublisherBlocked=false
+      OutboundQueue: <empty>
+      WaitQueue: <empty>
+    6: channelName='b9ab769 DockedStackDivider (server)', windowName='Window{b9ab769 u0 DockedStackDivider}', status=NORMAL, monitor=false, inputPublisherBlocked=false
+      OutboundQueue: <empty>
+      WaitQueue: <empty>
+    7: channelName='f772255 com.tranquochuy.parkpin/com.tranquochuy.parkpin.MainActivity (server)', windowName='Window{f772255 u0 com.tranquochuy.parkpin/com.tranquochuy.parkpin.MainActivity}', status=NORMAL, monitor=false, inputPublisherBlocked=false
+      OutboundQueue: <empty>
+      WaitQueue: <empty>
+  AppSwitch: not pending
+  Configuration:
+    KeyRepeatDelay: 50.0ms
+    KeyRepeatTimeout: 500.0ms
+
+
+  Keyboard Layouts:
+    "English (UK) - Android keyboard": com.android.inputdevices/com.android.inputdevices.InputDeviceReceiver/keyboard_layout_english_uk
+    "English (US) - Android keyboard": com.android.inputdevices/com.android.inputdevices.InputDeviceReceiver/keyboard_layout_english_us
+    "English (US), International style - Android keyboard": com.android.inputdevices/com.android.inputdevices.InputDeviceReceiver/keyboard_layout_english_us_intl
+    "English (US), Colemak style - Android keyboard": com.android.inputdevices/com.android.inputdevices.InputDeviceReceiver/keyboard_layout_english_us_colemak
+    "English (US), Dvorak style - Android keyboard": com.android.inputdevices/com.android.inputdevices.InputDeviceReceiver/keyboard_layout_english_us_dvorak
+    "English (US), Workman style - Android keyboard": com.android.inputdevices/com.android.inputdevices.InputDeviceReceiver/keyboard_layout_english_us_workman
+    "German - Android keyboard": com.android.inputdevices/com.android.inputdevices.InputDeviceReceiver/keyboard_layout_german
+    "French - Android keyboard": com.android.inputdevices/com.android.inputdevices.InputDeviceReceiver/keyboard_layout_french
+    "French (Canada) - Android keyboard": com.android.inputdevices/com.android.inputdevices.InputDeviceReceiver/keyboard_layout_french_ca
+    "Russian - Android keyboard": com.android.inputdevices/com.android.inputdevices.InputDeviceReceiver/keyboard_layout_russian
+    "Russian, Mac style - Android keyboard": com.android.inputdevices/com.android.inputdevices.InputDeviceReceiver/keyboard_layout_russian_mac
+    "Spanish - Android keyboard": com.android.inputdevices/com.android.inputdevices.InputDeviceReceiver/keyboard_layout_spanish
+    "Swiss French - Android keyboard": com.android.inputdevices/com.android.inputdevices.InputDeviceReceiver/keyboard_layout_swiss_french
+    "Swiss German - Android keyboard": com.android.inputdevices/com.android.inputdevices.InputDeviceReceiver/keyboard_layout_swiss_german
+    "Belgian - Android keyboard": com.android.inputdevices/com.android.inputdevices.InputDeviceReceiver/keyboard_layout_belgian
+    "Bulgarian - Android keyboard": com.android.inputdevices/com.android.inputdevices.InputDeviceReceiver/keyboard_layout_bulgarian
+    "Italian - Android keyboard": com.android.inputdevices/com.android.inputdevices.InputDeviceReceiver/keyboard_layout_italian
+    "Danish - Android keyboard": com.android.inputdevices/com.android.inputdevices.InputDeviceReceiver/keyboard_layout_danish
+    "Norwegian - Android keyboard": com.android.inputdevices/com.android.inputdevices.InputDeviceReceiver/keyboard_layout_norwegian
+    "Swedish - Android keyboard": com.android.inputdevices/com.android.inputdevices.InputDeviceReceiver/keyboard_layout_swedish
+    "Finnish - Android keyboard": com.android.inputdevices/com.android.inputdevices.InputDeviceReceiver/keyboard_layout_finnish
+    "Croatian - Android keyboard": com.android.inputdevices/com.android.inputdevices.InputDeviceReceiver/keyboard_layout_croatian
+    "Czech - Android keyboard": com.android.inputdevices/com.android.inputdevices.InputDeviceReceiver/keyboard_layout_czech
+    "Estonian - Android keyboard": com.android.inputdevices/com.android.inputdevices.InputDeviceReceiver/keyboard_layout_estonian
+    "Hungarian - Android keyboard": com.android.inputdevices/com.android.inputdevices.InputDeviceReceiver/keyboard_layout_hungarian
+    "Icelandic - Android keyboard": com.android.inputdevices/com.android.inputdevices.InputDeviceReceiver/keyboard_layout_icelandic
+    "Brazilian - Android keyboard": com.android.inputdevices/com.android.inputdevices.InputDeviceReceiver/keyboard_layout_brazilian
+    "Portuguese - Android keyboard": com.android.inputdevices/com.android.inputdevices.InputDeviceReceiver/keyboard_layout_portuguese
+    "Slovak - Android keyboard": com.android.inputdevices/com.android.inputdevices.InputDeviceReceiver/keyboard_layout_slovak
+    "Slovenian - Android keyboard": com.android.inputdevices/com.android.inputdevices.InputDeviceReceiver/keyboard_layout_slovenian
+    "Turkish - Android keyboard": com.android.inputdevices/com.android.inputdevices.InputDeviceReceiver/keyboard_layout_turkish
+    "Ukrainian - Android keyboard": com.android.inputdevices/com.android.inputdevices.InputDeviceReceiver/keyboard_layout_ukrainian
+    "Arabic - Android keyboard": com.android.inputdevices/com.android.inputdevices.InputDeviceReceiver/keyboard_layout_arabic
+    "Greek - Android keyboard": com.android.inputdevices/com.android.inputdevices.InputDeviceReceiver/keyboard_layout_greek
+    "Hebrew - Android keyboard": com.android.inputdevices/com.android.inputdevices.InputDeviceReceiver/keyboard_layout_hebrew
+    "Lithuanian - Android keyboard": com.android.inputdevices/com.android.inputdevices.InputDeviceReceiver/keyboard_layout_lithuanian
+    "Spanish (Latin) - Android keyboard": com.android.inputdevices/com.android.inputdevices.InputDeviceReceiver/keyboard_layout_spanish_latin
+    "Latvian - Android keyboard": com.android.inputdevices/com.android.inputdevices.InputDeviceReceiver/keyboard_layout_latvian
+
+  PersistentDataStore
+    mLoaded=true
+    mDirty=false
+    InputDeviceStates:

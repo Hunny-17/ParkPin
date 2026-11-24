@@ -91,13 +91,15 @@ public class SaveParkingFragment extends Fragment {
         view.findViewById(R.id.btn_pick_photo).setOnClickListener(v -> {
             try {photoPicker.launch(new PickVisualMediaRequest.Builder()
                     .setMediaType(ActivityResultContracts.PickVisualMedia.ImageOnly.INSTANCE).build());}
-            catch(RuntimeException e){Toast.makeText(requireContext(),"Không mở được trình chọn ảnh. Bạn vẫn có thể lưu thủ công.",Toast.LENGTH_LONG).show();}
+            catch(RuntimeException e){Toast.makeText(requireContext().getApplicationContext(),"Không mở được trình chọn ảnh. Bạn vẫn có thể lưu thủ công.",Toast.LENGTH_LONG).show();}
         });
         view.findViewById(R.id.btn_remove_photo).setOnClickListener(v -> photoDraft.remove());
         photoDraft.state().observe(getViewLifecycleOwner(),draft->{
             if(draft.saved){
                 photoDraft.consumeSaved();
-                Toast.makeText(requireContext(),editId>0?"Đã cập nhật vị trí":"Đã lưu vị trí đỗ xe",Toast.LENGTH_SHORT).show();
+                // Nougat's system Toast layout must not use the Activity's
+                // Material/AppCompat inflater (framework string-pool crash).
+                Toast.makeText(requireContext().getApplicationContext(),editId>0?"Đã cập nhật vị trí":"Đã lưu vị trí đỗ xe",Toast.LENGTH_SHORT).show();
                 ((MainActivity)requireActivity()).navigateTo(R.id.nav_home);return;
             }
             PhotoViews.bind(view.findViewById(R.id.photo_preview),view.findViewById(R.id.photo_status),draft.path,"Ảnh chỗ đỗ xe đã chọn");

@@ -46,4 +46,14 @@ public class Api24CompatibilityTest {
                         activity.findViewById(R.id.fragment_container)));
         }
     }
+
+    @Test public void findCarFeedbackDoesNotCrashOnApi24() {
+        assumeTrue(Build.VERSION.SDK_INT == 24);
+        try (ActivityScenario<MainActivity> scenario = ActivityScenario.launch(MainActivity.class)) {
+            // Both empty and manually saved locations use the same system Toast
+            // feedback path as save completion. Exercise the real click listener.
+            scenario.onActivity(activity ->
+                assertTrue(activity.findViewById(R.id.card_find_car).performClick()));
+        }
+    }
 }

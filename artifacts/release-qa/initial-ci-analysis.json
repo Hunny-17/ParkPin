@@ -1,0 +1,12 @@
+{
+  "run_id": 45217184551,
+  "head_sha": "f12cf4966f3168730b0edbd7cdb2aa3d7b02d405",
+  "conclusion": "failure",
+  "instrumentation": {"tests": 18, "failures": 0, "errors": 0, "skipped": 0},
+  "failed_step": "scripts/api24_photo_e2e.py waiting for btn_remove_photo",
+  "screenshots_opened": ["01-document-picker.png", "01b-after-select.png"],
+  "observation": "Both original screenshots show the same DocumentsUI Recent grid. App preview has not been reached; this alone does not establish a ParkPin production failure.",
+  "documentsui_title": {"resource_id": "android:id/title", "clickable": false, "bounds": "[64,244][144,266]"},
+  "qa_system_image": {"package": "system-images;android-24;google_apis;x86_64", "revision": 27, "archive": "x86_64-24_r27.zip", "official_sha1": "46d09c0723b77ddba00f2281099a2c44a88ac971", "checksum_verified": true},
+  "production_changed": false
+}

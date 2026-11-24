@@ -1,0 +1,18 @@
+<hierarchy rotation="0">
+  <node index="0" text="" resource-id="" class="android.widget.FrameLayout" package="com.android.documentsui" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[120,28][316,124]">
+    <node index="0" text="" resource-id="" class="android.widget.FrameLayout" package="com.android.documentsui" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[120,28][316,124]">
+      <node index="0" text="" resource-id="" class="android.widget.ListView" package="com.android.documentsui" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" focusable="true" focused="true" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[120,28][316,124]">
+        <node index="0" text="" resource-id="" class="android.widget.LinearLayout" package="com.android.documentsui" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[120,28][316,76]">
+          <node index="0" text="" resource-id="" class="android.widget.RelativeLayout" package="com.android.documentsui" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[136,41][300,63]">
+            <node index="0" text="Show file size" resource-id="android:id/title" class="android.widget.TextView" package="com.android.documentsui" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[136,41][300,63]" />
+          </node>
+        </node>
+        <node index="1" text="" resource-id="" class="android.widget.LinearLayout" package="com.android.documentsui" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[120,76][316,124]">
+          <node index="0" text="" resource-id="" class="android.widget.RelativeLayout" package="com.android.documentsui" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[136,89][300,111]">
+            <node index="0" text="Show internal storage" resource-id="android:id/title" class="android.widget.TextView" package="com.android.documentsui" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[136,89][300,111]" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>

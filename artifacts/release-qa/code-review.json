@@ -1,0 +1,12 @@
+{
+  "reviewer": "Independent code review subagent",
+  "base": "f12cf4966f3168730b0edbd7cdb2aa3d7b02d405",
+  "critical": 0,
+  "important": 0,
+  "scope": "Static review of production Toast fix, instrumentation regression, and actual picker QA script; emulator not touched by reviewer",
+  "followup": "Added emulator serial and empty-database guards to prevent modifying a preexisting active parking row",
+  "limitations": [
+    "English DocumentsUI",
+    "Disposable emulator only; separate physical QA required"
+  ]
+}

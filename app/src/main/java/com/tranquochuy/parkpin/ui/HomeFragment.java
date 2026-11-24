@@ -40,13 +40,13 @@ public class HomeFragment extends Fragment {
         MaterialCardView findCar = view.findViewById(R.id.card_find_car);
         findCar.setOnClickListener(v -> {
             if (activeSpot == null) {
-                Toast.makeText(requireContext(), "Chưa có vị trí đỗ xe để tìm.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(requireContext().getApplicationContext(), "Chưa có vị trí đỗ xe để tìm.", Toast.LENGTH_SHORT).show();
             } else if (!activeSpot.hasCoordinates()) {
-                Toast.makeText(requireContext(),
+                Toast.makeText(requireContext().getApplicationContext(),
                         "Điểm đỗ chưa có GPS. Hãy chỉnh sửa vị trí và nhấn LẤY GPS.",
                         Toast.LENGTH_LONG).show();
             } else if (!MapsNavigation.open(requireContext(), activeSpot.latitude, activeSpot.longitude)) {
-                Toast.makeText(requireContext(),
+                Toast.makeText(requireContext().getApplicationContext(),
                         "Không tìm thấy ứng dụng bản đồ. Dữ liệu đỗ xe vẫn được giữ nguyên.",
                         Toast.LENGTH_LONG).show();
             }
