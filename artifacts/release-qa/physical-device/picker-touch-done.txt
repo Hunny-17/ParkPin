@@ -1,0 +1,10 @@
+Warning: This version of UI Automator is deprecated. New tests should be written using
+UI Automator 2.0 which is available as part of the Android Testing Support Library.
+See https://developer.android.com/training/testing/ui-testing/uiautomator-testing.html
+for more details.
+.Fixture node bounds: Rect(850, 2164 - 942, 2219) display 1080x2400
+ParkPin in foreground
+
+Time: 2.95
+
+OK (1 test)

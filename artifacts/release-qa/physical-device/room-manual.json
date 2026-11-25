@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "placeName": "PPQA251125A",
+    "floor": "",
+    "zone": "",
+    "columnLabel": "",
+    "note": "",
+    "active": 1,
+    "latitude": null,
+    "longitude": null,
+    "accuracyMeters": null,
+    "locationCapturedAt": null,
+    "photoPath": null,
+    "createdAt": 1795622172396,
+    "updatedAt": 1795622172396
+  }
+]

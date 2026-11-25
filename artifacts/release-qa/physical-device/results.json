@@ -1,0 +1,74 @@
+{
+  "P01": {
+    "status": "PASS",
+    "evidence": "adb install Success, am start Status: ok, empty Room and launch screenshot"
+  },
+  "P02": {
+    "status": "PASS",
+    "evidence": "Home, Save and History selected on device"
+  },
+  "P03": {
+    "status": "PASS",
+    "evidence": "Visible name validation and no stored row"
+  },
+  "P04": {
+    "status": "PASS",
+    "evidence": "Manual QA row in Room with NULL GPS"
+  },
+  "P05": {
+    "status": "PASS",
+    "evidence": "Denied permission through Android prompt; app displayed manual fallback"
+  },
+  "P06": {
+    "status": "PASS",
+    "evidence": "Granted precise foreground permission; observed fix and confirmed coordinates persisted. Exact values redacted."
+  },
+  "P07": {
+    "status": "PASS",
+    "evidence": "Actual ACTION_VIEW navigation URI to Google Maps equals saved Room pair at seven decimals; raw coordinates withheld"
+  },
+  "P08": {
+    "status": "PASS",
+    "evidence": "Selected the stamped synthetic green image in the native Android picker, pressed Done, and verified the private draft and ParkPin preview"
+  },
+  "P09": {
+    "status": "PASS",
+    "evidence": "QA row links the private JPEG; Room snapshot and JPEG evidence"
+  },
+  "P10": {
+    "status": "PASS",
+    "evidence": "Same Room ID, photoPath and JPEG bytes after force-stop and reopen"
+  },
+  "P11": {
+    "status": "PASS",
+    "evidence": "History row for the QA record displayed the saved photo"
+  },
+  "P12": {
+    "status": "PASS",
+    "evidence": "Changed floor and image on existing row. Orange fixture verified, old private JPEG absent."
+  },
+  "P13": {
+    "status": "PASS",
+    "evidence": "Saved image removal; Room photoPath NULL and prior JPEG absent"
+  },
+  "P14": {
+    "status": "PASS",
+    "evidence": "Activated first QA record from History; Room and Home show it as sole active row"
+  },
+  "P15": {
+    "status": "PASS",
+    "evidence": "Deleted a QA row with an existing private JPEG through confirmation dialog; row and file both disappeared"
+  },
+  "P16": {
+    "status": "PASS",
+    "evidence": "Opened keyboard and reached Save, rotated to landscape and back preserving draft, Back returned Home without saving"
+  },
+  "P17": {
+    "status": "PASS",
+    "evidence": "No active default network before and after manual save, QA row persisted in Room"
+  },
+  "P18": {
+    "status": "PASS",
+    "evidence": "Opened all 20 representative physical screenshots and two decoded QA JPEGs. No ParkPin crash. Minor History button outline crop documented."
+  }
+}

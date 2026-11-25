@@ -1,14 +1,14 @@
 # ParkPin — Final Release QA
 
-**RELEASE HOLD — PHYSICAL DEVICE QA — BLOCKED: NO DEVICE.**
+**Physical Device QA PASS 18/18.** Cổng phát hành dùng kết quả Android build trên đúng commit chứa báo cáo này.
 
-Kiểm thử thực tế ngày 24–25/11/2026, múi giờ Asia/Bangkok. Không tạo release, không phát hành APK, không merge PR hoặc tạo branch QA.
+Kiểm thử Emulator ngày 24–25/11/2026 và điện thoại ngày 25/11/2026, múi giờ Asia/Bangkok. Không tạo release, không phát hành APK, không merge PR hoặc tạo branch QA.
 
 ## Mã nguồn và môi trường
 
 - Repository: `Hunny-17/ParkPin`, branch `main`.
 - HEAD đầu vào đã xác minh: `f12cf4966f3168730b0edbd7cdb2aa3d7b02d405`; working tree sạch trước QA.
-- Commit chứa báo cáo này là commit tổng hợp sau QA. Xác định SHA cuối bằng `git log -1 --format=%H -- docs/RELEASE_QA.md`; đối chiếu `head_sha` của CI, không dùng kết quả CI của SHA đầu vào thay thế.
+- Nguồn APK chạy trên điện thoại là `53b510fbbd62738c36c96cf8bc907981bad6f0b1`. Xác định SHA chứa bằng chứng điện thoại bằng `git log -1 --format=%H -- docs/RELEASE_QA.md` và đối chiếu với `head_sha` của Android build.
 - JDK Microsoft **17.0.21.1+2**, Gradle **9.6.0**, compile SDK **37**.
 - Emulator **37.2.12.0**, build **16428233**; AVD mới `ParkPin_Release_API24`, serial **emulator-5558**, Android **7.0 / API 24**, Google APIs, **x86_64**, **320×640**, density 160.
 - Image Google chính thức revision 27; SHA-1 archive `46d09c0723b77ddba00f2281099a2c44a88ac971` đã khớp trước giải nén.
@@ -21,19 +21,19 @@ Kiểm thử thực tế ngày 24–25/11/2026, múi giờ Asia/Bangkok. Không 
 | Gate | Status | Bằng chứng |
 |---|---|---|
 | Preflight | PASS | [preflight.json](../artifacts/release-qa/preflight.json), [Gradle/JVM](../artifacts/release-qa/gradle-version.txt), [Emulator](../artifacts/release-qa/emulator-version.txt) |
-| Build và unit tests | PASS — 4/4 | [Build sau sửa](../artifacts/release-qa/build-fixed.log), JUnit `GpsFixTest` 3 + `ParkingSpotTest` 1, 0 FAIL/skip |
-| API 24 Instrumentation | PASS — 19/19 | [JUnit](../artifacts/release-qa/junit-fixed-api24.xml), [Gradle](../artifacts/release-qa/instrumentation-fixed.log); 0 FAIL/error/skip |
+| Build và unit tests | PASS — 4/4 | [Build sau sửa](https://github.com/Hunny-17/ParkPin/actions/runs/45456093649), JUnit `GpsFixTest` 3 + `ParkingSpotTest` 1, 0 FAIL/skip |
+| API 24 Instrumentation | PASS — 19/19 | [JUnit](../artifacts/release-qa/junit-fixed-api24.xml), [CI API 24](https://github.com/Hunny-17/ParkPin/actions/runs/45456093632); 0 FAIL/error/skip |
 | DocumentsUI Photo Selection | PASS | [Download folder](../artifacts/release-qa/e2e-verified/01b-download-folder.png), XML và actual Intent dump cùng thư mục |
 | Photo Preview | PASS | [Preview](../artifacts/release-qa/e2e-verified/02-picked-image-preview.png); ảnh thật, nút đổi/bỏ ảnh hiện |
 | Room Photo Persistence | PASS | [Trước](../artifacts/release-qa/e2e-verified/room-before.json), [sau lưu](../artifacts/release-qa/e2e-verified/room-saved.json), [JPEG giải mã được](../artifacts/release-qa/e2e-verified/private-photo.jpg) |
 | Restart & History | PASS | [Room sau restart](../artifacts/release-qa/e2e-verified/room-restarted.json), [Home](../artifacts/release-qa/e2e-verified/04-home-after-restart.png), [History](../artifacts/release-qa/e2e-verified/05-history-photo.png) |
 | API 24 Visual QA | PASS | Đã mở ảnh thực tế của các trạng thái bắt buộc và hồi quy; danh sách bên dưới |
-| Crash & Regression | PASS sau sửa | [11/11 kiểm tra UI](../artifacts/release-qa/regression-result.json), [log chạy](../artifacts/release-qa/regression-run.log), Logcat sau sửa |
-| Physical Device QA | **BLOCKED: NO DEVICE** | [adb devices -l](../artifacts/release-qa/physical-device-inventory.txt): chỉ có emulator-5558 |
-| CI final HEAD | Kết quả trực tiếp của hai workflow bên dưới | Chỉ PASS khi cả hai push runs trên đúng SHA commit tổng hợp đều SUCCESS; xác minh SHA/run cuối được giao kèm kết quả thực thi |
-| Release Decision | **HOLD** | Còn thiếu nghiệm thu điện thoại Android vật lý |
+| Crash & Regression | PASS sau sửa | [11/11 kiểm tra UI](../artifacts/release-qa/regression-result.json), [Logcat sau sửa](../artifacts/release-qa/logcat-post-fix.txt) |
+| Physical Device QA | **PASS 18/18** | [Nghiệm thu điện thoại Android 15 / API 35](../artifacts/release-qa/physical-device/README.md) |
+| CI final HEAD | Android build trên commit bằng chứng | [Push runs trên main](https://github.com/Hunny-17/ParkPin/actions/workflows/android-ci.yml?query=branch%3Amain+event%3Apush). Xác minh `head_sha` của commit này và kết luận SUCCESS. |
+| Release Decision | **READY khi CI final HEAD SUCCESS** | API 24 và điện thoại thật đã PASS. Owner phê duyệt riêng việc phát hành. |
 
-CI là trạng thái trực tiếp trên `main`, không phải kết quả được dự đoán từ build local:
+Hai workflow Android build và API 24 đã SUCCESS trên SHA nguồn `53b510fbbd62738c36c96cf8bc907981bad6f0b1`. Commit sau nghiệm thu chỉ chứa báo cáo và bằng chứng nên workflow API 24 theo bộ lọc đường dẫn giữ kết quả của SHA nguồn. [Android build nguồn](https://github.com/Hunny-17/ParkPin/actions/runs/45456093649) · [API 24 nguồn](https://github.com/Hunny-17/ParkPin/actions/runs/45456093632)
 
 [![Android build](https://github.com/Hunny-17/ParkPin/actions/workflows/android-ci.yml/badge.svg?branch=main&event=push)](https://github.com/Hunny-17/ParkPin/actions/workflows/android-ci.yml?query=branch%3Amain+event%3Apush)
 [![Android API24](https://github.com/Hunny-17/ParkPin/actions/workflows/android-api24-compat.yml/badge.svg?branch=main&event=push)](https://github.com/Hunny-17/ParkPin/actions/workflows/android-api24-compat.yml?query=branch%3Amain+event%3Apush)
@@ -93,7 +93,7 @@ GREEN: full **19/19 instrumentation**, **4/4 JVM**, lưu/sửa/đặt hiện t�
 | Landscape/portrait giữ tên và ảnh nháp | PASS | `screenshots/reg-landscape.png`, `reg-portrait-restored.png`, sau đó lưu được |
 | Back về Home, không crash chuyển tab | PASS | `screenshots/reg-back-home.png`, 11/11 regression |
 | Room CRUD, reopen, migration 1→2 và 2→3, EXIF/private files | PASS | Full JUnit 19/19, 0 skip |
-| GPS và Maps trên điện thoại thật | BLOCKED | Không có điện thoại; không lấy kết quả Emulator thay thế |
+| GPS và Maps trên điện thoại thật | PASS | Thiết bị cấp/từ chối quyền đúng, lưu vị trí thật và giao URI chính xác cho Google Maps. [P05–P07](../artifacts/release-qa/physical-device/README.md) |
 
 ## Ảnh thực tế đã mở kiểm tra
 
@@ -119,6 +119,6 @@ Home là màn hình cuộn; ảnh Home có ảnh được chụp ở vùng đã 
 
 Logcat trước sửa giữ nguyên crash ParkPin; cửa sổ log sau sửa được bắt đầu mới sau full suite GREEN, trước các luồng UI. Bằng chứng cuối ở `artifacts/release-qa/logcat-post-fix.txt`, `crash-post-fix.txt` và `post-fix-summary.json`; không dùng lỗi cũ để đếm crash của bản sửa. Không quan sát popup crash hệ thống khác trong các ảnh PASS đã mở.
 
-`adb devices -l` sau khi luồng API24 PASS chỉ liệt kê Emulator. **PHYSICAL DEVICE QA — BLOCKED: NO DEVICE.** Chưa xác minh model/ABI/dung lượng, dữ liệu hiện hữu, picker, persistence, quyền GPS được cấp/từ chối, Maps, bàn phím, rotation và Back trên điện thoại thật. Không cài/gỡ hay ghi dữ liệu trên thiết bị chưa xác định là QA.
+Thiết bị `ee8318b9` giải quyết cổng thiếu điện thoại trước đây. Đã cài APK debug từ SHA nguồn sau khi xác nhận ParkPin chưa cài, kiểm tra 18 ca thực tế và dọn dữ liệu QA bằng giao diện. [Báo cáo và bằng chứng điện thoại](../artifacts/release-qa/physical-device/README.md)
 
-Không còn lỗi API24 đã tái hiện mà chưa sửa trong phạm vi đã chạy. Thiếu thiết bị thật là cổng bắt buộc còn BLOCKED; CI xanh không thay thế được cổng này. Giữ **RELEASE HOLD**, không phát hành APK.
+Không có lỗi cản nghiệm thu. Điểm hiển thị viền nút trong History được ghi trong báo cáo điện thoại. Quyết định READY phụ thuộc kết quả Android build của đúng SHA cuối. Công bố release, tag và APK cần Owner phê duyệt.

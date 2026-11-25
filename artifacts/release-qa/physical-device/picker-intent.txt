@@ -1,0 +1,2 @@
+Intent { act=android.provider.action.PICK_IMAGES typ=image/* flg=0x800000 cmp=com.google.android.photopicker/com.android.photopicker.MainActivity (has extras) }
+resultTo=ActivityRecord{5ed96f3 u0 com.tranquochuy.parkpin/.MainActivity t729} resultWho=null resultCode=1292034963

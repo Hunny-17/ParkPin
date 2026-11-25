@@ -1,0 +1,15 @@
+branch=main
+head=53b510fbbd62738c36c96cf8bc907981bad6f0b1
+working tree (before evidence): untracked gradle/gradle-daemon-jvm.properties; no tracked changes
+serial=ee8318b9
+adb_state=device
+model=23021RAAEG
+product=tapas_global
+android=15
+api=35
+abi=arm64-v8a,armeabi-v7a,armeabi
+display=1080x2400, 440 dpi
+storage /data: 226 GiB total, 50 GiB available
+ParkPin package absent (including list with -u), only owner user exists
+Google Maps installed
+Location services enabled at start

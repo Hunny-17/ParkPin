@@ -1,0 +1,8 @@
+{
+  "action": "android.intent.action.VIEW",
+  "mapPackage": "com.google.android.apps.maps",
+  "expectedUriShape": "google.navigation:q=[latitude],[longitude]",
+  "runtimeUriFound": true,
+  "matchesRoomAt7Decimals": true,
+  "mapsInForeground": true
+}

@@ -1,0 +1,7 @@
+{
+  "finePermission": true,
+  "coarsePermission": true,
+  "observedDenialFallback": true,
+  "locationFixPersisted": true,
+  "exactPositionPublished": false
+}

@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "placeName": "PPQA251125A",
+    "floor": "",
+    "zone": "",
+    "columnLabel": "",
+    "note": "",
+    "active": 0,
+    "latitude": null,
+    "longitude": null,
+    "accuracyMeters": null,
+    "locationCapturedAt": null,
+    "photoPath": null,
+    "createdAt": 1795622172396,
+    "updatedAt": 1795622172396
+  },
+  {
+    "id": 2,
+    "placeName": "PPQA251125B",
+    "floor": "",
+    "zone": "",
+    "columnLabel": "",
+    "note": "",
+    "active": 1,
+    "latitude": "REDACTED: measured physical location",
+    "longitude": "REDACTED: measured physical location",
+    "accuracyMeters": 13.713000297546387,
+    "locationCapturedAt": 1795622217888,
+    "photoPath": null,
+    "createdAt": 1795622232790,
+    "updatedAt": 1795622232790
+  }
+]
